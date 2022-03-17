@@ -4,7 +4,7 @@
   $: path = $page.url.pathname
 </script>
 
-<nav>
+<nav class="mainNav">
   <a href="/projects" class:active={path === '/projects'}>Projects</a>
   <a href="/contact" class:active={path === '/contact'}>Contact</a>
   <a href="/about" class:active={path === '/about'}>About</a>
