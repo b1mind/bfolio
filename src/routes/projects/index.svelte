@@ -1,21 +1,41 @@
-<h1>Proof of work</h1>
-<article>
-  <header>
-    <h2>Pizza-Boy App</h2>
-    <i>An interactive way to order a pizza</i>
-  </header>
-</article>
+<script>
+  import { projectsStore } from '$lib/data/projects'
+</script>
 
-<article>
-  <header>
-    <h2>Twitch overlay</h2>
-    <i>Interactive overlay for OBS</i>
-  </header>
-</article>
+{#each Object.entries($projectsStore) as [key, project]}
+  <a href="/projects/{key}">
+    <article>
+      <header>
+        <h2>{project.name}</h2>
+        <i>{project.subTitle}</i>
+      </header>
+      <img src={project.thumbnail} alt="{project.name} preview" />
+    </article>
+  </a>
+{/each}
 
-<article>
-  <header>
-    <h2>Faux website</h2>
-    <i>web site demo</i>
-  </header>
-</article>
+<style lang="scss">
+  article {
+    padding: 1rem;
+    display: grid;
+    & > * {
+      grid-area: 1/-1;
+    }
+  }
+
+  header {
+    height: max-content;
+    padding: 1rem;
+    background-color: hsl(0 0% 0% / 0.8);
+  }
+
+  img {
+    max-height: 300px;
+    object-fit: cover;
+    z-index: -99;
+  }
+
+  h2 {
+    margin: 0;
+  }
+</style>

@@ -1,27 +1,19 @@
-//Let's finish a portfolio
+//Let's finish a portfolio! You can do this!
 Todo:
-  ✔ test postcss plugins to make sure they work @done(21-06-21 02:37)
-  ✔ import gsap back into project @done
-  ✔ decide how to obstract stream from portfolio (or do I?) YES! @done
-  ✔ import gsap back into project @done
-  ✔ favicon for app.html @done
-  ✔ how are we going to handle data (static, service, md? wysiyg?) github @done
-  ☐ set up github cms with md files
-  ☐ home page/lander for root domain 1mind.dev 
-  ☐ need to install a img crunch / svg omg package for vite/sveltekit
-  ✘ start designing basic projects section.. Professional vs Playground @cancelled
-  ☐ home page/lander for root domain 1mind.dev 
-  ☐ use barrel file
+  ✔ make store to handle data get to it worry about shaping it to backend later @done
+  ✔ main portfolio card component @done
+  ✔ [slug] component pulling param from url @done
 
 //ideas:
+  ☐ bring in social component from demystified challenge
+  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
-  ☐ Pick a hard 3 projects to showcase PERIOD!?!?
-  ☐ top 3 skills with 3 demo/projects in each? websites/animation/svg?
-  ✘ do I sub cat portfolio /personal/professional/playground? @cancelled
+  ✔ Pick a hard 3 projects to showcase PERIOD!?!? @done
+  ✘ top 3 skills with 3 demo/projects in each? websites/animation/svg? @cancelled
 
 Projects:
-  ☐ make schema for projects // model like case study
-  ☐ images of projects gifs? svg?
+  ✔ make schema for projects // model like case study @done
+  ☐ images of projects gifs
   ☐ clear about tech used in a unique way.
   ☐ problems + solutions  
 
@@ -43,11 +35,23 @@ About:
   ☐ describe yourself... don't be corny ... how..
 
 Blog:
-  ☐ cat- Tech, opEd, Tools
-  ☐ basic url /cat/slug or /slug > /blog (only for home)
+  ☐ cat: Tech, opEd, Tools
+  ☐ basic url root/slug for post > /blog (only for home)
 
 Wishlist: 
-  ☐ attempt to get Solid Auth working (don't spend all year on it) 
+  ☐ get a svg background set up for playtime
+  ☐ set up github cms with md files
+  ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
   ☐ attempt to get Solid Auth working (don't spend all year on it)
   ☐ try to get private gsap repo working in docker server side
+
+Archive:
+  ✔ test postcss plugins to make sure they work @done(21-06-21 02:37) @project(Todo)
+  ✔ import gsap back into project @done @project(Todo)
+  ✔ decide how to obstract stream from portfolio (or do I?) YES! @done @project(Todo)
+  ✔ import gsap back into project @done @project(Todo)
+  ✔ favicon for app.html @done @project(Todo)
+  ✔ how are we going to handle data (static, service, md? wysiyg?) github @done @project(Todo)
+  ✘ start designing basic projects section.. Professional vs Playground @cancelled @project(Todo)
+  ✘ do I sub cat portfolio /personal/professional/playground? @cancelled @project(//ideas)

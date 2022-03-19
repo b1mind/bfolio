@@ -4,6 +4,7 @@
   $: path = $page.url.pathname
 </script>
 
+<!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
 <nav class="mainNav">
   <a href="/projects" class:active={path === '/projects'}>Projects</a>
   <a href="/contact" class:active={path === '/contact'}>Contact</a>
