@@ -8,7 +8,7 @@
 <h1>Proof of Work</h1>
 <nav class="subNav">
   {#each Object.entries($projectsStore) as [key, project]}
-    <a href="/projects{project.path}" class:active={path === project.path}>
+    <a href="/projects/{key}" class:active={path === project.path}>
       {project.name}
     </a>
   {/each}
@@ -16,9 +16,12 @@
 <slot />
 
 <style lang="scss">
+  h1 {
+    font-size: 2.75rem;
+  }
   nav {
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>

@@ -3,6 +3,7 @@
 </script>
 
 {#each Object.entries($projectsStore) as [key, project]}
+  <!-- //todo find out if you want to link card or make button -->
   <a href="/projects/{key}">
     <article>
       <header>
@@ -18,6 +19,7 @@
   article {
     padding: 1rem;
     display: grid;
+
     & > * {
       grid-area: 1/-1;
     }

@@ -13,6 +13,7 @@
 
 <style lang="scss">
   nav {
+    grid-column: 2 / 3;
     max-width: max-content;
     display: grid;
     gap: 0.5rem;
@@ -20,7 +21,7 @@
 
   a {
     color: blueviolet;
-    font-size: 4rem;
+    font-size: clamp(3rem, 15vw, 8rem);
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;

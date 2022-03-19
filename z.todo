@@ -1,19 +1,14 @@
 //Let's finish a portfolio! You can do this!
-Todo:
-  ✔ make store to handle data get to it worry about shaping it to backend later @done
-  ✔ main portfolio card component @done
-  ✔ [slug] component pulling param from url @done
+Today:
+
 
 //ideas:
-  ☐ bring in social component from demystified challenge
+  ✔ bring in social component from demystified challenge @done
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
-  ✔ Pick a hard 3 projects to showcase PERIOD!?!? @done
-  ✘ top 3 skills with 3 demo/projects in each? websites/animation/svg? @cancelled
 
 Projects:
-  ✔ make schema for projects // model like case study @done
-  ☐ images of projects gifs
+  ☐ images of projects, animated gifs, x4
   ☐ clear about tech used in a unique way.
   ☐ problems + solutions  
 
@@ -47,6 +42,12 @@ Wishlist:
   ☐ try to get private gsap repo working in docker server side
 
 Archive:
+  ✔ make store to handle data get to it worry about shaping it to backend later @done @project(Todo)
+  ✔ main portfolio card component @done @project(Todo)
+  ✔ [slug] component pulling param from url @done @project(Todo)
+  ✔ Pick a hard 3 projects to showcase PERIOD!?!? @done @project(//ideas)
+  ✘ top 3 skills with 3 demo/projects in each? websites/animation/svg? @cancelled @project(//ideas)
+  ✔ make schema for projects // model like case study @done @project(Projects)
   ✔ test postcss plugins to make sure they work @done(21-06-21 02:37) @project(Todo)
   ✔ import gsap back into project @done @project(Todo)
   ✔ decide how to obstract stream from portfolio (or do I?) YES! @done @project(Todo)
