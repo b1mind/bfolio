@@ -1,25 +1,19 @@
 //Let's finish a portfolio! You can do this!
-Today:
+ToStyle: 
+  ☐ subNav styles
+  ☐ main nav boxes and page look
 
-
-//ideas:
-  ✔ bring in social component from demystified challenge @done
+Todo:
+  ☐ css normalizer/reset (custom)
+  ☐ man nav needs to be functional, animate or resize on page transition.
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
 
 Projects:
   ☐ images of projects, animated gifs, x4
+  ☐ copywrite for each section 
   ☐ clear about tech used in a unique way.
-  ☐ problems + solutions  
-
-  Criteria
-    most polished least amount of refactoring
-    best showcases all skills not language
-
-  Contenders
-    pizza-boy* make pwa/style up
-    twitch/obs overlay
-    website/s??
+  ☐ pizza-boy polish and design the "burger boy" branding
 
 Contact:
   ☐ form
@@ -42,6 +36,8 @@ Wishlist:
   ☐ try to get private gsap repo working in docker server side
 
 Archive:
+  ✔ problems + solutions + highlight + overview @done @project(Projects)
+  ✔ bring in social component from demystified challenge @done @project(//ideas)
   ✔ make store to handle data get to it worry about shaping it to backend later @done @project(Todo)
   ✔ main portfolio card component @done @project(Todo)
   ✔ [slug] component pulling param from url @done @project(Todo)
