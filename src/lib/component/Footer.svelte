@@ -1,5 +1,9 @@
 <script>
+  import { page } from '$app/stores'
   import SocialIcons from './SocialIcons.svelte'
+
+  $: path = $page.url.pathname
+
   const icons = [
     {
       name: 'twitter',
@@ -20,8 +24,8 @@
   ]
 </script>
 
-<footer class="container">
-  <div>
+{#if path !== '/'}
+  <footer class="container">
     <!-- todo find out about how to a11y this -->
     <!-- visually hidden text node (span) -->
     <nav class="social" aria-label="social links">
@@ -33,15 +37,23 @@
         {/each}
       </ul>
     </nav>
-  </div>
-</footer>
+  </footer>
+{/if}
 
 <style lang="scss">
   @use '../scss/vars' as *;
 
+  footer {
+    grid-column: 2 / 3;
+  }
+
   ul {
+    margin: 0;
+    padding: 1rem 0;
     display: grid;
     grid-auto-flow: column;
+    place-content: center;
+    gap: 2rem;
     list-style: none;
   }
 </style>
