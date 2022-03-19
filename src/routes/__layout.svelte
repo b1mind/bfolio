@@ -1,4 +1,7 @@
 <script>
+  import { page } from '$app/stores'
+  $: path = $page.url.pathname
+
   import Footer from '$lib/component/Footer.svelte'
   import Header from '$lib/component/Header.svelte'
   import './global.scss'
@@ -7,9 +10,11 @@
 <main>
   <Header />
 
-  <section class="slot-wrap">
-    <slot />
-  </section>
+  {#if path !== '/'}
+    <section class="slot-wrap">
+      <slot />
+    </section>
+  {/if}
 
   <Footer />
 </main>
