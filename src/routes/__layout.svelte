@@ -4,7 +4,8 @@
 
   import Footer from '$lib/component/Footer.svelte'
   import Header from '$lib/component/Header.svelte'
-  import './global.scss'
+  import '$lib/scss/global.scss'
+  import '$lib/scss/normalize.css'
 </script>
 
 <main>
@@ -14,14 +15,14 @@
     <section class="slot-wrap">
       <slot />
     </section>
-  {/if}
 
-  <Footer />
+    <Footer />
+  {/if}
 </main>
 
 <style lang="scss">
   main {
-    min-height: 100%;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: minmax(10px, 1fr) minmax(300px, 1200px) minmax(10px, 1fr);
     place-items: center;
