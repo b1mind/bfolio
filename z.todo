@@ -1,10 +1,13 @@
 //Let's finish a portfolio! You can do this!
 ToStyle: 
+  ☐ projects layout for mobile
   ☐ subNav styles
   ☐ main nav boxes and page look
 
 Todo:
-  ☐ css normalizer/reset (custom)
+  ✔ css normalizer/reset (custom) @done
+  ☐ make sure to commit changes first thing
+  ☐ pick colors and put into custom props
   ☐ man nav needs to be functional, animate or resize on page transition.
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
@@ -24,7 +27,7 @@ About:
   ☐ describe yourself... don't be corny ... how..
 
 Blog:
-  ☐ cat: Tech, opEd, Tools
+  ☐ category: Tech, opEd, Tools
   ☐ basic url root/slug for post > /blog (only for home)
 
 Wishlist: 
