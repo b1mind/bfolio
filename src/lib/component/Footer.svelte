@@ -24,21 +24,19 @@
   ]
 </script>
 
-{#if path !== '/'}
-  <footer class="container">
-    <!-- todo find out about how to a11y this -->
-    <!-- visually hidden text node (span) -->
-    <nav class="social" aria-label="social links">
-      <ul>
-        {#each icons as icon}
-          <li>
-            <SocialIcons name={icon.name} url={icon.url} />
-          </li>
-        {/each}
-      </ul>
-    </nav>
-  </footer>
-{/if}
+<footer class="container">
+  <!-- todo find out about how to a11y this -->
+  <!-- visually hidden text node (span) -->
+  <nav class="social" aria-label="social links">
+    <ul>
+      {#each icons as icon}
+        <li>
+          <SocialIcons name={icon.name} url={icon.url} />
+        </li>
+      {/each}
+    </ul>
+  </nav>
+</footer>
 
 <style lang="scss">
   @use '../scss/vars' as *;
