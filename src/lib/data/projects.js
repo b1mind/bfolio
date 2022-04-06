@@ -3,7 +3,7 @@ import { writable } from 'svelte/store'
 let data = {
   twitchoverlay: {
     name: 'Twitch Overlay',
-    subTitle: 'Alerts and Overlays for Twitch',
+    subTitle: 'Alerts and Overlays For Twitch',
     thumbnail: 'https://picsum.photos/800/600?random=0',
     path: '/twitchoverlay',
     techUsed: ['svelte', 'obs', 'comfyjs'],

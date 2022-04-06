@@ -8,24 +8,29 @@
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
 <article>
-  <header class="spacer">
+  <header class="wrap spacer">
     <h2>{currentProject.name}</h2>
     <i>{currentProject.subTitle}</i>
   </header>
 
   {#each currentProject.sections as section}
-    <section class="spacer">
+    <section class="wrap spacer">
       <h3>{section.title}</h3>
       <img src={section.img} alt={section.altText} />
 
       <!-- note @html to render the html content of the section -->
-      {@html section.content}
+      <div class="spacer">
+        {@html section.content}
+      </div>
     </section>
   {/each}
 </article>
 
 <style lang="scss">
   article {
+    // grid-column: 1 / -1;
+    grid-column: 2 / 3;
+    min-width: 100%;
     font-size: 1.15rem;
   }
 

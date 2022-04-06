@@ -5,18 +5,23 @@
 </script>
 
 <!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
-<nav class="mainNav">
-  <a href="/projects" class:active={path === '/projects'}>Projects</a>
-  <a href="/contact" class:active={path === '/contact'}>Contact</a>
-  <a href="/about" class:active={path === '/about'}>About</a>
-</nav>
+<header class="wrap">
+  <nav class="mainNav">
+    <a href="/projects" class:active={path === '/projects'}>Projects</a>
+    <a href="/contact" class:active={path === '/contact'}>Contact</a>
+    <a href="/about" class:active={path === '/about'}>About</a>
+  </nav>
+</header>
 
 <style lang="scss">
   nav {
+    height: 100%;
+    // grid-column: 1 / -1;
     grid-column: 2 / 3;
     max-width: max-content;
     display: grid;
     gap: 0.5rem;
+    place-content: center;
   }
 
   a {

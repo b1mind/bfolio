@@ -39,24 +39,32 @@ html:focus-within {
 }
 
 //fixme find out the best way to do this
-// html {
-//   height: 100%;
-// }
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
   color: var(--clr-white);
   font-family: Helvetica, sans-serif;
   background-color: hsl(260, 24%, 10%);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   // overflow: hidden;
 }
 
 body,
 .main-wrapper {
-  min-height: 100vh;
+  min-height: 100%;
+  // min-height: 100vh;
 }
 
-img {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -76,21 +84,30 @@ select {
 h1,
 h2,
 h3,
-h4,
-p {
+h4 {
   margin: 0;
+  line-height: 1.1;
+  overflow-wrap: break-word;
 }
 
-h1 {
+h1,
+.title-lrg {
   font-size: var(--fs-800);
 }
 
-h2 {
+h2,
+.title-med {
   font-size: var(--fs-700);
 }
 
-h3 {
+h3,
+.title-sml {
   font-size: var(--fs-600);
+}
+
+p {
+  margin: 0;
+  line-height: 1.25;
 }
 
 nav > ul {
@@ -99,7 +116,21 @@ nav > ul {
   list-style: none;
 }
 
+#root,
+#__next {
+  isolation: isolate;
+}
+
 //utils
 .spacer > * + * {
   margin-top: var(--spacer, var(--spacer-100));
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr) minmax(300px, 920px) minmax(10px, 1fr);
+
+  & > * {
+    grid-column: 2 / 3;
+  }
 }

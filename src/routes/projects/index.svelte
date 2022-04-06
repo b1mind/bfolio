@@ -4,7 +4,7 @@
 
 {#each Object.entries($projectsStore) as [key, project]}
   <!-- //todo find out if you want to link card or make button -->
-  <article>
+  <article class="wrap">
     <header class="spacer">
       <a href="/projects/{key}">
         <h2>{project.name}</h2>
@@ -16,14 +16,6 @@
 {/each}
 
 <style lang="scss">
-  article {
-    display: grid;
-
-    & > * {
-      grid-area: 1/-1;
-    }
-  }
-
   header {
     --spacer: 0.5rem;
     height: max-content;
