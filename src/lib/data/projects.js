@@ -3,7 +3,7 @@ import { writable } from 'svelte/store'
 let data = {
   twitchoverlay: {
     name: 'Twitch Overlay',
-    subTitle: 'An interactive way to order a pizza',
+    subTitle: 'Alerts and Overlays for Twitch',
     thumbnail: 'https://picsum.photos/800/600?random=0',
     path: '/twitchoverlay',
     techUsed: ['svelte', 'obs', 'comfyjs'],
@@ -11,7 +11,7 @@ let data = {
       {
         title: 'Overview',
         content:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!',
+          '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!,</p><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!</p>',
         img: 'https://picsum.photos/300/300?random=0',
         altText: 'img alt text',
       },

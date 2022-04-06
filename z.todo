@@ -1,21 +1,23 @@
 //Let's finish a portfolio! You can do this!
 ToStyle: 
-  ☐ projects layout for mobile
+  ✔ projects layout for mobile @done
   ☐ subNav styles
   ☐ main nav boxes and page look
 
 Todo:
   ✔ css normalizer/reset (custom) @done
-  ☐ make sure to commit changes first thing
+  ✔ make sure to commit changes first thing @done
+  ✔ spacer custom props @done
+
+  ☐ clear about tech used in a unique way.
   ☐ pick colors and put into custom props
   ☐ man nav needs to be functional, animate or resize on page transition.
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
-  ☐ svg favicon - to handle light/dark modes
 
 Projects:
+  ☐ deside how to link live demo and github repo
   ☐ images of projects, animated gifs, x4
   ☐ copywrite for each section 
-  ☐ clear about tech used in a unique way.
   ☐ pizza-boy polish and design the "burger boy" branding
 
 Contact:
@@ -31,6 +33,7 @@ Blog:
   ☐ basic url root/slug for post > /blog (only for home)
 
 Wishlist: 
+  ☐ svg favicon - to handle light/dark modes
   ☐ get a svg background set up for playtime
   ☐ set up github cms with md files
   ☐ home page/lander for root domain 1mind.dev 
