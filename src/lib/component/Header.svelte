@@ -15,25 +15,26 @@
 
 <style lang="scss">
   nav {
-    height: 100%;
     // grid-column: 1 / -1;
     grid-column: 2 / 3;
     max-width: max-content;
     display: grid;
+    grid-auto-flow: column;
     gap: 0.5rem;
     place-content: center;
   }
 
   a {
-    color: blueviolet;
-    font-size: clamp(3rem, 15vw, 8rem);
+    color: var(--clr-secondary);
+    // font-size: var(--fs-lrg);
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 4px solid transparent;
 
     &:hover {
-      filter: invert(55%);
+      color: var(--clr-white);
+      // filter: invert(55%);
     }
   }
 
