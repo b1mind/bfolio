@@ -2,11 +2,11 @@
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects'
 
-  let currentTitle
+  let currentTitle = ''
   $: if ($page.url.pathname.split('/').length > 2) {
     currentTitle = $projectsStore[$page.url.pathname.split('/')[2]].subTitle
   } else {
-    currentTitle = $page.url.pathname.split('/')[1]
+    // currentTitle = $page.url.pathname.split('/')[1]
   }
 </script>
 
@@ -47,18 +47,7 @@
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--gap-100) var(--gap-200);
-  }
-
-  a {
-    color: blueviolet;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      filter: invert(55%);
-    }
+    gap: var(--gap-100) var(--gap-100);
   }
 
   .active {
