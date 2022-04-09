@@ -7,13 +7,10 @@
 }
 
 :root {
-  --clr-primary-bg: #18141f;
-  --clr-secondary-bg: #242035;
-  --clr-secondary-alt: #403960;
-  --clr-highlight: #514b6b;
-  --clr-highlight-text: #877fab;
-  --clr-active: #ff50ff;
-  --clr-white: #bebebe;
+  --clr-primary-bg: #283044;
+  --clr-secondary: #78a1bb;
+  --clr-highlight: #ffcb47;
+  --clr-white: #ebf5ee;
 
   // //todo make the rest of these and ues them
   // --clr-purple-200: #242035;
@@ -25,7 +22,7 @@
   --fs-600: 1.75rem;
   --fs-700: 2.3rem;
   --fs-800: 4.6rem;
-  --fs-lrg: clamp(2.5rem, 10vw + 1rem, 4.6rem);
+  --fs-lrg: clamp(2rem, 10vw + 1rem, 10rem);
 
   --spacer-100: 1rem;
   --spacer-200: 2.25rem;
@@ -45,19 +42,19 @@ body {
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   color: var(--clr-white);
   font-family: Helvetica, sans-serif;
-  background-color: hsl(260, 24%, 10%);
+  background-color: var(--clr-primary-bg);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   // overflow: hidden;
 }
 
-body,
 .main-wrapper {
   min-height: 100%;
-  // min-height: 100vh;
+  // height: 100%;
 }
 
 img,
@@ -128,9 +125,22 @@ nav > ul {
 
 .wrap {
   display: grid;
-  grid-template-columns: minmax(10px, 1fr) minmax(300px, 920px) minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr) minmax(280px, 920px) minmax(10px, 1fr);
 
   & > * {
     grid-column: 2 / 3;
+  }
+}
+
+//styles
+a {
+  color: var(--clr-secondary);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: var(--clr-white);
+    // filter: invert(55%);
   }
 }
