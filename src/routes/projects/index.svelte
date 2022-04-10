@@ -11,16 +11,41 @@
       </a>
       <i>{project.subTitle}</i>
     </header>
-    <img src={project.thumbnail} alt="{project.name} preview" />
+    <div class="img">
+      <img src={project.thumbnail} alt="{project.name} preview" />
+    </div>
   </article>
 {/each}
 
 <style lang="scss">
+  article {
+    border: 3px solid var(--clr-);
+  }
+  .img {
+    display: grid;
+    grid-template-areas: 'l';
+
+    img {
+      grid-area: l;
+    }
+
+    &::after {
+      content: '';
+      grid-area: l;
+      place-self: end;
+      margin: 0.5rem;
+      width: 45px;
+      height: 45px;
+      display: block;
+      background: var(--clr-highlight);
+    }
+  }
+
   header {
     --spacer: 0.5rem;
     height: max-content;
     padding: 1rem;
-    background-color: hsl(0 0% 0% / 0.8);
+    background-color: var(--clr-secondary-bg);
 
     i {
       display: block;

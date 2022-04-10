@@ -10,7 +10,7 @@
   </svg>
 </a>
 
-<style>
+<style lang="scss">
   /* todo add background styles or clean up */
   /* a {
     width: 36px;
@@ -25,7 +25,7 @@
   } */
 
   svg {
-    filter: contrast(0%);
+    filter: contrast(0%) brightness(150%);
   }
 
   svg:hover {

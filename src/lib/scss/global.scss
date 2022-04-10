@@ -7,21 +7,35 @@
 }
 
 :root {
-  --clr-primary-bg: #283044;
-  --clr-secondary: #78a1bb;
-  --clr-highlight: #ffcb47;
-  --clr-white: #ebf5ee;
+  --blue-9: hsla(223, 27%, 10%, 1);
+  --blue-8: hsla(223, 26%, 21%, 1);
+  --blue-7: hsla(210, 17%, 35%, 1);
+  --blue-6: hsla(215, 28%, 47%, 1);
+  --blue-5: hsla(203, 33%, 60%, 1);
+  --blue-4: hsla(205, 20%, 62%, 1);
+  --blue-3: hsla(204, 95%, 78%, 1);
+
+  --white-2: hsla(138, 33%, 94%, 1);
+
+  --yellow-5: hsla(43, 100%, 64%, 1);
+
+  --clr-primary-bg: var(--blue-8);
+  --clr-primary: var(--blue-3);
+  --clr-secondary: var(--blue-5);
+  --clr-secondary-bg: var(--blue-9);
+  --clr-highlight: var(--yellow-5);
+  --clr-white: var(--white-2);
 
   // //todo make the rest of these and ues them
   // --clr-purple-200: #242035;
   // --clr-purple-600: #514b6b;
   // --clr-purple-700: #877fab;
-  --fs-100: 0.5rem;
-  --fs-300: 0.75rem;
-  --fs-500: 1.15rem;
-  --fs-600: 1.75rem;
-  --fs-700: 2.3rem;
-  --fs-800: 4.6rem;
+  --fs-1: 0.5rem;
+  --fs-3: 0.75rem;
+  --fs-5: 1.15rem;
+  --fs-6: 1.75rem;
+  --fs-7: 2.3rem;
+  --fs-8: 4.6rem;
   --fs-lrg: clamp(2rem, 10vw + 1rem, 10rem);
 
   --spacer-100: 1rem;
@@ -89,17 +103,17 @@ h4 {
 
 h1,
 .title-lrg {
-  font-size: var(--fs-800);
+  font-size: var(--fs-8);
 }
 
 h2,
 .title-med {
-  font-size: var(--fs-700);
+  font-size: var(--fs-7);
 }
 
 h3,
 .title-sml {
-  font-size: var(--fs-600);
+  font-size: var(--fs-6);
 }
 
 p {
@@ -134,13 +148,24 @@ nav > ul {
 
 //styles
 a {
-  color: var(--clr-secondary);
-  font-weight: bold;
+  color: var(--clr-white);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
 
   &:hover {
-    color: var(--clr-white);
+    text-decoration: underline var(--clr-highlight);
+    text-underline-offset: 0.15em;
+    // research this
+    // text-underline-position: from-font;
+  }
+}
+
+nav a {
+  color: var(--clr-primary);
+  font-weight: bold;
+
+  &:hover {
+    color: var(--clr-secondary);
+    text-decoration: none;
     // filter: invert(55%);
   }
 }

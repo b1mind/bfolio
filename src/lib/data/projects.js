@@ -18,7 +18,7 @@ let data = {
       {
         title: 'Challenges',
         content:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!',
+          '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!,</p><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!</p>',
         img: 'https://picsum.photos/300/300?random=3',
         altText: 'img alt text',
       },

@@ -8,18 +8,21 @@
   import '$lib/scss/global.scss'
 </script>
 
-<Header />
+{#if path !== '/'}
+  <Header />
+{/if}
+
+<main class="spacer">
+  <slot />
+</main>
 
 {#if path !== '/'}
-  <main class="spacer">
-    <slot />
-  </main>
-
   <Footer />
 {/if}
 
 <style lang="scss">
   main {
-    place-items: center;
+    // height: 100%;
+    min-height: 100%;
   }
 </style>

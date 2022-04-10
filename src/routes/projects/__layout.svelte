@@ -2,6 +2,8 @@
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects'
 
+  //fixme needs to move to root layout
+  //refactor and abstract to util later *debt
   let currentTitle = ''
   $: if ($page.url.pathname.split('/').length > 2) {
     currentTitle = $projectsStore[$page.url.pathname.split('/')[2]].subTitle
@@ -32,7 +34,7 @@
     top: 0;
     min-width: 100%;
     grid-column: 2 / 3;
-    background: var(--clr-primary-bg);
+    background: var(--clr-secondary-bg);
   }
 
   // h1 {
@@ -42,6 +44,7 @@
 
   nav {
     // margin-bottom: var(--spacer-200);
+    justify-self: end;
     padding-block: var(--gap-100);
     display: flex;
     justify-content: start;
@@ -51,6 +54,7 @@
   }
 
   .active {
-    border-bottom: 2px solid var(--clr-white);
+    text-decoration: underline solid var(--clr-highlight) 2px;
+    text-underline-offset: 0.5rem;
   }
 </style>

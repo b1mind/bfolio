@@ -7,7 +7,7 @@
 
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
-<article>
+<article class="spacer">
   <header class="wrap spacer">
     <h2>{currentProject.name}</h2>
     <i>{currentProject.subTitle}</i>
@@ -28,6 +28,7 @@ how is the data from the backend returned? does markup get injected? -->
 
 <style lang="scss">
   article {
+    --spacer: 3rem;
     // grid-column: 1 / -1;
     grid-column: 2 / 3;
     min-width: 100%;
@@ -35,13 +36,23 @@ how is the data from the backend returned? does markup get injected? -->
   }
 
   header {
-    --spacer: 0.5rem;
-    margin-bottom: var(--spacer-200);
+    --spacer: 0.25rem;
   }
 
   section {
-    --spacer: var(--spacer-100);
-    margin-bottom: var(--spacer-200);
+    --spacer: 3rem;
+
+    & > * {
+      --spacer: var(--spacer-100);
+    }
+  }
+
+  h3 {
+    max-width: max-content;
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
+    color: var(--clr-primary-bg);
+    background: var(--clr-highlight);
   }
 
   i {

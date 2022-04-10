@@ -1,21 +1,13 @@
 //Let's finish a portfolio! You can do this!
-ToStyle: 
-  ✔ projects layout for mobile @done
-  ☐ subNav styles
-  ☐ main nav boxes and page look
-
 Todo:
-  ✔ css normalizer/reset (custom) @done
-  ✔ make sure to commit changes first thing @done
-  ✔ spacer custom props @done
-
-  ☐ clear about tech used in a unique way.
-  ☐ decide how to link live demo and github repo
-  ☐ pick colors and put into custom props
   ☐ man nav needs to be functional, animate or resize on page transition.
-  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
+  ☐ finish bringing figma styles into layout
+  ✔ pick colors and put into custom props @done
 
 Projects:
+  ☐ clear about tech used in a unique way.
+  ☐ decide how to link live demo and github repo
+  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ images of projects, animated gifs, x4
   ☐ copywrite for each section 
   ☐ pizza-boy polish and design the "burger boy" branding
@@ -42,6 +34,10 @@ Wishlist:
   ☐ try to get private gsap repo working in docker server side
 
 Archive:
+  ✔ projects layout for mobile @done @project(ToStyle)
+  ✔ css normalizer/reset (custom) @done @project(Todo)
+  ✔ make sure to commit changes first thing @done @project(Todo)
+  ✔ spacer custom props @done @project(Todo)
   ✔ problems + solutions + highlight + overview @done @project(Projects)
   ✔ bring in social component from demystified challenge @done @project(//ideas)
   ✔ make store to handle data get to it worry about shaping it to backend later @done @project(Todo)
