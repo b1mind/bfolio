@@ -1,16 +1,18 @@
 //Let's finish a portfolio! You can do this!
 Todo:
-  ☐ man nav needs to be functional, animate or resize on page transition.
-  ☐ finish bringing figma styles into layout
+  ✘ man nav needs to be functional, animate or resize on page transition. @cancelled
+  ✔ finish bringing figma styles into layout @done
   ✔ pick colors and put into custom props @done
+  ✔ h1 be header in main not nav header @done
+  ✔ add info icon to card to signal link through @done
+  ✔ decide how to link live demo and github repo @done
+  ☐ clear about tech used in a unique way. (vendor-icons.svg)
+  ☐ add skip links for navigation
+  ☐ quick screen reader check to get and idea of aria needed
 
 Projects:
-  ☐ clear about tech used in a unique way.
-  ☐ decide how to link live demo and github repo
-  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ images of projects, animated gifs, x4
   ☐ copywrite for each section 
-  ☐ pizza-boy polish and design the "burger boy" branding
 
 Contact:
   ☐ form
@@ -20,18 +22,19 @@ About:
   ☐ picture / really need to call in a favor get pro?
   ☐ describe yourself... don't be corny ... how..
 
-Blog:
-  ☐ category: Tech, opEd, Tools
-  ☐ basic url root/slug for post > /blog (only for home)
-
 Wishlist: 
+  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
   ☐ get a svg background set up for playtime
-  ☐ set up github cms with md files
+  ☐ set up github cms with md files or something for CMS
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
   ☐ attempt to get Solid Auth working (don't spend all year on it)
   ☐ try to get private gsap repo working in docker server side
+
+  Blog:
+    ☐ category: Tech, opEd, Tools
+    ☐ basic url root/slug for post > /blog (only for home)
 
 Archive:
   ✔ projects layout for mobile @done @project(ToStyle)

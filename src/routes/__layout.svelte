@@ -22,6 +22,7 @@
 
 <style lang="scss">
   main {
+    --spacer: var(--spacer-6);
     // height: 100%;
     min-height: 100%;
   }

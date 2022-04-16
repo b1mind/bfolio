@@ -7,7 +7,7 @@
 
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
-<article class="spacer">
+<article>
   <header class="wrap spacer">
     <h2>{currentProject.name}</h2>
     <i>{currentProject.subTitle}</i>
@@ -16,54 +16,71 @@ how is the data from the backend returned? does markup get injected? -->
   {#each currentProject.sections as section}
     <section class="wrap spacer">
       <h3>{section.title}</h3>
-      <img src={section.img} alt={section.altText} />
+      <div class="grid">
+        <img src={section.img} alt={section.altText} />
 
-      <!-- note @html to render the html content of the section -->
-      <div class="spacer">
-        {@html section.content}
+        <!-- note @html to render the html content of the section -->
+        <div class="spacer">
+          {@html section.content}
+        </div>
       </div>
     </section>
   {/each}
 </article>
 
 <style lang="scss">
+  @use '../../lib/scss/vars.scss' as *;
+
   article {
-    --spacer: 3rem;
     // grid-column: 1 / -1;
     grid-column: 2 / 3;
     min-width: 100%;
-    font-size: 1.15rem;
   }
 
   header {
-    --spacer: 0.25rem;
+    --spacer: var(--spacer-1);
   }
 
   section {
-    --spacer: 3rem;
+    // --spacer: var(--spacer-9);
+    margin-block: var(--spacer-9);
 
     & > * {
-      --spacer: var(--spacer-100);
+      --spacer: var(--spacer-5);
     }
+
+    // & + section {
+    //   --spacer: 15rem;
+    // }
   }
 
   h3 {
     max-width: max-content;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
-    color: var(--clr-primary-bg);
+    color: var(--clr-secondary-bg);
     background: var(--clr-highlight);
   }
 
   i {
     display: block;
+    font-size: 1.15rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--gap-5);
+
+    @media (min-width: $mediaSml) {
+      grid-template-columns: 2fr 3fr;
+    }
   }
 
   img {
+    max-width: 260px;
+    // max-height: 400px;
     // max-width: 280px;
-    width: max(280px, 100%);
-    max-height: 300px;
-    object-fit: cover;
+    // object-fit: cover;
     z-index: -99;
   }
 </style>

@@ -15,33 +15,24 @@
 
 <style lang="scss">
   header {
+    //fix need mobile fix or % (@supports for dvt and new vp units?)
     min-height: 100vh;
   }
 
   nav {
     // grid-column: 1 / -1;
     grid-column: 2 / 3;
-    max-width: max-content;
     display: grid;
     gap: 0.5rem;
-    place-content: center;
+    justify-content: center;
+    align-content: center;
+    text-align: right;
   }
 
   a {
-    color: var(--clr-secondary);
     font-size: var(--fs-lrg);
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 3px solid transparent;
-
-    &:hover {
-      color: var(--clr-white);
-      // filter: invert(55%);
-    }
-  }
-
-  .active {
-    border-bottom: 4px solid var(--clr-white);
   }
 </style>

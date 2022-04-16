@@ -1,8 +1,5 @@
 <script>
-  import { page } from '$app/stores'
   import SocialIcons from './SocialIcons.svelte'
-
-  $: path = $page.url.pathname
 
   const icons = [
     {
@@ -41,13 +38,9 @@
 <style lang="scss">
   @use '../scss/vars' as *;
 
-  footer {
-    grid-column: 2 / 3;
-  }
-
   ul {
-    margin: 0;
-    padding: 1rem 0;
+    margin-top: var(--spacer-8);
+    padding: var(--gap-5) 0;
     display: grid;
     grid-auto-flow: column;
     place-content: center;

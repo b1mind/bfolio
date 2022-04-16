@@ -2,7 +2,7 @@
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects'
 
-  //fixme needs to move to root layout
+  //fixme needs to move to root layout or duplicate
   //refactor and abstract to util later *debt
   let currentTitle = ''
   $: if ($page.url.pathname.split('/').length > 2) {
@@ -16,7 +16,7 @@
   <title>{currentTitle}</title>
 </svelte:head>
 
-<header class="wrap">
+<div class="navBar wrap">
   <nav class="subNav">
     {#each Object.entries($projectsStore) as [key, project]}
       <a href="/projects/{key}" class:active={$page.url.pathname === `/projects/${key}`}>
@@ -24,17 +24,18 @@
       </a>
     {/each}
   </nav>
-</header>
+</div>
 
 <slot />
 
 <style lang="scss">
-  header {
+  .navBar {
     position: sticky;
     top: 0;
     min-width: 100%;
     grid-column: 2 / 3;
     background: var(--clr-secondary-bg);
+    z-index: 999;
   }
 
   // h1 {
@@ -45,12 +46,13 @@
   nav {
     // margin-bottom: var(--spacer-200);
     justify-self: end;
-    padding-block: var(--gap-100);
+    padding-block: var(--gap-2);
     display: flex;
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--gap-100) var(--gap-100);
+    gap: var(--gap-5) var(--gap-5);
+    text-transform: lowercase;
   }
 
   .active {
