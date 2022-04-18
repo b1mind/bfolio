@@ -1,11 +1,12 @@
 <script>
+  import Title from '$lib/component/Title.svelte'
   import { projectsStore } from '$lib/data/projects'
 </script>
 
-<div class="wrap spacer">
+<Title>
   <h1 class="title-med">Proof of Work</h1>
-  <i>Examples of coding abilities</i>
-</div>
+  <i>Samples of coding projects</i>
+</Title>
 
 {#each Object.entries($projectsStore) as [key, project]}
   <!-- //todo find out if you want to link card or make button
@@ -45,21 +46,24 @@
 {/each}
 
 <style lang="scss">
-  article {
-    border: 3px solid var(--clr-);
-  }
-
   header {
     --spacer: var(--spacer-1);
-    // grid-row: 1 / 2;
-    height: max-content;
-    padding: 1rem;
-    background-color: var(--clr-secondary-bg);
-    z-index: 9;
+  }
 
-    & svg {
-      display: inline;
-      fill: var(--clr-highlight);
+  article {
+    border: 3px solid var(--clr-);
+
+    header {
+      // grid-row: 1 / 2;
+      height: max-content;
+      padding: 1rem;
+      background-color: var(--clr-secondary-bg);
+      z-index: 9;
+
+      & svg {
+        display: inline;
+        fill: var(--clr-highlight);
+      }
     }
   }
 

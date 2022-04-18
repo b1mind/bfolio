@@ -18,7 +18,6 @@
   header {
     position: relative;
     overflow: hidden;
-    grid-auto-flow: row;
 
     &::after {
       content: attr(data-header) '';

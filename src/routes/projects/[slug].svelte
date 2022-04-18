@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import Title from '$lib/component/Title.svelte'
   import { projectsStore } from '$lib/data/projects.js'
 
   $: currentProject = $projectsStore[$page.params.slug]
@@ -8,16 +9,54 @@
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
 <article>
-  <header class="wrap spacer">
-    <h2>{currentProject.name}</h2>
+  <Title
+    thumbnail={currentProject.thumbnail}
+    thumbnail2={currentProject.thumbnail2}
+    techUsed={currentProject.techUsed}
+  >
+    <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
-  </header>
+  </Title>
+
+  <section class="wrap spacer">
+    <header class="box-wrap">
+      <h2 class="title-sml">{currentProject.overview.title}</h2>
+      <a href={currentProject.link} class="box">
+        <svg width="38" height="38">
+          <use href="/img/main-icons.svg#link" />
+        </svg>
+      </a>
+
+      <a href={currentProject.repo} class="box">
+        <svg width="38" height="38">
+          <use fill="unset" href="/img/social-icons.svg#github" />
+        </svg>
+      </a>
+    </header>
+
+    <div class="grid">
+      <img src={currentProject.overview.img} alt={currentProject.overview.altText} />
+
+      <div class="spacer">
+        {@html currentProject.overview.content}
+      </div>
+    </div>
+  </section>
 
   {#each currentProject.sections as section}
     <section class="wrap spacer">
-      <h3>{section.title}</h3>
+      <h2 class="title-sml">{section.title}</h2>
+
       <div class="grid">
-        <img src={section.img} alt={section.altText} />
+        {#if section.img}
+          <img src={section.img} alt={section.altText} />
+        {:else}
+          <ul>
+            {#each section.list as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
+        {/if}
 
         <!-- note @html to render the html content of the section -->
         <div class="spacer">
@@ -32,29 +71,35 @@ how is the data from the backend returned? does markup get injected? -->
   @use '../../lib/scss/vars.scss' as *;
 
   article {
-    // grid-column: 1 / -1;
-    grid-column: 2 / 3;
     min-width: 100%;
   }
 
-  header {
-    --spacer: var(--spacer-1);
+  .box-wrap {
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  .box {
+    padding: 5px;
+    display: grid;
+    place-content: center;
+    color: var(--clr-secondary-bg);
+    background: var(--clr-highlight);
+
+    svg {
+      filter: saturate(0%) brightness(0%);
+    }
   }
 
   section {
-    // --spacer: var(--spacer-9);
-    margin-block: var(--spacer-9);
+    margin-block: var(--spacer);
 
     & > * {
       --spacer: var(--spacer-5);
     }
-
-    // & + section {
-    //   --spacer: 15rem;
-    // }
   }
 
-  h3 {
+  h2 {
     max-width: max-content;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
@@ -77,10 +122,10 @@ how is the data from the backend returned? does markup get injected? -->
   }
 
   img {
-    max-width: 260px;
-    // max-height: 400px;
+    // max-width: 260px;
+    max-height: 400px;
     // max-width: 280px;
-    // object-fit: cover;
+    object-fit: cover;
     z-index: -99;
   }
 </style>

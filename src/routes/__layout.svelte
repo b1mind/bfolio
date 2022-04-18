@@ -12,18 +12,11 @@
   <Header />
 {/if}
 
-<main class="spacer">
-  <slot />
-</main>
+<slot />
 
 {#if path !== '/'}
   <Footer />
 {/if}
 
 <style lang="scss">
-  main {
-    --spacer: var(--spacer-6);
-    // height: 100%;
-    min-height: 100%;
-  }
 </style>

@@ -11,19 +11,6 @@
 </a>
 
 <style lang="scss">
-  /* todo add background styles or clean up */
-  /* a {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    place-items: center;
-    border-radius: 100%;
-  }
-  a:hover,
-  a:focus {
-    background: white;
-  } */
-
   svg {
     filter: contrast(0%) brightness(150%);
   }
