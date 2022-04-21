@@ -26,6 +26,7 @@
 
   --fs-1: 0.5rem;
   --fs-3: 0.75rem;
+  --fs-4: 0.9rem;
   --fs-5: 1.15rem;
   --fs-6: 1.75rem;
   --fs-7: 2.3rem;
@@ -90,10 +91,10 @@ body {
   min-height: 100%;
   margin: 0;
   color: var(--clr-white);
+  font-size: var(--fs-5);
   font-family: 'IBM Plex Sans', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  // overflow: hidden;
 }
 
 img,
@@ -220,7 +221,7 @@ a {
 
 nav a {
   color: var(--clr-primary);
-  font-weight: bold;
+  font-weight: var(--fw-6);
 
   &:hover {
     color: var(--clr-secondary);

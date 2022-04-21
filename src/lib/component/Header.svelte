@@ -18,6 +18,7 @@
   header {
     position: relative;
     overflow: hidden;
+    z-index: 0;
 
     &::after {
       content: attr(data-header) '';

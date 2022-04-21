@@ -88,6 +88,7 @@
     flex-wrap: wrap;
     gap: var(--gap-5) var(--gap-5);
     text-transform: lowercase;
+    font-size: var(--fs-4);
   }
 
   .active {

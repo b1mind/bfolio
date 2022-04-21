@@ -54,6 +54,7 @@
     min-height: 100vh;
     grid-template-areas: '. l .';
     overflow: hidden;
+    z-index: 0;
 
     & > * {
       grid-area: l;

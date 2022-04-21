@@ -123,6 +123,5 @@ how is the data from the backend returned? does markup get injected? -->
     max-height: 400px;
     // max-width: 280px;
     object-fit: cover;
-    z-index: -99;
   }
 </style>
