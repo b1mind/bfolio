@@ -8,51 +8,59 @@
   <i>Samples of coding projects</i>
 </Title>
 
-{#each Object.entries($projectsStore) as [key, project]}
-  <!-- //todo find out if you want to link card or make button
+<div class="wrap">
+  <div class="grid">
+    {#each Object.entries($projectsStore) as [key, project]}
+      <!-- //todo find out if you want to link card or make button
       // refactor cards to for better semantics -->
 
-  <article class="wrap">
-    <header class="spacer">
-      <a href="/projects/{key}">
-        <b class="title-sml">
-          {project.name}
+      <article>
+        <header class="spacer">
+          <a href="/projects/{key}">
+            <b class="title-sml">
+              {project.name}
 
-          <svg width="24" height="24">
-            <use href="/img/main-icons.svg#info" />
-          </svg>
-        </b>
-      </a>
-      <i>{project.subTitle}</i>
-    </header>
+              <svg width="24" height="24">
+                <use href="/img/main-icons.svg#info" />
+              </svg>
+            </b>
+          </a>
+          <i>{project.subTitle}</i>
+        </header>
 
-    <div class="img">
-      <img src={project.thumbnail} alt="{project.name} preview" />
-      <div class="box-wrap">
-        <a href={project.link} class="box">
-          <svg width="38" height="38">
-            <use href="/img/main-icons.svg#link" />
-          </svg>
-        </a>
+        <div class="img">
+          <img src={project.thumbnail} alt="{project.name} preview" />
+          <div class="box-wrap">
+            <a href={project.link} class="box">
+              <svg width="38" height="38">
+                <use href="/img/main-icons.svg#link" />
+              </svg>
+            </a>
 
-        <a href={project.repo} class="box">
-          <svg width="38" height="38">
-            <use fill="unset" href="/img/social-icons.svg#github" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </article>
-{/each}
+            <a href={project.repo} class="box">
+              <svg width="38" height="38">
+                <use fill="unset" href="/img/social-icons.svg#github" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    {/each}
+  </div>
+</div>
 
 <style lang="scss">
   header {
     --spacer: var(--spacer-1);
   }
 
-  article {
-    border: 3px solid var(--clr-);
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacer-3);
+  }
 
+  article {
     header {
       // grid-row: 1 / 2;
       height: max-content;
@@ -79,7 +87,7 @@
     img {
       grid-area: l;
       min-width: 100%;
-      max-height: 300px;
+      max-height: 200px;
       object-fit: cover;
     }
   }

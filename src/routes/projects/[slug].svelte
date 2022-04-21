@@ -8,7 +8,7 @@
 
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
-<article>
+<article class="spacer">
   <Title
     thumbnail={currentProject.thumbnail}
     thumbnail2={currentProject.thumbnail2}
@@ -92,8 +92,6 @@ how is the data from the backend returned? does markup get injected? -->
   }
 
   section {
-    margin-block: var(--spacer);
-
     & > * {
       --spacer: var(--spacer-5);
     }
@@ -109,7 +107,6 @@ how is the data from the backend returned? does markup get injected? -->
 
   i {
     display: block;
-    font-size: 1.15rem;
   }
 
   .grid {

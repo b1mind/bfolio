@@ -8,7 +8,7 @@
 <header class="wrap">
   <div class="logo">
     <b>Bren</b>
-    <svg height="37" viewBox="0 0 125 117" xmlns="http://www.w3.org/2000/svg">
+    <svg height="36" viewBox="0 0 125 117" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M24 44.9984H9V14.9984C9.00153 18.6099 3.73701 18.0063 0 17.9984V6.99838C9.95537 7.00583 7.42383 0.453084 8.98668 0C14.8419 0 18.1509 0.0337733 24 0V44.9984Z"
         fill="#ffffff"
@@ -67,16 +67,18 @@
     // max-height: min-content;
     max-height: 35px;
     margin-block-start: 6.5rem;
-    padding: 1rem;
     display: grid;
     grid-auto-flow: column;
     font-size: var(--fs-5);
-    line-height: 0.7;
     letter-spacing: var(--font-spacing);
     z-index: 999;
 
     & > :last-child {
       align-self: end;
+    }
+
+    b {
+      line-height: 0.8;
     }
 
     svg {
