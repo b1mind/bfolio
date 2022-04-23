@@ -76,9 +76,10 @@
   --clr-secondary-bg: var(--blue-9);
   --clr-highlight: var(--yellow-5);
   --clr-white: var(--white-2);
+  --clr-gray: var(--blue-7);
 }
 
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 

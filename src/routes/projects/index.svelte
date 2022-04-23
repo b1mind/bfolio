@@ -39,7 +39,7 @@
 
             <a href={project.repo} class="box">
               <svg width="38" height="38">
-                <use fill="unset" href="/img/social-icons.svg#github" />
+                <use href="/img/social-icons.svg#github" />
               </svg>
             </a>
           </div>
@@ -69,8 +69,8 @@
       z-index: 9;
 
       & svg {
+        --fill: var(--clr-highlight);
         display: inline;
-        fill: var(--clr-highlight);
       }
     }
   }
@@ -101,14 +101,17 @@
   }
 
   .box {
+    --fill: currentColor;
     padding: 5px;
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
     background: var(--clr-highlight);
+    border: 3px solid var(--clr-highlight);
 
-    svg {
-      filter: saturate(0%) brightness(0%);
+    &:hover {
+      --fill: var(--clr-highlight);
+      background: var(--clr-primary-bg);
     }
   }
 </style>

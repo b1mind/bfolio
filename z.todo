@@ -1,21 +1,20 @@
 //Let's finish a portfolio! You can do this!
 Todo:
-  ✘ man nav needs to be functional, animate or resize on page transition. @cancelled
-  ✔ finish bringing figma styles into layout @done
-  ✔ pick colors and put into custom props @done
-  ✔ h1 be header in main not nav header @done
-  ✔ add info icon to card to signal link through @done
-  ✔ decide how to link live demo and github repo @done
-  ☐ clear about tech used in a unique way. (vendor-icons.svg)
+  ✔ change svg sprites to use custom props with fall backs @done
+  ✔ better hover for project card link buttons @done
+  ☐ look into using conditional slots for Title component
+  ✘ quick screen reader check to get and idea of aria needed @cancelled
   ☐ add skip links for navigation
-  ☐ quick screen reader check to get and idea of aria needed
+  ☐ learn how to use Navigator to better test aria needs
 
 Projects:
+  ☐ set asset image sizes and unify thumbnail aspect ratios
   ☐ images of projects, animated gifs, x4
   ☐ copywrite for each section 
 
 Contact:
-  ☐ form
+  ☐ decide if both form and link will use mailTo or find smtp method
+  ☐ form for contact
   ☐ email link safe from spam bots?
 
 About: 
@@ -37,6 +36,13 @@ Wishlist:
     ☐ basic url root/slug for post > /blog (only for home)
 
 Archive:
+  ✘ man nav needs to be functional, animate or resize on page transition. @cancelled @project(Todo)
+  ✔ finish bringing figma styles into layout @done @project(Todo)
+  ✔ pick colors and put into custom props @done @project(Todo)
+  ✔ h1 be header in main not nav header @done @project(Todo)
+  ✔ add info icon to card to signal link through @done @project(Todo)
+  ✔ decide how to link live demo and github repo @done @project(Todo)
+  ✔ clear about tech used in a unique way. (vendor-icons.svg) @done @project(Todo)
   ✔ projects layout for mobile @done @project(ToStyle)
   ✔ css normalizer/reset (custom) @done @project(Todo)
   ✔ make sure to commit changes first thing @done @project(Todo)
