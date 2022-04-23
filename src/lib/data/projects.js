@@ -46,7 +46,8 @@ const data = {
   knittingpro: {
     name: 'Knitting Pro',
     subTitle: 'A web site made with sveltekit',
-    thumbnail: 'https://picsum.photos/800/600?random=1',
+    thumbnail: '/img/knitting/knitting-main.jpg',
+    thumbnail2: '/img/knitting/knitting-page.jpg',
     link: 'https://mysfits-challenge5.vercel.app/',
     repo: 'https://github.com/b1mind/mysfits-challenge5',
     techUsed: ['svelte', 'svg', 'json'],
