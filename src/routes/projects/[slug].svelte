@@ -1,7 +1,8 @@
 <script>
   import { page } from '$app/stores'
-  import Title from '$lib/component/Title.svelte'
   import { projectsStore } from '$lib/data/projects.js'
+  import Title from '$lib/component/Title.svelte'
+  import VendorIcons from '$lib/component/VendorIcons.svelte'
 
   $: currentProject = $projectsStore[$page.params.slug]
 </script>
@@ -9,26 +10,33 @@
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
 <article class="spacer">
-  <Title
-    thumbnail={currentProject.thumbnail}
-    thumbnail2={currentProject.thumbnail2}
-    techUsed={currentProject.techUsed}
-  >
+  <Title thumbnail={currentProject.thumbnail} thumbnail2={currentProject.thumbnail2}>
     <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
+
+    <div class="icons-wrap" slot="icons">
+      {#each currentProject.techUsed as name}
+        <VendorIcons {name} />
+      {/each}
+    </div>
+
+    <div class="img-wrap" slot="thumbnails">
+      <img src={currentProject.thumbnail} alt="Demo of the project" />
+      <img src={currentProject.thumbnail2} alt="Demo of the project" />
+    </div>
   </Title>
 
   <section class="wrap spacer">
     <header class="box-wrap">
       <h2 class="title-sml">{currentProject.overview.title}</h2>
       <a href={currentProject.link} class="box">
-        <svg width="38" height="38">
+        <svg width="28" height="28">
           <use href="/img/main-icons.svg#link" />
         </svg>
       </a>
 
       <a href={currentProject.repo} class="box">
-        <svg width="38" height="38">
+        <svg width="28" height="28">
           <use fill="unset" href="/img/social-icons.svg#github" />
         </svg>
       </a>
@@ -74,20 +82,56 @@ how is the data from the backend returned? does markup get injected? -->
     min-width: 100%;
   }
 
+  .icons-wrap {
+    margin-block-start: var(--spacer-8);
+    display: flex;
+    gap: var(--gap-3);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .img-wrap {
+    // grid-area: img;
+    justify-self: end;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 'l';
+
+    img {
+      grid-area: l;
+      max-height: 250px;
+      box-shadow: var(--shadow-5);
+    }
+
+    img:last-child {
+      transform: translateX(-35px);
+      // opacity: 99;
+    }
+
+    @media (min-width: $mediaSml) {
+      img:first-child {
+        transform: rotate(15deg);
+      }
+    }
+  }
+
   .box-wrap {
     display: inline-flex;
     gap: 0.5rem;
   }
 
   .box {
-    padding: 5px;
+    --fill: currentColor;
+    padding: 4px;
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
     background: var(--clr-highlight);
+    border: 3px solid var(--clr-highlight);
 
-    svg {
-      filter: saturate(0%) brightness(0%);
+    &:hover {
+      --fill: var(--clr-highlight);
+      background: var(--clr-primarty-bg);
     }
   }
 

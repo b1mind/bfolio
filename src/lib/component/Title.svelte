@@ -1,9 +1,6 @@
 <script>
-  import VendorIcons from '$lib/component/VendorIcons.svelte'
-
   export let thumbnail
   export let thumbnail2
-  export let techUsed
 </script>
 
 <div class="wrap">
@@ -11,35 +8,24 @@
     <div class="title spacer">
       <slot />
 
-      <div class="icons-wrap">
-        {#if techUsed}
-          {#each techUsed as name}
-            <VendorIcons {name} />
-          {/each}
-        {:else}
-          <a href="https://codepen.io/b1mind/">
-            <svg width="24" height="24">
-              <use href="/img/main-icons.svg#codepen" />
-            </svg>
-            <b>Codepen Profile</b>
-          </a>
+      <slot name="icons">
+        <a href="https://codepen.io/b1mind/">
+          <svg width="24" height="24">
+            <use href="/img/main-icons.svg#codepen" />
+          </svg>
+          <b>Showcase</b>
+        </a>
 
-          <a href="https://github.com/b1mind/">
-            <svg width="24" height="24">
-              <use href="/img/main-icons.svg#github" />
-            </svg>
-            <b>Github Profile</b>
-          </a>
-        {/if}
-      </div>
+        <a href="https://github.com/b1mind/">
+          <svg width="24" height="24">
+            <use href="/img/main-icons.svg#github" />
+          </svg>
+          <b>Profile</b>
+        </a>
+      </slot>
     </div>
 
-    {#if thumbnail}
-      <div class="img-wrap">
-        <img src={thumbnail} alt="Demo of the project" />
-        <img src={thumbnail2} alt="Demo of the project" />
-      </div>
-    {/if}
+    <slot name="thumbnails" />
   </header>
 </div>
 
@@ -73,45 +59,12 @@
   }
 
   svg {
-    fill: var(--clr-primary);
+    --fill: var(--clr-primary);
   }
 
-  .icons-wrap {
-    margin-block-start: var(--spacer-8);
-    display: flex;
-    gap: var(--gap-3);
-    flex-wrap: wrap;
+  a {
+    display: inline-flex;
+    gap: var(--gap-1);
     align-items: center;
-
-    a {
-      display: inline-flex;
-      gap: var(--gap-1);
-      align-items: center;
-    }
-  }
-
-  .img-wrap {
-    // grid-area: img;
-    justify-self: end;
-    display: grid;
-    align-items: center;
-    grid-template-areas: 'l';
-
-    img {
-      grid-area: l;
-      max-height: 250px;
-      box-shadow: var(--shadow-5);
-    }
-
-    img:last-child {
-      transform: translateX(-35px);
-      // opacity: 99;
-    }
-
-    @media (min-width: $mediaSml) {
-      img:first-child {
-        transform: rotate(15deg);
-      }
-    }
   }
 </style>
