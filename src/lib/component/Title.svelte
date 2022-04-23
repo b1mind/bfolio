@@ -1,8 +1,3 @@
-<script>
-  export let thumbnail
-  export let thumbnail2
-</script>
-
 <div class="wrap">
   <header class="spacer">
     <div class="title spacer">
