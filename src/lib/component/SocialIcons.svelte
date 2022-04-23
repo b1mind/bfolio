@@ -1,6 +1,7 @@
 <script>
   export let name = 'twitter'
   export let url = 'twitter.com'
+
   let icon = `/img/social-icons.svg#${name}`
 </script>
 
@@ -12,10 +13,10 @@
 
 <style lang="scss">
   svg {
-    filter: contrast(0%) brightness(150%);
+    --fill: var(--clr-gray);
   }
 
   svg:hover {
-    filter: none;
+    --fill: unset;
   }
 </style>
