@@ -13,7 +13,7 @@
 
 <style lang="scss">
   svg {
-    --fill: var(--clr-gray);
+    --fill: var(--clr-secondary-bg);
   }
 
   svg:hover {

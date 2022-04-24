@@ -10,7 +10,7 @@
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
 <article class="spacer">
-  <Title thumbnail={currentProject.thumbnail} thumbnail2={currentProject.thumbnail2}>
+  <Title>
     <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
 
@@ -121,17 +121,17 @@ how is the data from the backend returned? does markup get injected? -->
   }
 
   .box {
-    --fill: currentColor;
+    --fill: var(--clr-highlight);
     padding: 4px;
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
-    background: var(--clr-highlight);
+    background: var(--clr-primarty-bg);
     border: 3px solid var(--clr-highlight);
 
     &:hover {
-      --fill: var(--clr-highlight);
-      background: var(--clr-primarty-bg);
+      --fill: currentColor;
+      background: var(--clr-highlight);
     }
   }
 

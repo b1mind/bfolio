@@ -37,10 +37,12 @@
 
 <style lang="scss">
   @use '../scss/vars' as *;
+  footer {
+    margin-top: var(--spacer-9);
+  }
 
   ul {
-    margin-top: var(--spacer-8);
-    padding: var(--gap-5) 0;
+    padding: var(--gap-6) 0;
     display: grid;
     grid-auto-flow: column;
     place-content: center;

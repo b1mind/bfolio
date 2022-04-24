@@ -3,21 +3,7 @@
     <div class="title spacer">
       <slot />
 
-      <slot name="icons">
-        <a href="https://codepen.io/b1mind/">
-          <svg width="24" height="24">
-            <use href="/img/main-icons.svg#codepen" />
-          </svg>
-          <b>Showcase</b>
-        </a>
-
-        <a href="https://github.com/b1mind/">
-          <svg width="24" height="24">
-            <use href="/img/main-icons.svg#github" />
-          </svg>
-          <b>Profile</b>
-        </a>
-      </slot>
+      <slot name="icons" />
     </div>
 
     <slot name="thumbnails" />
@@ -51,15 +37,5 @@
   .title {
     --spacer: var(--spacer-2);
     // grid-area: title;
-  }
-
-  svg {
-    --fill: var(--clr-primary);
-  }
-
-  a {
-    display: inline-flex;
-    gap: var(--gap-1);
-    align-items: center;
   }
 </style>

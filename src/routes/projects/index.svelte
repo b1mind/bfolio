@@ -6,6 +6,22 @@
 <Title>
   <h1 class="title-med">Proof of Work</h1>
   <i>Samples of coding projects</i>
+
+  <div class="icons-wrap" slot="icons">
+    <a href="https://codepen.io/b1mind/">
+      <svg width="24" height="24">
+        <use href="/img/main-icons.svg#codepen" />
+      </svg>
+      <b>Showcase</b>
+    </a>
+
+    <a href="https://github.com/b1mind/">
+      <svg width="24" height="24">
+        <use href="/img/main-icons.svg#github" />
+      </svg>
+      <b>Profile</b>
+    </a>
+  </div>
 </Title>
 
 <div class="wrap">
@@ -52,6 +68,24 @@
 <style lang="scss">
   header {
     --spacer: var(--spacer-1);
+  }
+
+  .icons-wrap {
+    margin-block-start: var(--spacer-8);
+    display: flex;
+    gap: var(--gap-3);
+    flex-wrap: wrap;
+    align-items: center;
+
+    svg {
+      --fill: var(--clr-primary);
+    }
+
+    a {
+      display: inline-flex;
+      gap: var(--gap-1);
+      align-items: center;
+    }
   }
 
   .grid {
@@ -101,17 +135,17 @@
   }
 
   .box {
-    --fill: currentColor;
+    --fill: var(--clr-highlight);
     padding: 5px;
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
-    background: var(--clr-highlight);
+    background: var(--clr-primary-bg);
     border: 3px solid var(--clr-highlight);
 
     &:hover {
-      --fill: var(--clr-highlight);
-      background: var(--clr-primary-bg);
+      --fill: currentColor;
+      background: var(--clr-highlight);
     }
   }
 </style>
