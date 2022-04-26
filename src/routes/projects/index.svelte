@@ -9,14 +9,14 @@
 
   <div class="icons-wrap" slot="icons">
     <a href="https://codepen.io/b1mind/">
-      <svg width="24" height="24">
+      <svg width="32" height="32">
         <use href="/img/main-icons.svg#codepen" />
       </svg>
       <b>Showcase</b>
     </a>
 
     <a href="https://github.com/b1mind/">
-      <svg width="24" height="24">
+      <svg width="32" height="32">
         <use href="/img/main-icons.svg#github" />
       </svg>
       <b>Profile</b>
@@ -36,7 +36,7 @@
             <b class="title-sml">
               {project.name}
 
-              <svg width="24" height="24">
+              <svg width="22" height="22">
                 <use href="/img/main-icons.svg#info" />
               </svg>
             </b>
@@ -48,13 +48,13 @@
           <img src={project.thumbnail} alt="{project.name} preview" />
           <div class="box-wrap">
             <a href={project.link} class="box">
-              <svg width="38" height="38">
+              <svg width="28" height="28">
                 <use href="/img/main-icons.svg#link" />
               </svg>
             </a>
 
             <a href={project.repo} class="box">
-              <svg width="38" height="38">
+              <svg width="28" height="28">
                 <use href="/img/social-icons.svg#github" />
               </svg>
             </a>
@@ -66,6 +66,8 @@
 </div>
 
 <style lang="scss">
+  @use '../../lib/scss/vars.scss' as *;
+
   header {
     --spacer: var(--spacer-1);
   }
@@ -90,13 +92,21 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacer-3);
+    grid-template-columns: 1fr;
+    gap: var(--spacer-9);
+
+    // @media (min-width: $mediaMed) {
+    //   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    //   & article:last-child {
+    //     min-width: 50%;
+    //     grid-column: 1 / -1;
+    //     justify-self: center;
+    //   }
+    // }
   }
 
   article {
     header {
-      // grid-row: 1 / 2;
       height: max-content;
       padding: 1rem;
       background-color: var(--clr-secondary-bg);
@@ -121,7 +131,7 @@
     img {
       grid-area: l;
       min-width: 100%;
-      max-height: 200px;
+      max-height: 350px;
       object-fit: cover;
     }
   }
@@ -140,8 +150,8 @@
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
-    background: var(--clr-primary-bg);
-    border: 3px solid var(--clr-highlight);
+    background: var(--clr-secondary-bg);
+    border: 2px solid var(--clr-highlight);
 
     &:hover {
       --fill: currentColor;

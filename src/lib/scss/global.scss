@@ -32,7 +32,7 @@
   --fs-7: 2.3rem;
   --fs-8: 4.6rem;
   --fs-lrg: clamp(3.6rem, 10vw + 1rem, 6.6rem);
-  --fs-xl: clamp(12rem, 15vw + 1rem, 16rem);
+  --fs-xl: clamp(12rem, 28vw + 1rem, 16rem);
 
   --fw-1: 100;
   --fw-2: 200;
@@ -48,7 +48,11 @@
   --spacer-5: 1rem;
   --spacer-6: 1.5rem;
   --spacer-8: 2.25rem;
-  --spacer-9: 8.5rem;
+  --spacer-9: 6.5rem;
+
+  @media (max-width: $mediaSml) {
+    --spacer-9: 3.5rem;
+  }
 
   --gap-1: 0.25rem;
   --gap-2: 0.35rem;
@@ -225,7 +229,7 @@ nav a {
   font-weight: var(--fw-6);
 
   &:hover {
-    color: var(--clr-secondary);
+    color: var(--clr-gray);
     text-decoration: none;
     // filter: invert(55%);
   }

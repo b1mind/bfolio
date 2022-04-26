@@ -41,6 +41,8 @@
     font-size: var(--fs-lrg);
     margin-block: 2rem;
     text-align: right;
+    text-decoration: underline 0.075em var(--clr-highlight);
+    text-underline-offset: 0.075em;
   }
 
   nav {
@@ -48,7 +50,7 @@
     justify-self: end;
     // grid-column: 2 / 3;
     max-width: max-content;
-    margin-block-start: 0.75rem;
+    margin-block: 0.75rem;
     display: grid;
     grid-auto-flow: column;
     gap: var(--gap-5);
@@ -66,8 +68,8 @@
     // display: none;
     color: var(--clr-secondary-bg);
     // background-color: var(--clr-secondary-bg);
-    // text-decoration: line-through 0.5rem;
-    // text-underline-offset: 0.5rem;
+    // text-decoration: underline 3px var(--clr-highlight);
+    // text-underline-offset: 0.25rem;
     z-index: -99;
   }
 </style>

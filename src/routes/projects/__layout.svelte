@@ -64,6 +64,7 @@
     top: 0;
     align-items: center;
     background: var(--clr-secondary-bg);
+    border-bottom: 2px solid var(--clr-gray);
     z-index: 999;
   }
 
@@ -93,6 +94,6 @@
 
   .active {
     text-decoration: underline solid var(--clr-highlight) 2px;
-    text-underline-offset: 0.5rem;
+    text-underline-offset: 0.65rem;
   }
 </style>

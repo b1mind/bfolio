@@ -99,7 +99,7 @@ how is the data from the backend returned? does markup get injected? -->
 
     img {
       grid-area: l;
-      max-height: 250px;
+      max-height: 300px;
       box-shadow: var(--shadow-5);
     }
 
@@ -126,8 +126,8 @@ how is the data from the backend returned? does markup get injected? -->
     display: grid;
     place-content: center;
     color: var(--clr-secondary-bg);
-    background: var(--clr-primarty-bg);
-    border: 3px solid var(--clr-highlight);
+    background: var(--clr-secondary-bg);
+    border: 2px solid var(--clr-highlight);
 
     &:hover {
       --fill: currentColor;

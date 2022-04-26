@@ -16,7 +16,6 @@
   header {
     --spacer: var(--spacer-1);
 
-    min-height: 266px;
     padding: 1rem;
     display: grid;
     gap: var(--gap-5);
@@ -29,6 +28,7 @@
     );
 
     @media (min-width: $mediaSml) {
+      min-height: 350px;
       grid-template-columns: 3fr 2fr;
       // grid-template-areas: 'title img';
     }

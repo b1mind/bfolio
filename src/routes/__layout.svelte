@@ -6,6 +6,8 @@
   import Header from '$lib/component/Header.svelte'
   import '$lib/scss/normalize.css'
   import '$lib/scss/global.scss'
+
+  const hideMe = ['/', '/contact']
 </script>
 
 {#if path !== '/'}
