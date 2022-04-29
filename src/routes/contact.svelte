@@ -1,9 +1,11 @@
 <script>
+  const emailAddress = 'b@1mind.dev'
+
   function submitHandler(e) {
-    const emailAddress = 'b@1mind.dev'
     const emailSubject = e.target.elements.subject.value
     const emailBody = e.target.elements.body.value
-    document.location.href = `mailto:${emailAddress}?subject=${emailSubject}&body=${emailBody}`
+    const mailTo = `mailto:${emailAddress}?subject=${emailSubject}&body=${emailBody}`
+    document.location.href = mailTo
   }
 </script>
 
@@ -12,14 +14,38 @@
   <div class="wrap">
     <svg class="overlay"> <use href="/img/main-icons.svg#mail-at" /></svg>
     <article>
-      <header>
+      <header class="spacer">
         <h1 class="title-med">Get in touch</h1>
+
+        <div class="icons-wrap">
+          <a href="mailto:{emailAddress}">
+            <svg width="32" height="32">
+              <use href="/img/main-icons.svg#mail-send" />
+            </svg>
+            <b>b@1mind.dev</b>
+          </a>
+
+          <a href="https://twitter.com/b1mind/">
+            <svg width="32" height="32">
+              <use href="/img/social-icons.svg#twitter" />
+            </svg>
+            <b>@b1mind</b>
+          </a>
+
+          <a href="https://www.linkedin.com/in/brent-morton-86636b192">
+            <svg width="32" height="32">
+              <use href="/img/social-icons.svg#linkedIn" />
+            </svg>
+            <b>Brent Morton</b>
+          </a>
+        </div>
       </header>
 
       <form class="spacer" on:submit|preventDefault={submitHandler}>
         <b class="title-sml">Email</b>
-        <label for="subject">Subject<input type="text" name="subject" /></label>
-        <label for="body">Body<textarea rows="5" name="body" /></label>
+        <label for="subject">Subject:<input type="text" name="subject" /></label>
+        <label for="body">Body:<textarea rows="5" name="body" /></label>
+
         <button type="submit">Send</button>
       </form>
     </article>
@@ -30,6 +56,7 @@
   @use '../lib/scss/vars.scss' as *;
 
   main {
+    display: grid;
     overflow: hidden;
     z-index: 0;
   }
@@ -69,6 +96,22 @@
     }
   }
 
+  .icons-wrap {
+    max-width: max-content;
+    display: grid;
+    gap: var(--gap-5);
+
+    svg {
+      --fill: var(--clr-primary);
+    }
+
+    a {
+      display: inline-flex;
+      gap: var(--gap-1);
+      align-items: center;
+    }
+  }
+
   label,
   input,
   textarea {
@@ -102,12 +145,12 @@
     color: var(--clr-highlight);
     font-weight: var(--fw-5);
     background: var(--clr-secondary-bg);
-    border: 2px solid var(--clr-secondary-bg);
+    border: 2px solid var(--clr-highlight);
     cursor: pointer;
 
     &:hover {
-      // color: var(--clr-secondary-bg);
-      // background: var(--clr-highlight);
+      color: var(--clr-secondary-bg);
+      background: var(--clr-highlight);
       border: 2px solid var(--clr-highlight);
     }
   }

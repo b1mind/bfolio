@@ -2,7 +2,6 @@
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects.js'
   import Title from '$lib/component/Title.svelte'
-  import VendorIcons from '$lib/component/VendorIcons.svelte'
 
   $: currentProject = $projectsStore[$page.params.slug]
 </script>
@@ -16,7 +15,9 @@ how is the data from the backend returned? does markup get injected? -->
 
     <div class="icons-wrap" slot="icons">
       {#each currentProject.techUsed as name}
-        <VendorIcons {name} />
+        <svg aria-label={name} width="32" height="32">
+          <use href="/img/vendor-icons.svg#{name}" />
+        </svg>
       {/each}
     </div>
 
@@ -88,6 +89,10 @@ how is the data from the backend returned? does markup get injected? -->
     gap: var(--gap-3);
     flex-wrap: wrap;
     align-items: center;
+
+    & svg {
+      --fill: var(--clr-primary);
+    }
   }
 
   .img-wrap {
@@ -99,7 +104,7 @@ how is the data from the backend returned? does markup get injected? -->
 
     img {
       grid-area: l;
-      max-height: 300px;
+      max-height: 400px;
       box-shadow: var(--shadow-5);
     }
 

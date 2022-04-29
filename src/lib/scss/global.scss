@@ -1,5 +1,5 @@
 //sassy vars
-@use '../scss/vars.scss' as *;
+@use '../scss/vars' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-//todo make use of has()? like open props does/look to example
+//todo make use of where(html)? like open props does/look to example
 :root {
   --blue-9: hsla(223, 27%, 10%, 1);
   --blue-8: hsla(223, 26%, 21%, 1);
@@ -26,7 +26,7 @@
 
   --fs-1: 0.5rem;
   --fs-3: 0.75rem;
-  --fs-4: 0.9rem;
+  --fs-4: 0.95rem;
   --fs-5: 1.15rem;
   --fs-6: 1.75rem;
   --fs-7: 2.3rem;
@@ -42,16 +42,19 @@
   --fw-6: 600;
   --fw-7: 700;
 
+  //todo better spacing
   --spacer-1: 0.25rem;
   --spacer-2: 0.5rem;
   --spacer-3: 0.75rem;
+  --spacer-4: 0.85rem;
   --spacer-5: 1rem;
   --spacer-6: 1.5rem;
+  --spacer-7: 2rem;
   --spacer-8: 2.25rem;
   --spacer-9: 6.5rem;
 
   @media (max-width: $mediaSml) {
-    --spacer-9: 3.5rem;
+    --spacer-9: 3.25rem;
   }
 
   --gap-1: 0.25rem;
@@ -217,7 +220,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline var(--clr-highlight);
+    text-decoration: 0.15em underline var(--clr-highlight);
     text-underline-offset: 0.15em;
     // research this
     // text-underline-position: from-font;
@@ -229,9 +232,18 @@ nav a {
   font-weight: var(--fw-6);
 
   &:hover {
-    color: var(--clr-gray);
+    color: var(--clr-white);
     text-decoration: none;
     // filter: invert(55%);
+  }
+}
+
+p a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  &:hover {
+    text-decoration: 0.15em underline var(--clr-highlight);
+    text-underline-offset: 0.15em;
   }
 }
 
@@ -243,4 +255,18 @@ nav a {
 img::selection {
   color: unset;
   background: unset;
+}
+
+p > img:nth-child(2n + 1),
+p + p > img:nth-child(2n + 2) {
+  float: right;
+  clear: right;
+  // padding: 0.5em 0 0.5em 0.5em;
+}
+
+p > img:nth-child(2n + 2),
+p + p > img:nth-child(2n + 1) {
+  float: left;
+  clear: left;
+  // padding: 0.5em 0.5em 0.5em 0;
 }

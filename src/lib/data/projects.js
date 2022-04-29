@@ -8,7 +8,7 @@ const data = {
     thumbnail2: '/img/overlay/overlay-start.jpg',
     link: 'https://www.twitch.tv/b1mind',
     repo: 'https://github.com/b1mind/stream-stuff',
-    techUsed: ['svelte', 'svg'],
+    techUsed: ['svelte', 'svg', 'figma', 'gsap'],
     overview: {
       title: 'Overview',
       content:
@@ -21,7 +21,7 @@ const data = {
       {
         title: 'Challenges',
         content:
-          '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!,</p><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!</p>',
+          '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, <img src="https://picsum.photos/50/50" alt="random" />architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum <img src="https://picsum.photos/50/50" alt="random" />ex repellat quas error id ipsa unde nisi optio ad!,</p><p> <img src="https://picsum.photos/50/50" alt="random" />Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!</p>',
         list: ['item 1', 'item 2', 'item 3', 'item 4'],
       },
 
@@ -45,12 +45,12 @@ const data = {
 
   knittingpro: {
     name: 'Knitting Pro',
-    subTitle: 'A web site made with sveltekit',
+    subTitle: 'Dynamic components and pages',
     thumbnail: '/img/knitting/knitting-main.jpg',
     thumbnail2: '/img/knitting/knitting-page.jpg',
     link: 'https://mysfits-challenge5.vercel.app/',
     repo: 'https://github.com/b1mind/mysfits-challenge5',
-    techUsed: ['svelte', 'svg', 'json'],
+    techUsed: ['svelte', 'json'],
     overview: {
       title: 'Overview',
       content:
@@ -93,7 +93,7 @@ const data = {
     thumbnail2: '/img/pizza-app/android-full.png',
     link: 'https://b1mind.github.io/pizza-boy',
     repo: 'https://github.com/b1mind/pizza-boy',
-    techUsed: ['svelte', 'svg'],
+    techUsed: ['svelte', 'svg', 'figma', 'gsap'],
     overview: {
       title: 'Overview',
       content:

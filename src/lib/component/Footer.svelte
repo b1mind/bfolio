@@ -18,6 +18,10 @@
       name: 'codepen',
       url: 'codepen.io/b1mind/',
     },
+    {
+      name: 'linkedIn',
+      url: 'https://www.linkedin.com/in/brent-morton-86636b192',
+    },
   ]
 </script>
 
