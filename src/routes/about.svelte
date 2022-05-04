@@ -1,6 +1,6 @@
 <main>
   <div class="bar" />
-  <div class="wrap">
+  <div class="wrap spacer">
     <h1>Brent S. Morton</h1>
     <p>
       I enjoy creating dynamic interactive components and telling stories via websites,
