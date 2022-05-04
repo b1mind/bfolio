@@ -31,7 +31,7 @@
       </a>
     </div>
   </nav>
-  <h1>{path.split('/')[1]}</h1>
+  <b>{path.split('/')[1]}</b>
 </header>
 
 <style lang="scss">
@@ -62,7 +62,7 @@
     }
   }
 
-  h1 {
+  b {
     display: block;
     font-size: var(--fs-lrg);
     margin-block: var(--spacer-7);
