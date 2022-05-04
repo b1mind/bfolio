@@ -42,6 +42,7 @@
   .navBar {
     position: sticky;
     top: 0;
+    height: max-content;
     align-items: center;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);

@@ -143,6 +143,10 @@ h1,
 .title-lrg {
   font-size: var(--fs-8);
   line-height: 1;
+
+  @media (max-width: $mediaSml) {
+    font-size: var(--fs-7);
+  }
 }
 
 h2,
