@@ -77,7 +77,7 @@ how is the data from the backend returned? does markup get injected? -->
 </article>
 
 <style lang="scss">
-  @use '../../lib/scss/vars.scss' as *;
+  @use '../../lib/scss/vars' as *;
 
   article {
     min-width: 100%;

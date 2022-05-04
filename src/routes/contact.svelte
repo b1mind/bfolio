@@ -53,7 +53,7 @@
 </main>
 
 <style lang="scss">
-  @use '../lib/scss/vars.scss' as *;
+  @use '../lib/scss/vars' as *;
 
   main {
     display: grid;
