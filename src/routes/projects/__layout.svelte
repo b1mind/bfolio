@@ -42,7 +42,7 @@
   .navBar {
     position: sticky;
     top: 0;
-    height: max-content;
+    height: 32.8px;
     align-items: center;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);
@@ -63,12 +63,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: var(--gap-5) var(--gap-5);
-    text-transform: lowercase;
     font-size: var(--fs-4);
+    line-height: 1.2;
+    text-transform: lowercase;
   }
 
   .active {
     text-decoration: underline solid var(--clr-highlight) 2px;
-    text-underline-offset: 0.65rem;
+    text-underline-offset: 0.6em;
   }
 </style>
