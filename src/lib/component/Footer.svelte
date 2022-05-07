@@ -20,7 +20,7 @@
     },
     {
       name: 'linkedIn',
-      url: 'https://www.linkedin.com/in/brent-morton-86636b192',
+      url: 'linkedin.com/in/b1mind',
     },
   ]
 </script>

@@ -32,7 +32,7 @@
             <b>@b1mind</b>
           </a>
 
-          <a href="https://www.linkedin.com/in/brent-morton-86636b192">
+          <a href="https://www.linkedin.com/in/b1mind">
             <svg width="32" height="32">
               <use href="/img/social-icons.svg#linkedIn" />
             </svg>
@@ -71,13 +71,13 @@
     --fill: var(--clr-secondary-bg);
     align-self: end;
     justify-self: center;
-    transform: translate(-120px, -140px) scale(3.5);
+    transform: translate(-120px, -140px) scale(2.5);
     z-index: -9;
 
     @media (max-width: $mediaSml) {
       // justify-self: end;
       align-self: start;
-      transform: translate(0, 150px) scale(2.5);
+      transform: translate(0, 150px) scale(1.5);
     }
   }
 
