@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-//todo make use of where(html)? like open props does/look to example
+//todo use of :where(html)? usability
 :root {
   --blue-9: hsla(223, 27%, 10%, 1);
   --blue-8: hsla(223, 26%, 21%, 1);
@@ -86,9 +86,9 @@
   --clr-gray: var(--blue-7);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 html,
 body {
