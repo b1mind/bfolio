@@ -29,8 +29,8 @@
     border-radius: 3px;
 
     @media (min-width: $mediaSml) {
-      min-height: 350px;
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-8);
       // grid-template-areas: 'title img';
     }
   }

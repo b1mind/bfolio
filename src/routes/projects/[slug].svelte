@@ -8,7 +8,7 @@
 
 <!-- //todo think about the injection, 
 how is the data from the backend returned? does markup get injected? -->
-<article class="spacer">
+<div class="spacer">
   <Title>
     <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
@@ -22,12 +22,12 @@ how is the data from the backend returned? does markup get injected? -->
     </div>
 
     <div class="img-wrap" slot="thumbnails">
-      <img src={currentProject.thumbnail} alt="Demo of the project" />
-      <img src={currentProject.thumbnail2} alt="Demo of the project" />
+      <img src={currentProject.thumbnail} alt="Visual of the project" />
+      <img src={currentProject.thumbnail2} alt="Visual of the project" />
     </div>
   </Title>
 
-  <section class="wrap spacer">
+  <article class="wrap spacer">
     <header class="box-wrap">
       <h2 class="title-sml">{currentProject.overview.title}</h2>
       <a href={currentProject.link} class="box">
@@ -50,38 +50,34 @@ how is the data from the backend returned? does markup get injected? -->
         {@html currentProject.overview.content}
       </div>
     </div>
-  </section>
+  </article>
 
-  {#each currentProject.sections as section}
-    <section class="wrap spacer">
-      <h2 class="title-sml">{section.title}</h2>
+  <article class="wrap spacer">
+    <h2 class="title-sml">Highlight</h2>
+    <ul>
+      {#each currentProject.highlight as highlight, id}
+        <li><b>{highlight}</b><i>{id + 1}</i></li>
+      {/each}
+    </ul>
+    {#each currentProject.sections as section}
+      <section class="spacer">
+        <h3>{section.title}</h3>
 
-      <div class="grid">
-        {#if section.img}
+        <div class="grid">
           <img src={section.img} alt={section.altText} />
-        {:else}
-          <ul>
-            {#each section.list as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-        {/if}
 
-        <!-- note @html to render the html content of the section -->
-        <div class="spacer">
-          {@html section.content}
+          <!-- note @html to render the html content of the section -->
+          <div class="spacer">
+            {@html section.content}
+          </div>
         </div>
-      </div>
-    </section>
-  {/each}
-</article>
+      </section>
+    {/each}
+  </article>
+</div>
 
 <style lang="scss">
   @use '../../lib/scss/vars' as *;
-
-  article {
-    min-width: 100%;
-  }
 
   .icons-wrap {
     margin-block-start: var(--spacer-8);
@@ -109,7 +105,7 @@ how is the data from the backend returned? does markup get injected? -->
     }
 
     img:last-child {
-      transform: translateX(-35px);
+      transform: translateX(-70px) scale(0.75);
     }
 
     @media (min-width: $mediaSml) {
@@ -140,9 +136,53 @@ how is the data from the backend returned? does markup get injected? -->
     }
   }
 
+  article,
   section {
     & > * {
       --spacer: var(--spacer-5);
+    }
+  }
+
+  section {
+    --spacer: var(--spacer-9);
+  }
+
+  article {
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--gap-5);
+    }
+
+    li {
+      display: grid;
+      grid-template-areas: 'l';
+      place-items: center;
+
+      & > * {
+        grid-area: l;
+      }
+
+      b {
+        align-self: end;
+        text-transform: lowercase;
+        // color: var(--clr-highlight);
+        transform: translate(0, -5px);
+        z-index: 9;
+      }
+
+      i {
+        max-width: max-content;
+        padding-block: 0.1em;
+        padding-inline: 0.35em;
+        color: var(--clr-primary-bg);
+        font-size: var(--fs-lrg);
+        font-weight: var(--fw-7);
+        background-color: var(--clr-secondary-bg);
+        border-radius: 3px;
+      }
     }
   }
 
@@ -155,6 +195,11 @@ how is the data from the backend returned? does markup get injected? -->
     border-radius: 3px;
   }
 
+  h3 {
+    text-transform: lowercase;
+    text-decoration: underline var(--clr-highlight);
+  }
+
   i {
     display: block;
   }
@@ -164,14 +209,12 @@ how is the data from the backend returned? does markup get injected? -->
     gap: var(--gap-5);
 
     @media (min-width: $mediaSml) {
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 3fr 2fr;
     }
   }
 
   img {
-    // max-width: 260px;
     max-height: 400px;
-    // max-width: 280px;
     object-fit: cover;
     border-radius: 3px;
   }
