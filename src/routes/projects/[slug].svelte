@@ -110,12 +110,11 @@ how is the data from the backend returned? does markup get injected? -->
 
     img:last-child {
       transform: translateX(-35px);
-      // opacity: 99;
     }
 
     @media (min-width: $mediaSml) {
       img:first-child {
-        transform: rotate(15deg);
+        transform: rotate(13deg);
       }
     }
   }
@@ -133,6 +132,7 @@ how is the data from the backend returned? does markup get injected? -->
     color: var(--clr-secondary-bg);
     background: var(--clr-secondary-bg);
     border: 2px solid var(--clr-highlight);
+    border-radius: 3px;
 
     &:hover {
       --fill: currentColor;
@@ -152,6 +152,7 @@ how is the data from the backend returned? does markup get injected? -->
     padding-inline: 0.5rem;
     color: var(--clr-secondary-bg);
     background: var(--clr-highlight);
+    border-radius: 3px;
   }
 
   i {
@@ -172,5 +173,6 @@ how is the data from the backend returned? does markup get injected? -->
     max-height: 400px;
     // max-width: 280px;
     object-fit: cover;
+    border-radius: 3px;
   }
 </style>

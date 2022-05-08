@@ -127,11 +127,12 @@
     border: 2px solid var(--clr-gray);
     // border: none;
     resize: none;
+    border-radius: 3px;
 
     &:active,
     &:focus {
-      outline-color: var(--clr-highlight);
-      outline-style: inset;
+      // outline-color: var(--clr-highlight);
+      // outline-style: inset;
       border: 2px solid var(--clr-highlight);
     }
   }
@@ -146,6 +147,7 @@
     font-weight: var(--fw-5);
     background: var(--clr-secondary-bg);
     border: 2px solid var(--clr-highlight);
+    border-radius: 3px;
     cursor: pointer;
 
     &:hover {

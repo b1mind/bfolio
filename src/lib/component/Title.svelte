@@ -26,6 +26,7 @@
       rgba(19, 23, 33, 1) 50%,
       rgba(40, 48, 68, 0) 100%
     );
+    border-radius: 3px;
 
     @media (min-width: $mediaSml) {
       min-height: 350px;
