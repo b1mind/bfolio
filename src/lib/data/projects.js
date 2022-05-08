@@ -89,8 +89,8 @@ const data = {
   pizzaapp: {
     name: 'Pizza App',
     subTitle: 'Interactive way to make a pizza',
-    thumbnail: '/img/pizza-app/android-full.png',
-    thumbnail2: '/img/pizza-app/android-full.png',
+    thumbnail: '/img/pizza-app/pizza-main.jpg',
+    thumbnail2: '/img/pizza-app/pizza-main.jpg',
     link: 'https://b1mind.github.io/pizza-boy',
     repo: 'https://github.com/b1mind/pizza-boy',
     techUsed: ['svelte', 'svg', 'figma', 'gsap'],
@@ -98,7 +98,7 @@ const data = {
       title: 'Overview',
       content:
         '<p>Select the size of the pizza (cheese included). Drag and drop toppings onto pizza to add, click an already added topping to remove. </p><p>When you have finished adding toppings hit confirm to see your total, then click order to make a pizza!</p>',
-      img: '/img/pizza-app/android-full.png',
+      img: '/img/pizza-app/pizza-main.jpg',
       altText: 'pizza app with draggable toppings',
     },
 
@@ -107,7 +107,7 @@ const data = {
         title: 'Challenges',
         content:
           '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!,</p><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo, architecto temporibus aspernatur repellendus saepe vel laborum voluptates molestias rerum ex repellat quas error id ipsa unde nisi optio ad!</p>',
-        img: '/img/pizza-app/android-confirm.png',
+        img: '/img/pizza-app/pizza-main.jpg',
         altText: 'confirm pizza toppings',
       },
 
