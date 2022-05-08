@@ -84,11 +84,13 @@
     place-items: center;
 
     @media (max-width: $mediaSml) {
-      font-size: var(--fs-4);
+      // font-size: var(--fs-4);
+      gap: var(--gap-4);
     }
   }
 
   a {
+    display: inline-block;
     text-transform: uppercase;
     font-weight: var(--fw-7);
   }

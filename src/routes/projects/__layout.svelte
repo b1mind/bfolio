@@ -33,7 +33,6 @@
 <style lang="scss">
   main {
     --spacer: var(--spacer-9);
-    // height: 100%;
     padding-block-start: var(--spacer-9);
     min-height: 100%;
     overflow: hidden;
@@ -64,7 +63,7 @@
     flex-wrap: wrap;
     gap: var(--gap-5) var(--gap-5);
     font-size: var(--fs-4);
-    line-height: 1.2;
+    line-height: 1.1;
     text-transform: lowercase;
   }
 

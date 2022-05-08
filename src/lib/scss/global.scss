@@ -29,10 +29,14 @@
   --fs-4: 0.95rem;
   --fs-5: 1.15rem;
   --fs-6: 1.75rem;
-  --fs-7: 2.3rem;
+  --fs-7: 3.3rem;
   --fs-8: 4.6rem;
   --fs-lrg: clamp(3.6rem, 10vw + 1rem, 6.6rem);
   --fs-xl: clamp(12rem, 28vw + 1rem, 16rem);
+
+  @media (max-width: $mediaSml) {
+    --fs-7: 2.3rem;
+  }
 
   --fw-1: 100;
   --fw-2: 200;
@@ -63,6 +67,7 @@
   --gap-4: 0.75rem;
   --gap-5: 1rem;
   --gap-6: 1.5rem;
+  --gap-7: 2rem;
   --gap-8: 2.25rem;
   --gap-9: 3.25rem;
 
@@ -197,7 +202,7 @@ nav > ul {
 }
 
 .wrap {
-  --gap: var(--gap-5);
+  --gap: var(--gap-6);
 
   display: grid;
   grid-template-columns:
@@ -214,7 +219,7 @@ nav > ul {
   }
 
   @media (max-width: $mediaSml) {
-    --gap: var(--gap-3);
+    --gap: var(--gap-4);
   }
 }
 
@@ -243,11 +248,13 @@ nav a {
 }
 
 p a {
-  color: var(--clr-primary);
+  color: var(--clr-white);
   text-decoration: none;
+  text-decoration: 0.15em underline var(--clr-primary);
+  text-underline-offset: 0.15em;
   &:hover {
-    text-decoration: 0.15em underline var(--clr-highlight);
-    text-underline-offset: 0.15em;
+    color: var(--clr-primary);
+    text-decoration: none;
   }
 }
 
@@ -266,6 +273,7 @@ p + p > img:nth-child(2n + 2) {
   float: right;
   clear: right;
   // padding: 0.5em 0 0.5em 0.5em;
+  border-radius: 3px;
 }
 
 p > img:nth-child(2n + 2),
@@ -273,4 +281,5 @@ p + p > img:nth-child(2n + 1) {
   float: left;
   clear: left;
   // padding: 0.5em 0.5em 0.5em 0;
+  border-radius: 3px;
 }
