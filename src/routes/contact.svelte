@@ -9,47 +9,51 @@
   }
 </script>
 
-<main>
-  <div class="bar" />
-  <div class="wrap">
-    <svg class="overlay"> <use href="/img/main-icons.svg#mail-at" /></svg>
-    <article>
-      <header class="spacer">
-        <h1 class="title-med">Get in touch</h1>
+<div class="bar" />
+<main class="wrap">
+  <svg class="overlay"> <use href="/img/main-icons.svg#mail-at" /></svg>
+  <article>
+    <header class="spacer">
+      <h1 class="title-med">Get in touch</h1>
 
-        <div class="icons-wrap">
-          <a href="mailto:{emailAddress}">
-            <svg width="32" height="32">
-              <use href="/img/main-icons.svg#mail-send" />
-            </svg>
-            <b>b@1mind.dev</b>
-          </a>
+      <div class="icons-wrap">
+        <a href="mailto:{emailAddress}">
+          <svg width="32" height="32">
+            <use href="/img/main-icons.svg#mail-send" />
+          </svg>
+          <b>b@1mind.dev</b>
+        </a>
 
-          <a href="https://twitter.com/b1mind/">
-            <svg width="32" height="32">
-              <use href="/img/social-icons.svg#twitter" />
-            </svg>
-            <b>@b1mind</b>
-          </a>
+        <a href="https://twitter.com/b1mind/">
+          <svg width="32" height="32">
+            <use href="/img/social-icons.svg#twitter" />
+          </svg>
+          <b>@b1mind</b>
+        </a>
 
-          <a href="https://www.linkedin.com/in/b1mind">
-            <svg width="32" height="32">
-              <use href="/img/social-icons.svg#linkedIn" />
-            </svg>
-            <b>Brent Morton</b>
-          </a>
-        </div>
-      </header>
+        <a href="https://www.linkedin.com/in/b1mind">
+          <svg width="32" height="32">
+            <use href="/img/social-icons.svg#linkedIn" />
+          </svg>
+          <b>Brent Morton</b>
+        </a>
+      </div>
+    </header>
 
-      <form class="spacer" on:submit|preventDefault={submitHandler}>
-        <b class="title-sml">Email</b>
-        <label for="subject">Subject:<input type="text" name="subject" /></label>
-        <label for="body">Body:<textarea rows="5" name="body" /></label>
+    <form class="spacer" on:submit|preventDefault={submitHandler}>
+      <b class="title-sml">Email</b>
+      <label for="subject">
+        Subject:
+        <input type="text" name="subject" required />
+      </label>
+      <label for="body">
+        Body:
+        <textarea rows="5" name="body" required />
+      </label>
 
-        <button type="submit">Send</button>
-      </form>
-    </article>
-  </div>
+      <button type="submit">Send</button>
+    </form>
+  </article>
 </main>
 
 <style lang="scss">
