@@ -48,7 +48,7 @@ const data = {
     learned: {
       title: 'Learned',
       content:
-        '<p>How to use the new routing and layouts in SvelteKit. Using data-sets for dynamic styling components based on the value of the data. Passing url paramaters as props to get data from a JSON or request response.</p>',
+        '<p>Streaming hardware and software. The in and outs of the OBS application and how Twitch works. Using different browsers and web pages to overlay and create different scenes. How to code in front of others.</p>',
     },
   },
 
@@ -99,7 +99,7 @@ const data = {
     learned: {
       title: 'Learned',
       content:
-        '<p>Streaming hardware and software. The in and outs of the OBS application and how Twitch works. Using different browsers and web pages to overlay and create different scenes. How to code in front of others.</p>',
+        '<p>How to use the new routing and layouts in SvelteKit. Using data-sets for dynamic styling components based on the value of the data. Passing url paramaters as props to get data from a JSON or request response.</p>',
     },
   },
 
