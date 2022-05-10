@@ -55,7 +55,7 @@
   --spacer-6: 1.5rem;
   --spacer-7: 2rem;
   --spacer-8: 2.25rem;
-  --spacer-9: 6.5rem;
+  --spacer-9: 9.5rem;
 
   @media (max-width: $mediaSml) {
     --spacer-9: 3.25rem;
@@ -172,8 +172,9 @@ b {
 p {
   max-width: 65ch;
   margin: 0;
-  line-height: 1.25;
+  line-height: 1.5;
   font-size: var(--fs-5);
+  font-weight: var(--fw-3);
   font-family: 'IBM Plex Serif', serif;
 }
 
@@ -230,7 +231,7 @@ a {
 
   &:hover {
     text-decoration: 0.15em underline var(--clr-highlight);
-    text-underline-offset: 0.15em;
+    text-underline-offset: 0.1em;
     // research this
     // text-underline-position: from-font;
   }
