@@ -4,10 +4,9 @@
   import Title from '$lib/component/Title.svelte'
 
   $: currentProject = $projectsStore[$page.params.slug]
+  const lines = ['swoop-left', 'check', 'wiggly']
 </script>
 
-<!-- //todo think about the injection, 
-how is the data from the backend returned? does markup get injected? -->
 <div class="spacer">
   <Title>
     <h1 class="title-med">{currentProject.name}</h1>
@@ -55,24 +54,40 @@ how is the data from the backend returned? does markup get injected? -->
   <article class="wrap spacer">
     <h2 class="title-sml">Highlight</h2>
     <ul>
-      {#each currentProject.highlight as highlight, id}
-        <li><b>{highlight}</b><i>{id + 1}</i></li>
+      {#each currentProject.highlight as highlight, dex}
+        <li><b>{highlight}</b><i>{dex + 1}</i></li>
       {/each}
     </ul>
-    {#each currentProject.sections as section}
-      <section class="spacer">
+
+    {#each currentProject.sections as section, dex}
+      <section class="spacer" data-highlight={dex}>
         <h3>{section.title}</h3>
 
-        <div class="grid">
+        <div class="highlight grid">
           <img src={section.img} alt={section.altText} />
 
+          <svg class="line">
+            <use href="/img/lines.svg#{lines[dex]}" />
+          </svg>
+
           <!-- note @html to render the html content of the section -->
-          <div class="spacer">
+          <div class="content spacer">
             {@html section.content}
           </div>
         </div>
       </section>
     {/each}
+  </article>
+
+  <article class="wrap spacer">
+    <h2 class="title-sml">{currentProject.learned.title}</h2>
+
+    <div class="grid">
+      <!-- <img src={currentProject.learned.img} alt={currentProject.learned.altText} /> -->
+      <div class="spacer">
+        {@html currentProject.learned.content}
+      </div>
+    </div>
   </article>
 </div>
 
@@ -196,8 +211,8 @@ how is the data from the backend returned? does markup get injected? -->
   }
 
   h3 {
-    text-transform: lowercase;
-    text-decoration: underline var(--clr-highlight);
+    text-decoration: 0.1em underline var(--clr-highlight);
+    text-underline-offset: 0.05em;
   }
 
   i {
@@ -217,5 +232,50 @@ how is the data from the backend returned? does markup get injected? -->
     max-height: 400px;
     object-fit: cover;
     border-radius: 3px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  @media (min-width: $mediaSml) {
+    .highlight {
+      grid-template-columns: 4fr 1fr auto;
+      grid-template-areas:
+        'content . img'
+        'line line img';
+
+      img {
+        grid-area: img;
+      }
+    }
+
+    .line {
+      --fill: var(--clr-highlight);
+      grid-area: line;
+      justify-self: end;
+      align-self: start;
+      width: 55%;
+      height: 75px;
+      display: block;
+      // transform: translate(120px);
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    [data-highlight='1'] {
+      .grid {
+        grid-template-columns: auto 1fr 5fr;
+        grid-template-areas:
+          'img . content'
+          'img line line';
+      }
+
+      .line {
+        place-self: start;
+      }
+    }
   }
 </style>
