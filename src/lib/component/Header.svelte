@@ -38,7 +38,9 @@
   @use '../scss/vars' as *;
 
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-primary-bg);
     overflow: hidden;
     z-index: 0;
 

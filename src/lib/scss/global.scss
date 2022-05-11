@@ -75,6 +75,8 @@
   --shadow-strength: 50%;
   --shadow-color: 0 0% 5%;
 
+  --shadow-2: 0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
   --shadow-5: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
     0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
     0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
@@ -194,7 +196,18 @@ nav > ul {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: var(--clr-primary-bg);
+  background-color: var(--clr-secondary-bg);
+  // background: linear-gradient;
+}
+
+.overlay-bg {
+  background-color: var(--clr-secondary-bg);
+  background: linear-gradient(
+    180deg,
+    var(--clr-primary-bg) 0%,
+    var(--clr-secondary-bg) 100%
+  );
+  z-index: 0;
 }
 
 //utils

@@ -43,7 +43,6 @@
   @use '../scss/vars' as *;
   footer {
     margin-top: var(--spacer-9);
-    background-color: var(--clr-secondary-bg);
   }
 
   ul {

@@ -45,6 +45,7 @@
     align-items: center;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);
+    box-shadow: var(--shadow-2);
     z-index: 999;
   }
 
