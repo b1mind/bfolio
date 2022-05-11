@@ -1,25 +1,25 @@
 # Overview
 
-Always evolving and creating different OBS browser layers and scenes that interact with Twitch. Animations using a mix of CSS, Svelte, and GreenSock. Mostly designed and developed while live streaming and coding in public.
+An ever evolving project. Different OBS browser layers and scenes that interact with Twitch. A mix of CSS, Svelte transitions, and GreenSock animations. Designed and developed while live streaming and building in public.
 
 # Highlight
 
 Custom Twitch alerts
-Chat Intergration & Interaction
+Chat Intergration
 Animated SVG scenes
 
 ## Alerts
 
-Working with Twitch api and learning how to test and mimic alerts. Used a wrapper library ComfyJS to interface with api easier. Then using Svelte stores for state management and animation of the alerts queue.
+Fully personalized alerts and chat commands using <a href="/">ComfyJS</a> to interface with Twitch api. Svelte stores allow for a easy state management alert animations and sounds.
 
 ## Chat
 
-Using showMy.chat and custom CSS to have different chats and animations for different overlays. Floating emoji's, chat theme to match design, animations for temparely displaying chat.
+Custom CSS themes for <a href="https://showmy.chat">showMy.chat</a> to match interface design system. Theme to only display emotes, for floating on interface.
 
-## Animation
+## Animations
 
-Using GreenShock and SVG elements to create scene animations such as Starting and Ending and Away from keyboard. Designed using Figma.
+Animated chat messages and user commands that send alerts. Combined GreenSock and SVG in Svelte for animated scenes and custom notification alerts.
 
-# Learning
+# Leveled
 
 Streaming hardware and software. The in and outs of the OBS application and how Twitch works. Using different browsers and web pages to overlay and create different scenes. How to code in front of others.
