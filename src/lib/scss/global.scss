@@ -93,6 +93,7 @@
   --clr-gray: var(--blue-7);
 }
 
+//put behind prefers or just leave out?
 // html {
 //   scroll-behavior: smooth;
 // }
@@ -108,7 +109,6 @@ body {
   color: var(--clr-white);
   font-size: var(--fs-5);
   font-family: 'IBM Plex Sans', sans-serif;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
