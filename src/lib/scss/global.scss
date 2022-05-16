@@ -107,10 +107,10 @@ body {
   min-height: 100%;
   margin: 0;
   color: var(--clr-white);
-  font-size:ng: antialiased;
-} var(--fs-5);
+  font-size: var(--fs-5);
   font-family: 'IBM Plex Sans', sans-serif;
-  -webkit-font-smoothi
+  -webkit-font-smoothing: antialiased;
+}
 
 img,
 picture,
