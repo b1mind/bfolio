@@ -26,7 +26,7 @@
   }
 
   .bar {
-    height: 32.8px;
+    height: 33px;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);
   }

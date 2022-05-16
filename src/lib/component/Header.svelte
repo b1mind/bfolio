@@ -6,7 +6,7 @@
 
 <!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
 <header class="wrap spacer" data-header={path.split('/')[1]}>
-  <nav class="mainNav">
+  <nav class="mainNav" aria-label="main-navigation">
     <a href="/projects">Projects</a>
     <a href="/contact">Contact</a>
     <a href="/about">About</a>
@@ -38,8 +38,8 @@
   @use '../scss/vars' as *;
 
   header {
-    position: sticky;
-    top: 0;
+    position: relative;
+    // top: 0;
     background-color: var(--clr-primary-bg);
     overflow: hidden;
     z-index: 0;
@@ -57,10 +57,6 @@
       text-transform: uppercase;
       line-height: 1;
       z-index: -99;
-
-      // @media (max-width: $mediaMed) {
-      //   justify-self: start;
-      // }
     }
   }
 
@@ -74,9 +70,7 @@
   }
 
   nav {
-    // grid-column: 1 / -1;
     justify-self: end;
-    // grid-column: 2 / 3;
     max-width: max-content;
     margin-block-start: var(--spacer-3);
     margin-block-end: var(--spacer-8);

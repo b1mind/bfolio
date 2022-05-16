@@ -11,7 +11,7 @@
 
 <div class="bar" />
 <main class="wrap">
-  <svg class="overlay"> <use href="/img/main-icons.svg#mail-at" /></svg>
+  <svg class="email-bg"> <use href="/img/main-icons.svg#mail-at" /></svg>
   <article>
     <header class="spacer">
       <h1 class="title-med">Get in touch</h1>
@@ -41,7 +41,12 @@
     </header>
 
     <form class="spacer" on:submit|preventDefault={submitHandler}>
-      <b class="title-sml">Email</b>
+      <b class="title-sml">
+        <svg width="32" height="32">
+          <use href="/img/main-icons.svg#mail-send" />
+        </svg>
+        Email
+      </b>
       <label for="subject">
         Subject:
         <input type="text" name="subject" required />
@@ -66,12 +71,12 @@
   }
 
   .bar {
-    height: 32.8px;
+    height: 33px;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);
   }
 
-  .overlay {
+  .email-bg {
     --fill: var(--clr-secondary-bg);
     align-self: end;
     justify-self: center;
@@ -85,7 +90,7 @@
     }
   }
 
-  .overlay,
+  .email-bg,
   article {
     grid-area: l;
   }
@@ -105,15 +110,22 @@
     display: grid;
     gap: var(--gap-5);
 
-    svg {
-      --fill: var(--clr-primary);
-    }
-
     a {
       display: inline-flex;
       gap: var(--gap-1);
       align-items: center;
     }
+  }
+
+  a svg,
+  b svg {
+    --fill: var(--clr-primary);
+  }
+
+  b {
+    display: inline-flex;
+    gap: var(--gap-1);
+    align-items: center;
   }
 
   label,
