@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import gsap from 'gsap'
+  import { gsap } from 'gsap'
 
   // import { page } from '$app/stores'
 
@@ -8,38 +8,35 @@
   const tl = gsap.timeline({})
 
   onMount(() => {
-    // const links = document.querySelectorAll('.mainNav > a')
     const links = gsap.utils.toArray('.mainNav > a')
+    gsap.set(links, { opacity: 0, x: 200 })
+    gsap.set('.logo > b', { opacity: 0 })
+    gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
 
     tl.add('start')
-    tl.set('.logo > b', { opacity: 0 })
-    tl.set(links, { opacity: 0, x: 300, attr: { 'pointer-events': 'none' } })
-    tl.set('.logo', { opacity: 0, y: '20vh', scale: 5 })
 
-    tl.to('.logo', { duration: 1.5, opacity: 1 })
-    // tl.from('.logo', {}, '<')
+    tl.to('.logo', { duration: 1, opacity: 1 }, 'start')
     tl.from(
       '.logo-bg',
       {
         duration: 1.5,
-        scale: 30,
-        // delay: 0.25,
-        ease: 'sine.out',
+        scale: 35,
+        ease: 'power1.out',
       },
       '<',
     )
 
-    tl.to('.logo', { y: 0, scale: 1, ease: 'sine.out' }, '>-0.25')
-    tl.to('.logo > b', { opacity: 1 }, '-=0.1')
+    tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5')
+    tl.to('.logo > b', { opacity: 1 }, '>-0.1')
     tl.to(
       links,
       {
         opacity: 1,
         x: 0,
-        stagger: { amount: 0.3 },
-        ease: 'back.out',
+        stagger: { amount: 0.1, from: 'end' },
+        ease: 'back',
       },
-      '-=0.2',
+      '>-0.35',
     )
   })
 
@@ -53,7 +50,7 @@
   <nav class="mainNav">
     <div class="logo" on:click={testAnime}>
       <b>Bren</b>
-      <svg height="36" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+      <svg width="36" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M28 51.9984H13V21.9984C13.0015 25.6099 7.73701 25.0063 4 24.9984V13.9984C13.9554 14.0058 11.4238 7.45308 12.9867 7C18.8419 7 22.1509 7.03377 28 7V51.9984Z"
           fill="white"
@@ -115,6 +112,7 @@
     grid-auto-flow: column;
     font-size: var(--fs-5);
     letter-spacing: var(--font-spacing);
+    transform-origin: center center;
     z-index: 999;
 
     & > :last-child {
@@ -126,7 +124,7 @@
     }
 
     svg {
-      margin-inline: 0.15rem;
+      margin-inline-end: 0.15rem;
       fill: var(--clr-primary);
     }
   }
@@ -135,7 +133,7 @@
     // grid-column: 1 / -1;
     // grid-column: 2 / 3;
     display: grid;
-    gap: 0.5rem;
+    gap: var(--gap-7);
     justify-content: center;
     align-content: center;
     text-align: right;
@@ -150,7 +148,7 @@
 
   .logo-bg {
     fill: var(--clr-secondary-bg);
-    transform: scale(1.5) rotate(-25deg);
+    transform: scale(1.1) rotate(-20deg);
     // opacity: 50%;
     z-index: -999;
   }
