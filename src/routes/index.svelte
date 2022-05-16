@@ -11,7 +11,7 @@
     const links = gsap.utils.toArray('.mainNav > a')
     gsap.set(links, { opacity: 0, x: 200 })
     gsap.set('.logo > b', { opacity: 0 })
-    gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
+    gsap.set('.logo', { opacity: 0, y: '25vh', scale: 4, translateX: 15 })
 
     tl.add('start')
 
@@ -93,6 +93,7 @@
 <style lang="scss">
   header {
     //fix need mobile fix or % (@supports for dvt and new vp units?)
+    position: relative;
     min-height: 100vh;
     grid-template-areas: '. l .';
     overflow: hidden;
@@ -130,12 +131,9 @@
   }
 
   nav {
-    // grid-column: 1 / -1;
-    // grid-column: 2 / 3;
     display: grid;
     gap: var(--gap-7);
-    justify-content: center;
-    align-content: center;
+    place-content: center;
     text-align: right;
   }
 
@@ -147,6 +145,7 @@
   }
 
   .logo-bg {
+    position: absolute;
     fill: var(--clr-secondary-bg);
     transform: scale(1.1) rotate(-20deg);
     // opacity: 50%;

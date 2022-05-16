@@ -3,7 +3,7 @@ import { writable } from 'svelte/store'
 const data = {
   overlays: {
     name: 'Overlays',
-    subTitle: 'Alerts and scenes for twitch',
+    subTitle: 'Alerts and scenes for Twitch',
     thumbnail: '/img/overlay/overlay-main-right.jpg',
     thumbnail2: '/img/overlay/overlay-overview.jpg',
     link: 'https://www.twitch.tv/b1mind',
