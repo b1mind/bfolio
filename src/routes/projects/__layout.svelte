@@ -17,7 +17,7 @@
 </svelte:head>
 
 <div class="navBar wrap">
-  <nav class="subNav">
+  <nav class="subNav" aria-label="projects-navigation">
     {#each Object.entries($projectsStore) as [key, project]}
       <a href="/projects/{key}" class:active={$page.url.pathname === `/projects/${key}`}>
         {project.name}
@@ -40,8 +40,8 @@
 
   .navBar {
     position: sticky;
-    top: 0;
-    height: 32.8px;
+    top: -1px;
+    height: 33px;
     align-items: center;
     background: var(--clr-secondary-bg);
     border-bottom: 2px solid var(--clr-gray);

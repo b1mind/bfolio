@@ -21,8 +21,21 @@
     </div>
 
     <div class="img-wrap" slot="thumbnails">
-      <img src={currentProject.thumbnail} alt="Visual of the project" />
-      <img src={currentProject.thumbnail2} alt="Visual of the project" />
+      <img
+        src={currentProject.thumbnail}
+        alt="Visual of the project"
+        width="420px"
+        height="380px"
+        loading="lazy"
+      />
+
+      <img
+        src={currentProject.thumbnail2}
+        alt="Visual of the project"
+        width="420px"
+        height="237px"
+        loading="lazy"
+      />
     </div>
   </Title>
 
@@ -43,7 +56,13 @@
     </header>
 
     <div class="grid">
-      <img src={currentProject.overview.img} alt={currentProject.overview.altText} />
+      <img
+        src={currentProject.overview.img}
+        alt={currentProject.overview.altText}
+        width="420px"
+        height="237px"
+        loading="lazy"
+      />
 
       <div class="spacer">
         {@html currentProject.overview.content}
@@ -64,7 +83,7 @@
         <h3>{section.title}</h3>
 
         <div class="highlight grid">
-          <img src={section.img} alt={section.altText} />
+          <img src={section.img} alt={section.altText} loading="lazy" />
 
           <svg class="line">
             <use href="/img/lines.svg#{lines[dex]}" />
@@ -86,6 +105,18 @@
       <!-- <img src={currentProject.learned.img} alt={currentProject.learned.altText} /> -->
       <div class="spacer">
         {@html currentProject.learned.content}
+
+        <p class="links">
+          Check it out
+          <a href={currentProject.link}>here</a>
+          or see the
+          <a href={currentProject.repo}>code</a>.
+        </p>
+        <!-- <p class="links">
+          <a href={currentProject.link}>View</a>
+          or look at the
+          <a href={currentProject.repo}>Code</a>
+        </p> -->
       </div>
     </div>
   </article>
@@ -106,6 +137,12 @@
     }
   }
 
+  img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
   .img-wrap {
     // grid-area: img;
     justify-self: end;
@@ -120,6 +157,7 @@
     }
 
     img:last-child {
+      height: auto;
       transform: translateX(-70px) scale(0.75);
     }
 
@@ -226,12 +264,6 @@
     @media (min-width: $mediaSml) {
       grid-template-columns: 3fr 2fr;
     }
-  }
-
-  img {
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 3px;
   }
 
   .line {

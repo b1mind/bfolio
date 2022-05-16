@@ -7,9 +7,6 @@
     <h1 class="title-sml">Recent Work</h1>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
-      <!-- //todo find out if you want to link card or make button
-      // refactor cards to for better semantics -->
-
       <article>
         <header class="spacer">
           <a href="/projects/{key}">
@@ -28,7 +25,13 @@
         </svg>
 
         <div class="img">
-          <img src={project.thumbnail} alt="{project.name} preview" />
+          <img
+            src={project.thumbnail}
+            alt="{project.name} preview"
+            width="420px"
+            height="380px"
+            loading="lazy"
+          />
         </div>
       </article>
     {/each}
@@ -151,7 +154,7 @@
 
     img {
       grid-area: l;
-      min-width: 100%;
+      height: 100%;
       object-fit: cover;
       transform: translate(-15px, -15px);
       box-shadow: var(--shadow-5);
