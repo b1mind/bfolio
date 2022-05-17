@@ -24,7 +24,7 @@ const data = {
         title: 'Alerts',
         content:
           '<p>Working with Twitch api and learning how to test and mimic alerts. Used a wrapper library <a href="#">ComfyJS</a> to interface with api easier. Then using Svelte stores for state management and animation of the alerts queue.</p>',
-        img: 'https://picsum.photos/300/300?random=1',
+        img: '/img/overlay/overlay-one.jpg',
         altText: 'img alt text',
       },
 
@@ -32,7 +32,7 @@ const data = {
         title: 'Chat',
         content:
           "<p>Using showMy.chat and custom CSS to have different chats and animations for different overlays. Floating emoji's, chat theme to match design, animations for temparely displaying chat.</p>",
-        img: 'https://picsum.photos/300/300?random=4',
+        img: '/img/overlay/overlay-two.jpg',
         altText: 'Chat example',
       },
 
@@ -40,7 +40,7 @@ const data = {
         title: 'Animation',
         content:
           '<p>Using GreenShock and SVG elements to create scene animations such as Starting and Ending and Away from keyboard. Designed using Figma.</p>',
-        img: 'https://picsum.photos/300/300?random=5',
+        img: '/img/overlay/overlay-three.jpg',
         altText: 'Animations example',
       },
     ],
@@ -75,7 +75,7 @@ const data = {
         title: 'Dynamic',
         content:
           '<p>Using SvelteKit file based routing to pull data from a mock JSON response. Layouts and error defaults. Dynamic slug value to provide courses from each category. Header changes based on home/category.</p>',
-        img: 'https://picsum.photos/300/300?random=3',
+        img: '/img/knitting/knitting-one.jpg',
         altText: 'Dynamic content',
       },
 
@@ -83,7 +83,7 @@ const data = {
         title: 'Responsive',
         content:
           '<p>The goal of the challenge was to code from a design that provided three resolution to follow. Creating responsive breakpoints and utility classes to meet specifications provided.</p>',
-        img: 'https://picsum.photos/300/300?random=9',
+        img: '/img/knitting/knitting-two.jpg',
         altText: 'Show responsive website',
       },
 
@@ -91,7 +91,7 @@ const data = {
         title: 'Components',
         content:
           '<p>Building a design system using CSS utility classes and component styles. Danmic component styles based on data set values. Responsive components to display correct content for based on view port resolution.</p>',
-        img: 'https://picsum.photos/300/300?random=5',
+        img: '/img/knitting/knitting-three.jpg',
         altText: 'Showing components',
       },
     ],
@@ -126,7 +126,7 @@ const data = {
         title: 'Assets',
         content:
           '<p>Using SVG sprites to limit the requests to the user. Using smart naming conventions to allow for small code and easy component state to display correct graphics.</p>',
-        img: 'https://picsum.photos/300/300?random=0',
+        img: '/img/pizza-app/pizza-one.jpg',
         altText: 'confirm pizza toppings',
       },
 
@@ -134,7 +134,7 @@ const data = {
         title: 'Interaction',
         content:
           '<p>Drag and drop animations using GreenSock and Svelte components. Allow users to drag a topping onto the pizza to add as well as click if added to remove toppings.</p>',
-        img: 'https://picsum.photos/300/300?random=1',
+        img: '/img/pizza-app/pizza-two.jpg',
         altText: 'order price calculation',
       },
 
@@ -142,7 +142,7 @@ const data = {
         title: 'Calculation',
         content:
           '<p>As the user changes the size and toppings of the pizza cost will be reactively updated keeping precise track of what is ready to be ordered.</p>',
-        img: 'https://picsum.photos/300/300?random=12',
+        img: '/img/pizza-app/pizza-three.jpg',
         altText: 'order price calculation',
       },
     ],
