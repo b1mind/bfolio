@@ -109,7 +109,8 @@ body {
   color: var(--clr-white);
   font-size: var(--fs-5);
   font-family: 'IBM Plex Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-secondary-bg);
 }
 
 img,
@@ -204,14 +205,14 @@ nav > ul {
   );
 }
 
-.overlay-bg {
-  background: linear-gradient(
-    180deg,
-    var(--clr-primary-bg) 0%,
-    var(--clr-secondary-bg) 100%
-  );
-  z-index: 0;
-}
+// .overlay-bg {
+//   background: linear-gradient(
+//     180deg,
+//     var(--clr-primary-bg) 0%,
+//     var(--clr-secondary-bg) 100%
+//   );
+//   z-index: 0;
+// }
 
 //utils
 .spacer > * + * {
