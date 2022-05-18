@@ -65,7 +65,9 @@
     font-size: var(--fs-lrg);
     margin-block: var(--spacer-7);
     text-align: right;
-    text-decoration: underline 0.075em var(--clr-highlight);
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.075em;
+    text-decoration-color: var(--clr-highlight);
     text-underline-offset: 0.075em;
   }
 

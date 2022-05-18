@@ -1,7 +1,9 @@
 <script>
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects.js'
+
   import Title from '$lib/component/Title.svelte'
+  import VendorIcons from '$lib/component/VendorIcons.svelte'
 
   $: currentProject = $projectsStore[$page.params.slug]
   const lines = ['swoop-left', 'check', 'wiggly']
@@ -12,13 +14,7 @@
     <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
 
-    <div class="icons-wrap" slot="icons">
-      {#each currentProject.techUsed as name}
-        <svg aria-label={name} width="32" height="32">
-          <use href="/img/vendor-icons.svg#{name}" />
-        </svg>
-      {/each}
-    </div>
+    <VendorIcons slot="icons" techUsed={currentProject.techUsed} />
 
     <div class="img-wrap" slot="thumbnails">
       <img
@@ -124,18 +120,6 @@
 
 <style lang="scss">
   @use '../../lib/scss/vars' as *;
-
-  .icons-wrap {
-    margin-block-start: var(--spacer-8);
-    display: flex;
-    gap: var(--gap-3);
-    flex-wrap: wrap;
-    align-items: center;
-
-    & svg {
-      --fill: var(--clr-primary);
-    }
-  }
 
   img {
     height: 100%;
@@ -249,7 +233,9 @@
   }
 
   h3 {
-    text-decoration: 0.1em underline var(--clr-highlight);
+    text-decoration-line: underline;
+    text-decoration-color: var(--clr-highlight);
+    text-decoration-thickness: 0.1em;
     text-underline-offset: 0.05em;
   }
 

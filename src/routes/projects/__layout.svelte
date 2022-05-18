@@ -69,7 +69,9 @@
   }
 
   .active {
-    text-decoration: underline solid var(--clr-highlight) 2px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--clr-highlight);
+    text-decoration-thickness: 2px;
     text-underline-offset: 0.6em;
   }
 </style>

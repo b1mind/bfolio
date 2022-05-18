@@ -247,8 +247,10 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: 0.15em underline var(--clr-highlight);
-    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.15em;
+    text-decoration-line: underline;
+    text-decoration-color: var(--clr-highlight);
+    text-underline-offset: 0.15em;
     // research this
     // text-underline-position: from-font;
   }
@@ -267,8 +269,9 @@ nav a {
 
 p a {
   color: var(--clr-white);
-  text-decoration: none;
-  text-decoration: 0.15em underline var(--clr-primary);
+  text-decoration-thickness: 0.15em;
+  text-decoration-line: underline;
+  text-decoration-color: var(--clr-primary);
   text-underline-offset: 0.15em;
   &:hover {
     color: var(--clr-primary);
