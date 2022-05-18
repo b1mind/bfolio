@@ -118,7 +118,9 @@
         gap: var(--gap-3);
 
         &:hover {
-          text-decoration: 0.2em underline var(--clr-highlight);
+          text-decoration-thickness: 0.2em;
+          text-decoration-line: underline;
+          text-decoration-color: var(--clr-highlight);
           text-underline-offset: 0.2em;
         }
       }
