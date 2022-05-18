@@ -10,7 +10,7 @@
     technologies while also creating fun, accessible, and rewarding user experiences.
   </p>
   <p>
-    Want to work with me <a href="/contact">Reach Out</a>
+    Want to work with me? <a href="/contact">Reach Out</a>.
   </p>
 </main>
 

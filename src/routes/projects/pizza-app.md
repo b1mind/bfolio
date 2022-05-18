@@ -24,4 +24,4 @@ As the user changes the size and toppings of the pizza cost will be reactively u
 
 # Learned
 
-SVG sprites and how to use them in components. Using data-set to help pass naming conventions along to keep every thing in sync. Wanted to try making HTML details and summary modal for oder confermation screen.
+SVG sprites and how to use them in components. Using data-set to help pass naming conventions along to keep every thing in sync. Wanted to try making HTML details and summary modal for oder confirmation screen.
