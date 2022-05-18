@@ -7,11 +7,11 @@
   // $: path = $page.url.pathname
   const tl = gsap.timeline({})
 
-  onMount(() => {
-    const links = gsap.utils.toArray('.mainNav > a')
-    gsap.set(links, { opacity: 0, x: 200 })
-    gsap.set('.logo > b', { opacity: 0 })
-    gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
+  onMount(async () => {
+    const links = await gsap.utils.toArray('.mainNav > a')
+    await gsap.set(links, { opacity: 0, x: 200 })
+    await gsap.set('.logo > b', { opacity: 0 })
+    await gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
 
     tl.add('start')
 
