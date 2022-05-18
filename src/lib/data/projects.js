@@ -14,7 +14,7 @@ const data = {
       content:
         '<p>An ever evolving project. Different OBS browser layers and scenes that interact with Twitch. A mix of CSS, Svelte transitions, and GreenSock animations. </p> <p>Designed and developed while live streaming and building in public.</p>',
       img: '/img/overlay/overlay-overview.jpg',
-      altText: 'img alt text',
+      altText: 'starting soon scene',
     },
 
     highlight: ['Custom Twitch alerts', 'Chat Interaction', 'Animated SVG scenes'],
@@ -25,7 +25,7 @@ const data = {
         content:
           '<p>Fully personalized alerts and chat commands using <a href="https://github.com/instafluff/ComfyJS">ComfyJS</a> to interface with Twitch api. Svelte stores allow for a easy state management alert animations and sounds.</p>',
         img: '/img/overlay/overlay-one.jpg',
-        altText: 'img alt text',
+        altText: 'raid alert displayed on screen',
       },
 
       {
