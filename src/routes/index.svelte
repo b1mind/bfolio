@@ -2,16 +2,14 @@
   import { onMount } from 'svelte'
   import { gsap } from 'gsap'
 
-  // import { page } from '$app/stores'
-
-  // $: path = $page.url.pathname
   const tl = gsap.timeline({})
 
   onMount(async () => {
-    const links = await gsap.utils.toArray('.mainNav > a')
-    await gsap.set(links, { opacity: 0, x: 200 })
-    await gsap.set('.logo > b', { opacity: 0 })
-    await gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
+    const links = gsap.utils.toArray('.mainNav > a')
+    gsap.set('.hidden', { visibility: 'hidden' })
+    gsap.set(links, { opacity: 0, x: 200 })
+    gsap.set('.logo > b', { opacity: 0 })
+    gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
 
     tl.add('start')
 
@@ -38,6 +36,7 @@
       },
       '>-0.35',
     )
+    tl.set('.hidden', { display: 'none' })
   })
 
   function testAnime() {
@@ -89,8 +88,19 @@
     <path d="M24 102H9V117H24V102Z" />
   </svg>
 </header>
+<div class="hidden" />
 
 <style lang="scss">
+  .hidden {
+    position: absolute;
+    visibility: visible;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--clr-secondary-bg);
+    opacity: 0.99;
+    z-index: 999;
+  }
+
   header {
     //fix need mobile fix or % (@supports for dvt and new vp units?)
     position: relative;

@@ -21,9 +21,7 @@
   <Header />
 {/if}
 
-<div class="overlay-bg">
-  <slot />
-</div>
+<slot />
 
 <!-- {#if path !== '/'} -->
 {#if !hidePaths.includes(path)}

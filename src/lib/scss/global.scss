@@ -197,11 +197,14 @@ nav > ul {
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: var(--clr-secondary-bg);
-  // background: linear-gradient;
+  background: linear-gradient(
+    180deg,
+    var(--clr-primary-bg) 0%,
+    var(--clr-secondary-bg) 100%
+  );
 }
 
 .overlay-bg {
-  background-color: var(--clr-secondary-bg);
   background: linear-gradient(
     180deg,
     var(--clr-primary-bg) 0%,
