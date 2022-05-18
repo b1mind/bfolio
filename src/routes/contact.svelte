@@ -1,4 +1,6 @@
 <script>
+  import Bar from '$lib/component/Bar.svelte'
+
   const emailAddress = 'b@1mind.dev'
 
   function submitHandler(e) {
@@ -9,7 +11,7 @@
   }
 </script>
 
-<div class="bar" />
+<Bar />
 <main class="wrap">
   <svg class="email-bg"> <use href="/img/main-icons.svg#mail-at" /></svg>
   <article>
@@ -69,12 +71,6 @@
     display: grid;
     overflow: hidden;
     z-index: 0;
-  }
-
-  .bar {
-    height: 33px;
-    background: var(--clr-secondary-bg);
-    border-bottom: 2px solid var(--clr-gray);
   }
 
   .email-bg {

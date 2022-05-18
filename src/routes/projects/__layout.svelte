@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects'
+  import Bar from '$lib/component/Bar.svelte'
 
   //fixme needs to move to root layout or duplicate
   //refactor and abstract to util later *debt
@@ -17,13 +18,18 @@
 </svelte:head>
 
 <div class="navBar wrap">
-  <nav class="subNav" aria-label="projects-navigation">
-    {#each Object.entries($projectsStore) as [key, project]}
-      <a href="/projects/{key}" class:active={$page.url.pathname === `/projects/${key}`}>
-        {project.name}
-      </a>
-    {/each}
-  </nav>
+  <Bar>
+    <nav class="subNav" aria-label="projects-navigation">
+      {#each Object.entries($projectsStore) as [key, project]}
+        <a
+          href="/projects/{key}"
+          class:active={$page.url.pathname === `/projects/${key}`}
+        >
+          {project.name}
+        </a>
+      {/each}
+    </nav>
+  </Bar>
 </div>
 
 <main class="spacer">
@@ -41,11 +47,6 @@
   .navBar {
     position: sticky;
     top: -1px;
-    height: 33px;
-    align-items: center;
-    background: var(--clr-secondary-bg);
-    border-bottom: 2px solid var(--clr-gray);
-    box-shadow: var(--shadow-2);
     z-index: 999;
   }
 

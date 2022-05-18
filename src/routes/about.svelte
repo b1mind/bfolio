@@ -1,4 +1,8 @@
-<div class="bar" />
+<script>
+  import Bar from '$lib/component/Bar.svelte'
+</script>
+
+<Bar />
 <main class="wrap spacer">
   <h1>Brent S. Morton</h1>
   <p>
@@ -23,11 +27,5 @@
 
   h1 {
     font-size: var(--fs-lrg);
-  }
-
-  .bar {
-    height: 33px;
-    background: var(--clr-secondary-bg);
-    border-bottom: 2px solid var(--clr-gray);
   }
 </style>
