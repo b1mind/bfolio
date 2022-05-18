@@ -47,12 +47,13 @@
         </svg>
         Email
       </b>
-      <label for="subject">
-        Subject:
+      <label class="spacer" for="subject">
+        <b> Subject: </b>
         <input type="text" name="subject" required />
       </label>
-      <label for="body">
-        Body:
+
+      <label class="spacer" for="body">
+        <b> Body: </b>
         <textarea rows="5" name="body" required />
       </label>
 
@@ -137,6 +138,7 @@
 
   input,
   textarea {
+    --spacer: var(--spacer-2);
     color: var(--clr-white);
     // background-color: var(--clr-secondary-bg);
     background-color: var(--clr-primary-bg);
