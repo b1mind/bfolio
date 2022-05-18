@@ -1,12 +1,15 @@
 <script>
+  import VendorIcons from '$lib/component/VendorIcons.svelte'
   import { projectsStore } from '$lib/data/projects'
+
+  const techUsed = ['svelte', 'svg', 'figma', 'gsap', 'json']
 </script>
 
 <div class="wrap">
   <div class="grid">
-    <header>
+    <header class="headerMain spacer">
       <h1 class="title-sml">Recent Work</h1>
-      <i>a showcase of current skills</i>
+      <VendorIcons {techUsed} />
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
@@ -71,6 +74,11 @@
     gap: var(--spacer-9);
   }
 
+  .headerMain {
+    display: grid;
+    place-items: center;
+  }
+
   .icons-wrap {
     margin-block-start: var(--spacer-8);
     display: flex;
@@ -87,11 +95,6 @@
       gap: var(--gap-1);
       align-items: center;
     }
-  }
-
-  h1,
-  i {
-    text-align: center;
   }
 
   i {

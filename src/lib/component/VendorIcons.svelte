@@ -1,21 +1,22 @@
 <script>
-  export let name = 'svelte-thin'
-  // export let url = 'kit.svelte.dev'
-  let icon = `/img/vendor-icons.svg#${name}`
+  export let techUsed = ['svelte']
 </script>
 
-<svg aria-label={name} width="32" height="32">
-  <use href={icon} />
-</svg>
+<div class="icons-wrap">
+  {#each techUsed as name}
+    <svg aria-label={name} width="32" height="32">
+      <use href="/img/vendor-icons.svg#{name}" />
+    </svg>
+  {/each}
+</div>
 
 <style lang="scss">
-  svg {
+  .icons-wrap {
     --fill: var(--clr-primary);
-    // fill: var(--clr-primary);
-    // filter: contrast(0%) brightness(150%);
+    margin-block-start: var(--spacer-8);
+    display: flex;
+    gap: var(--gap-3);
+    flex-wrap: wrap;
+    align-items: center;
   }
-
-  // svg:hover {
-  //   fill: var(--clr-highlight);
-  // }
 </style>
