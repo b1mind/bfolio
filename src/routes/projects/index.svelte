@@ -4,7 +4,10 @@
 
 <div class="wrap">
   <div class="grid">
-    <h1 class="title-sml">Recent Work</h1>
+    <header>
+      <h1 class="title-sml">Recent Work</h1>
+      <i>a showcase of current skills</i>
+    </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
       <article>
@@ -86,7 +89,8 @@
     }
   }
 
-  h1 {
+  h1,
+  i {
     text-align: center;
   }
 
