@@ -12,18 +12,18 @@ const data = {
     overview: {
       title: 'Overview',
       content:
-        '<p>Always evolving and creating different OBS browser layers and scenes that interact with Twitch.</p> <p>Animations using a mix of CSS, Svelte, and GreenSock. Mostly designed and developed while live streaming and coding in public.</p>',
+        '<p>An ever evolving project. Different OBS browser layers and scenes that interact with Twitch. A mix of CSS, Svelte transitions, and GreenSock animations. </p> <p>Designed and developed while live streaming and building in public.</p>',
       img: '/img/overlay/overlay-overview.jpg',
       altText: 'img alt text',
     },
 
-    highlight: ['Custom Alerts', 'Chat Interaction', 'Animated SVG'],
+    highlight: ['Custom Twitch alerts', 'Chat Interaction', 'Animated SVG scenes'],
 
     sections: [
       {
         title: 'Alerts',
         content:
-          '<p>Working with Twitch api and learning how to test and mimic alerts. Used a wrapper library <a href="#">ComfyJS</a> to interface with api easier. Then using Svelte stores for state management and animation of the alerts queue.</p>',
+          '<p>Fully personalized alerts and chat commands using <a href="https://github.com/instafluff/ComfyJS">ComfyJS</a> to interface with Twitch api. Svelte stores allow for a easy state management alert animations and sounds.</p>',
         img: '/img/overlay/overlay-one.jpg',
         altText: 'img alt text',
       },
@@ -31,7 +31,7 @@ const data = {
       {
         title: 'Chat',
         content:
-          "<p>Using showMy.chat and custom CSS to have different chats and animations for different overlays. Floating emoji's, chat theme to match design, animations for temparely displaying chat.</p>",
+          '<p>Custom CSS themes for <a href="https://showmy.chat">showMy.chat</a> to match interface design system. Theme to only display emotes, for floating on interface.</p>',
         img: '/img/overlay/overlay-two.jpg',
         altText: 'Chat example',
       },
@@ -39,7 +39,7 @@ const data = {
       {
         title: 'Animation',
         content:
-          '<p>Using GreenShock and SVG elements to create scene animations such as Starting and Ending and Away from keyboard. Designed using Figma.</p>',
+          '<p>Animated chat messages and user commands that send alerts. Combined GreenSock and SVG in Svelte for animated scenes and custom notification alerts.</p>',
         img: '/img/overlay/overlay-three.jpg',
         altText: 'Animations example',
       },
