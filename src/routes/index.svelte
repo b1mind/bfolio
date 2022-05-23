@@ -2,40 +2,51 @@
   import { onMount } from 'svelte'
   import { gsap } from 'gsap'
 
-  const tl = gsap.timeline({})
+  let tl
 
   onMount(async () => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } })
+
     const links = gsap.utils.toArray('.mainNav > a')
     gsap.set('.hidden', { visibility: 'hidden' })
-    gsap.set(links, { opacity: 0, x: 200 })
-    gsap.set('.logo > b', { opacity: 0 })
-    gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
 
     tl.add('start')
 
-    tl.to('.logo', { duration: 1, opacity: 1 }, 'start')
-    tl.from(
-      '.logo-bg',
-      {
-        duration: 1.5,
-        scale: 35,
-        ease: 'power1.out',
-      },
-      '<',
-    )
+    if (!reduceMotion) {
+      gsap.set(links, { opacity: 0, x: 200 })
+      gsap.set('.logo > b', { opacity: 0 })
+      gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
 
-    tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5')
-    tl.to('.logo > b', { opacity: 1 }, '>-0.1')
-    tl.to(
-      links,
-      {
-        opacity: 1,
-        x: 0,
-        stagger: { amount: 0.1, from: 'end' },
-        ease: 'back',
-      },
-      '>-0.35',
-    )
+      tl.to('.logo', { duration: 1, opacity: 1 }, 'start')
+      tl.from(
+        '.logo-bg',
+        {
+          duration: 1.5,
+          scale: 35,
+          ease: 'power1.out',
+        },
+        '<',
+      )
+
+      tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5')
+      tl.to('.logo > b', { opacity: 1 }, '>-0.1')
+      tl.to(
+        links,
+        {
+          opacity: 1,
+          x: 0,
+          stagger: { amount: 0.1, from: 'end' },
+          ease: 'back',
+        },
+        '>-0.35',
+      )
+    } else {
+      tl.from('.logo', { opacity: 0 })
+      tl.from('.logo-bg', { opacity: 0 }, '<+0.25')
+      tl.from(links, { opacity: 0, stagger: 0.25 }, '<+0.35')
+    }
+
     tl.set('.hidden', { display: 'none' })
   })
 
@@ -97,8 +108,7 @@
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--clr-secondary-bg);
-    opacity: 0.99;
-    z-index: 999;
+    z-index: 9999;
   }
 
   header {

@@ -6,7 +6,7 @@
 </script>
 
 <div class="wrap">
-  <div class="grid">
+  <div class="grid" id="main-content" tabindex="-1">
     <header class="headerMain spacer">
       <h1 class="title-sml">Recent Work</h1>
       <i>a showcase of current skills</i>
@@ -14,7 +14,7 @@
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
-      <article id="main-content" tabindex="-1">
+      <article>
         <header class="spacer">
           <a href="/projects/{key}">
             <h2>
