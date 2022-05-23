@@ -2,20 +2,25 @@
 Todo:
   ✔ change svg sprites to use custom props with fall backs @done
   ✔ better hover for project card link buttons @done
-  ☐ look into using conditional slots for Title component
-  ✘ quick screen reader check to get and idea of aria needed @cancelled
-  ☐ add skip links for navigation
+  ✔ look into using conditional slots for Title component @done
+  ✔ quick screen reader check to get and idea of aria needed @done
+  ✔ add skip links for navigation @done
   ☐ learn how to use Navigator to better test aria needs
+  ☐ fix the way we handle <title> in layouts
+  ☐ handle prefers color scheme
+  ☐ better meta - image, disc, social
+  ☐ better favicon (make the spread for all of them) main svg with fallbacks
 
 Projects:
-  ☐ set asset image sizes and unify thumbnail aspect ratios
-  ☐ images of projects, animated gifs, x4
-  ☐ copywrite for each section 
+  ✔ set asset image sizes and unify thumbnail aspect ratios @done
+  ✔ images of projects, animated gifs, x4 @done
+  ✔ copywrite for each section @done
+  ☐ proofread/edit (Mia) better copy
 
 Contact:
-  ☐ decide if both form and link will use mailTo or find smtp method
-  ☐ form for contact
-  ☐ email link safe from spam bots?
+  ✔ decide if both form and link will use mailTo or find smtp method @done
+  ✔ form for contact @done
+  ✘ email link safe from spam bots? @cancelled
 
 About: 
   ☐ picture / really need to call in a favor get pro?
@@ -28,10 +33,11 @@ Wishlist:
   ☐ set up github cms with md files or something for CMS
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
-  ☐ attempt to get Solid Auth working (don't spend all year on it)
+  ✘ attempt to get Solid Auth working (don't spend all year on it) @cancelled
   ☐ try to get private gsap repo working in docker server side
 
   Blog:
+    ☐ make new todo and section for blog, maybe even new repo/domain separate
     ☐ category: Tech, opEd, Tools
     ☐ basic url root/slug for post > /blog (only for home)
 
