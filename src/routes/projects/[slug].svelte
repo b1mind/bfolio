@@ -9,7 +9,7 @@
   const lines = ['swoop-left', 'check', 'wiggly']
 </script>
 
-<div class="spacer">
+<div class="spacer" id="main-content" tabindex="-1">
   <Title>
     <h1 class="title-med">{currentProject.name}</h1>
     <i>{currentProject.subTitle}</i>
@@ -38,13 +38,13 @@
   <article class="wrap spacer">
     <header class="box-wrap">
       <h2 class="title-sml">{currentProject.overview.title}</h2>
-      <a href={currentProject.link} class="box">
+      <a href={currentProject.link} class="box" aria-label="live demo">
         <svg width="28" height="28">
           <use href="/img/main-icons.svg#link" />
         </svg>
       </a>
 
-      <a href={currentProject.repo} class="box">
+      <a href={currentProject.repo} class="box" aria-label="github repo">
         <svg width="28" height="28">
           <use fill="unset" href="/img/social-icons.svg#github" />
         </svg>
@@ -79,7 +79,13 @@
         <h3>{section.title}</h3>
 
         <div class="highlight grid">
-          <img src={section.img} alt={section.altText} loading="lazy" />
+          <img
+            src={section.img}
+            alt={section.altText}
+            loading="lazy"
+            width="300px"
+            height="300px"
+          />
 
           <svg class="line">
             <use href="/img/lines.svg#{lines[dex]}" />
@@ -104,15 +110,10 @@
 
         <p class="links">
           Check it out
-          <a href={currentProject.link}>here</a>
+          <a href={currentProject.link} aria-label="link to demo">here</a>
           or see the
-          <a href={currentProject.repo}>code</a>.
+          <a href={currentProject.repo} aria-label="github repo">code</a>.
         </p>
-        <!-- <p class="links">
-          <a href={currentProject.link}>View</a>
-          or look at the
-          <a href={currentProject.repo}>Code</a>
-        </p> -->
       </div>
     </div>
   </article>

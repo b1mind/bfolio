@@ -12,7 +12,7 @@
 </script>
 
 <Bar />
-<main class="wrap">
+<main id="main-content" class="wrap" tabindex="-1">
   <svg class="email-bg"> <use href="/img/main-icons.svg#mail-at" /></svg>
   <article>
     <header class="spacer">

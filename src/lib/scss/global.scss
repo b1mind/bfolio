@@ -279,6 +279,10 @@ p a {
   }
 }
 
+#main-content {
+  scroll-margin-top: var(--spacer-9);
+}
+
 ::selection {
   color: var(--clr-secondary-bg);
   background: var(--clr-highlight);

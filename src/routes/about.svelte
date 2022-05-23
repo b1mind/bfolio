@@ -3,7 +3,7 @@
 </script>
 
 <Bar />
-<main class="wrap spacer">
+<main id="main-content" class="wrap spacer" tabindex="-1">
   <h1>Brent S. Morton</h1>
   <p>
     I enjoy creating dynamic interactive components and telling stories via websites,

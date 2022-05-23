@@ -6,13 +6,14 @@
 
 <!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
 <header class="wrap spacer" data-header={path.split('/')[1]}>
+  <a class="reader-only" href="#main-content">Skip to content</a>
   <nav class="mainNav" aria-label="main-navigation">
     <a href="/projects">Projects</a>
     <a href="/contact">Contact</a>
     <a href="/about">About</a>
 
     <div class="logo">
-      <a href="/">
+      <a href="/" aria-label="home">
         <svg height="17" viewBox="0 0 125 117" xmlns="http://www.w3.org/2000/svg">
           <g class="one">
             <path
@@ -93,12 +94,21 @@
     font-weight: var(--fw-7);
   }
 
-  // .active {
-  //   // display: none;
-  //   color: var(--clr-secondary-bg);
-  //   // background-color: var(--clr-secondary-bg);
-  //   // text-decoration: underline 3px var(--clr-highlight);
-  //   // text-underline-offset: 0.25rem;
-  //   z-index: -99;
-  // }
+  .reader-only {
+    padding-block: 0.25rem;
+    padding-inline: 0.75rem;
+    overflow: hidden;
+    position: absolute;
+    background-color: var(--clr-secondary-bg);
+  }
+
+  .reader-only:not(:focus) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    // overflow: hidden;
+    // position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 </style>
