@@ -5,9 +5,13 @@ Todo:
   ✔ look into using conditional slots for Title component @done
   ✔ quick screen reader check to get and idea of aria needed @done
   ✔ add skip links for navigation @done
-  ☐ learn how to use Navigator to better test aria needs
-  ☐ fix the way we handle <title> in layouts
+  ✔ handle prefers motion @done
+  ☐ font for safari antialising or pick diff size or font
   ☐ handle prefers color scheme
+  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
+  ☐ learn how to use Navigator to better test aria needs
+  ☐ run another screen reader test
+  ☐ fix the way we handle <title> in layouts
   ☐ better meta - image, disc, social
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
 
@@ -15,6 +19,7 @@ Projects:
   ✔ set asset image sizes and unify thumbnail aspect ratios @done
   ✔ images of projects, animated gifs, x4 @done
   ✔ copywrite for each section @done
+  ☐ index make a arrow line design for under h1
   ☐ proofread/edit (Mia) better copy
 
 Contact:
@@ -23,11 +28,11 @@ Contact:
   ✘ email link safe from spam bots? @cancelled
 
 About: 
+  ☐ word block to show skills on 
   ☐ picture / really need to call in a favor get pro?
   ☐ describe yourself... don't be corny ... how..
 
 Wishlist: 
-  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ svg favicon - to handle light/dark modes
   ☐ get a svg background set up for playtime
   ☐ set up github cms with md files or something for CMS
