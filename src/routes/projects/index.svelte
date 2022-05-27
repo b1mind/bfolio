@@ -5,6 +5,7 @@
   const techUsed = ['html', 'scss', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
 
+<!-- //note main is in __layout -->
 <div class="wrap">
   <div class="grid" id="main-content" tabindex="-1">
     <header class="headerMain spacer">

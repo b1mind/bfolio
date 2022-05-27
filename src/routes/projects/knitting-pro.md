@@ -8,15 +8,15 @@ Dynamic Routing
 Responsive CSS
 Components and styles
 
-# Dynamic Content
+## Dynamic Content
 
 Using SvelteKit file based routing to pull data from a mock JSON response. Layouts and error defaults. Dynamic slug value to provide courses from each category. Header changes based on home/category.
 
-# Responsive
+## Responsive
 
 The goal of the challenge was to code from a design that provided three resolution to follow. Creating responsive breakpoints and utility classes to meet specifications provided.
 
-# Components
+## Components
 
 Building a design system using CSS utility classes and component styles. Danmic component styles based on data set values. Responsive components to display correct content for based on view port resolution.
 

@@ -1,8 +1,8 @@
 //sassy vars
 @use '../scss/vars' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 *,
 *::before,
@@ -64,7 +64,7 @@
   --gap-1: 0.25rem;
   --gap-2: 0.35rem;
   --gap-3: 0.5rem;
-  --gap-4: 0.75rem;
+  --gap-4: 0.8rem;
   --gap-5: 1rem;
   --gap-6: 1.5rem;
   --gap-7: 2rem;
@@ -177,7 +177,7 @@ p {
   margin: 0;
   line-height: 1.5;
   font-size: var(--fs-5);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-4);
   font-family: 'IBM Plex Serif', serif;
 }
 
@@ -205,6 +205,7 @@ nav > ul {
   );
 }
 
+// this is for collapsing header
 // .overlay-bg {
 //   background: linear-gradient(
 //     180deg,

@@ -59,7 +59,7 @@ const data = {
     thumbnail2: '/img/knitting/knitting-overview.jpg',
     link: 'https://mysfits-challenge5.vercel.app/',
     repo: 'https://github.com/b1mind/mysfits-challenge5',
-    techUsed: ['svelte', 'json'],
+    techUsed: ['svelte', 'json', 'scss', 'html'],
     overview: {
       title: 'Overview',
       content:
