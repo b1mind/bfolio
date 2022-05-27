@@ -1,31 +1,17 @@
-//Let's finish a portfolio! You can do this!
 Todo:
-  ✔ change svg sprites to use custom props with fall backs @done
-  ✔ better hover for project card link buttons @done
-  ✔ look into using conditional slots for Title component @done
-  ✔ quick screen reader check to get and idea of aria needed @done
-  ✔ add skip links for navigation @done
-  ✔ handle prefers motion @done
-  ☐ font for safari antialising or pick diff size or font
+  ☐ contact us links goto msg? twitter/linked in
+  ☐ fix the way we handle :head and <title> in layouts
+  ✔ font for safari antialising or pick diff size or font @done
   ☐ handle prefers color scheme
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ learn how to use Navigator to better test aria needs
   ☐ run another screen reader test
-  ☐ fix the way we handle <title> in layouts
   ☐ better meta - image, disc, social
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
 
 Projects:
-  ✔ set asset image sizes and unify thumbnail aspect ratios @done
-  ✔ images of projects, animated gifs, x4 @done
-  ✔ copywrite for each section @done
   ☐ index make a arrow line design for under h1
   ☐ proofread/edit (Mia) better copy
-
-Contact:
-  ✔ decide if both form and link will use mailTo or find smtp method @done
-  ✔ form for contact @done
-  ✘ email link safe from spam bots? @cancelled
 
 About: 
   ☐ word block to show skills on 
@@ -38,15 +24,27 @@ Wishlist:
   ☐ set up github cms with md files or something for CMS
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
-  ✘ attempt to get Solid Auth working (don't spend all year on it) @cancelled
   ☐ try to get private gsap repo working in docker server side
 
-  Blog:
-    ☐ make new todo and section for blog, maybe even new repo/domain separate
-    ☐ category: Tech, opEd, Tools
-    ☐ basic url root/slug for post > /blog (only for home)
+Blog:
+  ☐ make new todo and section for blog, maybe even new repo/domain separate
+  ☐ category: Tech, opEd, Tools
+  ☐ basic url root/slug for post > /blog (only for home)
 
 Archive:
+  ✔ change svg sprites to use custom props with fall backs @done @project(Todo)
+  ✔ better hover for project card link buttons @done @project(Todo)
+  ✔ look into using conditional slots for Title component @done @project(Todo)
+  ✔ quick screen reader check to get and idea of aria needed @done @project(Todo)
+  ✔ add skip links for navigation @done @project(Todo)
+  ✔ handle prefers motion @done @project(Todo)
+  ✔ set asset image sizes and unify thumbnail aspect ratios @done @project(Projects)
+  ✔ images of projects, animated gifs, x4 @done @project(Projects)
+  ✔ copywrite for each section @done @project(Projects)
+  ✔ decide if both form and link will use mailTo or find smtp method @done @project(Contact)
+  ✔ form for contact @done @project(Contact)
+  ✘ email link safe from spam bots? @cancelled @project(Contact)
+  ✘ attempt to get Solid Auth working (don't spend all year on it) @cancelled @project(Wishlist)
   ✘ man nav needs to be functional, animate or resize on page transition. @cancelled @project(Todo)
   ✔ finish bringing figma styles into layout @done @project(Todo)
   ✔ pick colors and put into custom props @done @project(Todo)
