@@ -26,8 +26,6 @@
 </script>
 
 <footer class="container">
-  <!-- todo find out about how to a11y this -->
-  <!-- visually hidden text node (span) -->
   <nav class="social" aria-label="social links">
     <ul>
       {#each icons as icon}

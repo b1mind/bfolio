@@ -4,10 +4,9 @@
   $: path = $page.url.pathname
 </script>
 
-<!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
 <header class="wrap spacer" data-header={path.split('/')[1]}>
   <a class="reader-only" href="#main-content">Skip to content</a>
-  <nav class="mainNav" aria-label="main-navigation">
+  <nav class="mainNav" aria-label="main">
     <a href="/projects">Projects</a>
     <a href="/contact">Contact</a>
     <a href="/about">About</a>

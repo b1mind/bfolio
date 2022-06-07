@@ -19,11 +19,12 @@
 
 <div class="navBar wrap">
   <Bar>
-    <nav class="subNav" aria-label="projects-navigation">
+    <nav class="subNav" aria-label="projects">
       {#each Object.entries($projectsStore) as [key, project]}
         <a
           href="/projects/{key}"
           class:active={$page.url.pathname === `/projects/${key}`}
+          aria-current={$page.url.pathname === `/projects/${key}`}
         >
           {project.name}
         </a>
