@@ -1,17 +1,25 @@
 Todo:
-  ☐ contact us links goto msg? twitter/linked in
   ☐ fix the way we handle :head and <title> in layouts
   ✔ font for safari antialising or pick diff size or font @done
   ☐ handle prefers color scheme
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
-  ☐ learn how to use Navigator to better test aria needs
-  ☐ run another screen reader test
+  ✔ run another screen reader test (audited by Ben) @done
   ☐ better meta - image, disc, social
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
+  ☐ contact us links goto msg? twitter/linked in
+  
+SomeAntics Audit:
+  ☐ vendor icons should be links or different color 
+  ✔ aria-current for active links @done
+  ✔ navigation duplicates "navigation" no need to describe @done
+  ☐ alt text for images needs more depth
+  ☐ double check social links for contrast (pretty sure its barley passing/failing 3.5)
+  ☐ add labeld by headers for regions articles/sections/main
+  ☐ descriptive links for code/demo on slug projects pages
 
 Projects:
   ☐ index make a arrow line design for under h1
-  ☐ proofread/edit (Mia) better copy
+  ☐ proof read/edit (Mia) better copy
 
 About: 
   ☐ word block to show skills on 
@@ -25,6 +33,7 @@ Wishlist:
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
   ☐ try to get private gsap repo working in docker server side
+  ☐ learn how to use Navigator to better test aria needs
 
 Blog:
   ☐ make new todo and section for blog, maybe even new repo/domain separate
