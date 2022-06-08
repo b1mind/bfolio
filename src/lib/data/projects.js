@@ -14,7 +14,7 @@ const data = {
       content:
         '<p>An ever evolving project. Different OBS browser layers and scenes that interact with Twitch. A mix of CSS, Svelte transitions, and GreenSock animations. </p> <p>Designed and developed while live streaming and building in public.</p>',
       img: '/img/overlay/overlay-overview.webp',
-      altText: 'starting soon scene',
+      altText: 'starting soon scene for Twitch stream',
     },
 
     highlight: ['Custom Twitch alerts', 'Chat Interaction', 'Animated SVG scenes'],
@@ -25,7 +25,7 @@ const data = {
         content:
           '<p>Fully personalized alerts and chat commands using <a href="https://github.com/instafluff/ComfyJS">ComfyJS</a> to interface with Twitch api. Svelte stores allow for a easy state management alert animations and sounds.</p>',
         img: '/img/overlay/overlay-one.webp',
-        altText: 'raid alert displayed on screen',
+        altText: 'Twitch raid alert showing Samurai Champloo ducking in field',
       },
 
       {
@@ -33,7 +33,7 @@ const data = {
         content:
           '<p>Custom CSS themes for <a href="https://showmy.chat">showMy.chat</a> to match interface design system. Theme to only display emotes, for floating on interface.</p>',
         img: '/img/overlay/overlay-two.webp',
-        altText: 'Chat example',
+        altText: 'Chat overlay example showing messages from users',
       },
 
       {
@@ -41,7 +41,7 @@ const data = {
         content:
           '<p>Animated chat messages and user commands that send alerts. Combined GreenSock and SVG in Svelte for animated scenes and custom notification alerts.</p>',
         img: '/img/overlay/overlay-three.webp',
-        altText: 'Animations example',
+        altText: 'Synthwave car driving into a moon that looks like a brain',
       },
     ],
 
@@ -65,7 +65,8 @@ const data = {
       content:
         '<p>Knitting Pro course website is a mock website designed by Kevin Powell and given to students as a challenge in his Demystified CSS paid course.</p> <p> Meant to be a CSS class project I took the chance to use SvelteKit and learn how I would handle CSS utility classes and styled components.</p>',
       img: '/img/knitting/knitting-overview.webp',
-      altText: 'Knitting Pro Website',
+      altText:
+        'Knitting Pro Website hero section with a large image of Yarn and Navigation menus',
     },
 
     highlight: ['Dynamic Routing', 'Responsive CSS', 'Components and Styles'],
@@ -76,7 +77,7 @@ const data = {
         content:
           '<p>Using SvelteKit file based routing to pull data from a mock JSON response. Layouts and error defaults. Dynamic slug value to provide courses from each category. Header changes based on home/category.</p>',
         img: '/img/knitting/knitting-one.webp',
-        altText: 'Dynamic content',
+        altText: 'Showing dynamic components based on value and screen size',
       },
 
       {
@@ -84,7 +85,7 @@ const data = {
         content:
           '<p>The goal of the challenge was to code from a design that provided three resolution to follow. Creating responsive breakpoints and utility classes to meet specifications provided.</p>',
         img: '/img/knitting/knitting-two.webp',
-        altText: 'Show responsive website',
+        altText: 'Multiple display sizes showing responsiveness of the layout',
       },
 
       {
@@ -116,7 +117,7 @@ const data = {
       content:
         '<p>Wanted to make a fun application to learn different things.</p> <p>What better way than making a pizza (think python make pizza example).</p>',
       img: '/img/pizza-app/pizza-overview.webp',
-      altText: 'pizza app with draggable toppings',
+      altText: 'Screenshot of pizza drag and drop ordering application',
     },
 
     highlight: ['Sprite Assets', 'Interaction', 'Price Calculation'],
@@ -127,7 +128,7 @@ const data = {
         content:
           '<p>Using SVG sprites to limit the requests to the user. Using smart naming conventions to allow for small code and easy component state to display correct graphics.</p>',
         img: '/img/pizza-app/pizza-one.webp',
-        altText: 'confirm pizza toppings',
+        altText: 'confirm modal for pizza toppings',
       },
 
       {
@@ -135,7 +136,7 @@ const data = {
         content:
           '<p>Drag and drop animations using GreenSock and Svelte components. Allow users to drag a topping onto the pizza to add as well as click if added to remove toppings.</p>',
         img: '/img/pizza-app/pizza-two.webp',
-        altText: 'order price calculation',
+        altText: 'topping being drug to pizza to be added',
       },
 
       {
@@ -143,7 +144,7 @@ const data = {
         content:
           '<p>As the user changes the size and toppings of the pizza cost will be reactively updated keeping precise track of what is ready to be ordered.</p>',
         img: '/img/pizza-app/pizza-three.webp',
-        altText: 'order price calculation',
+        altText: 'reactive total change as you add or remove toppings',
       },
     ],
 
