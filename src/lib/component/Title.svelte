@@ -21,17 +21,18 @@
     gap: var(--gap-5);
     align-items: center;
     // grid-template-areas: 'title' 'img';
-    background: linear-gradient(
-      270deg,
-      rgba(19, 23, 33, 1) 50%,
-      rgba(40, 48, 68, 0) 100%
-    );
+    background: linear-gradient(0deg, rgba(19, 23, 33, 1) 20%, rgba(40, 48, 68, 0) 80%);
     border-radius: 3px;
 
     @media (min-width: $mediaSml) {
       grid-template-columns: 1fr 1fr;
       gap: var(--gap-8);
       // grid-template-areas: 'title img';
+      background: linear-gradient(
+        270deg,
+        rgba(19, 23, 33, 1) 45%,
+        rgba(40, 48, 68, 0) 95%
+      );
     }
   }
 
