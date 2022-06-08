@@ -12,7 +12,7 @@
       <h1 class="title-sml">Recent Work</h1>
       <i>a showcase of current skills</i>
       <VendorIcons {techUsed} />
-      <svg>
+      <svg height="50%">
         <use href="/img/lines.svg#wiggly-down" />
       </svg>
     </header>
