@@ -15,49 +15,41 @@
       <svg height="50%">
         <use href="/img/lines.svg#wiggly-down" />
       </svg>
-      <svg height="50%">
-        <use href="/img/lines.svg#wiggly-down" />
-      </svg>
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
+      <!-- <article>
+        <header class="spacer">
+          <h2>
+            <a href="/projects/{key}"> -->
+      <!-- //note find out if this is even needed other than Region Role titles -->
+
       <article aria-labelledby={project.name}>
         <header class="spacer">
           <h2 id={project.name}>
             <a href="/projects/{key}">
-              <header class="spacer">
-                <svg>
-                  <use href="/img/main-icons.svg#info" />
-                </svg>
-              </header></a
-            >
+              {project.name}
+              <svg>
+                <use href="/img/main-icons.svg#info" />
+              </svg>
+            </a>
           </h2>
-          <header class="spacer">
-            <h2 id={project.name}>
-              <a href="/projects/{key}">
-                {project.name}
-                <svg>
-                  <use href="/img/main-icons.svg#info" />
-                </svg>
-              </a>
-            </h2>
-            <i>{project.subTitle}</i>
-          </header>
-
-          <svg class="line">
-            <use href="/img/lines.svg#swoop-left" />
-          </svg>
-
-          <div class="img">
-            <img
-              src={project.thumbnail}
-              alt="{project.name} preview"
-              width="420px"
-              height="380px"
-              loading="lazy"
-            />
-          </div>
+          <i>{project.subTitle}</i>
         </header>
+
+        <svg class="line">
+          <use href="/img/lines.svg#swoop-left" />
+        </svg>
+
+        <div class="img">
+          <img
+            src={project.thumbnail}
+            alt="{project.name} preview"
+            width="420px"
+            height="380px"
+            loading="lazy"
+          />
+        </div>
       </article>
     {/each}
 
@@ -128,10 +120,10 @@
     display: grid;
     grid-template-rows: auto 1fr;
     row-gap: var(--gap-9);
-    text-decoration-thickness: 0.1em;
+
     header {
       width: max-content;
-      text-underline-offset: 0.035em;
+
       a {
         display: flex;
         gap: var(--gap-3);
