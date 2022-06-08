@@ -1,4 +1,5 @@
 <script>
+  import { dev } from '$app/env'
   import { onMount } from 'svelte'
   import { gsap } from 'gsap'
 
@@ -7,9 +8,9 @@
   onMount(async () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } })
+    gsap.set('.hidden', { opacity: 0 })
 
     const links = gsap.utils.toArray('.mainNav > a')
-    gsap.set('.hidden', { visibility: 'hidden' })
 
     tl.add('start')
 
@@ -51,16 +52,23 @@
   })
 
   function testAnime() {
+    if (!dev) return
     tl.play(0)
   }
 </script>
 
-<!-- //test how does a screen reader read mainNav as camelCase? reason to use spinal?-->
 <header class="wrap">
   <nav class="mainNav">
-    <div class="logo" on:click={testAnime}>
+    <div class="logo" aria-label="Brent Morton Logo" on:click={testAnime}>
       <b>Bren</b>
-      <svg width="36" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+
+      <svg
+        width="36"
+        viewBox="0 0 130 130"
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M28 51.9984H13V21.9984C13.0015 25.6099 7.73701 25.0063 4 24.9984V13.9984C13.9554 14.0058 11.4238 7.45308 12.9867 7C18.8419 7 22.1509 7.03377 28 7V51.9984Z"
           fill="white"
@@ -104,7 +112,7 @@
 <style lang="scss">
   .hidden {
     position: absolute;
-    visibility: visible;
+    display: grid;
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--clr-secondary-bg);
