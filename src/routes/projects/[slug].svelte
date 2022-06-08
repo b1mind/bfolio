@@ -110,9 +110,9 @@
 
         <p class="links">
           Check out the
-          <a href={currentProject.repo} aria-label="github repo">code</a>
+          <a href={currentProject.repo}>code repo</a>
           or view the
-          <a href={currentProject.link} aria-label="link to demo">demo</a>.
+          <a href={currentProject.link}>active demo</a>.
         </p>
       </div>
     </div>
