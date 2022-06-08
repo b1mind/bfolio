@@ -1,7 +1,6 @@
 Todo:
   ☐ fix the way we handle :head and <title> in layouts
   ✔ font for safari antialising or pick diff size or font @done
-  ☐ handle prefers color scheme
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ✔ run another screen reader test (audited by Ben) @done
   ☐ better meta - image, disc, social
@@ -14,11 +13,12 @@ SomeAntics Audit:
   ✔ navigation duplicates "navigation" no need to describe @done
   ☐ alt text for images needs more depth
   ☐ double check social links for contrast (pretty sure its barley passing/failing 3.5)
-  ☐ add labeld by headers for regions articles/sections/main
+  ✔ add labeld by headers for regions articles/sections/main //issues around this read note @done
   ☐ descriptive links for code/demo on slug projects pages
 
 Projects:
   ☐ index make a arrow line design for under h1
+  ☐ rotate header gradient on slug page for mobile
   ☐ proof read/edit (Mia) better copy
 
 About: 
@@ -27,6 +27,7 @@ About:
   ☐ describe yourself... don't be corny ... how..
 
 Wishlist: 
+  ☐ handle prefers color scheme (light/dark/high contrast)
   ☐ svg favicon - to handle light/dark modes
   ☐ get a svg background set up for playtime
   ☐ set up github cms with md files or something for CMS
