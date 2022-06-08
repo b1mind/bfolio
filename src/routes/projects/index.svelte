@@ -2,7 +2,7 @@
   import VendorIcons from '$lib/component/VendorIcons.svelte'
   import { projectsStore } from '$lib/data/projects'
 
-  const techUsed = ['html', 'scss', 'svg', 'json', 'svelte', 'figma', 'gsap']
+  const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
 
 <!-- //note main is in __layout -->
@@ -12,19 +12,28 @@
       <h1 class="title-sml">Recent Work</h1>
       <i>a showcase of current skills</i>
       <VendorIcons {techUsed} />
+      <svg>
+        <use href="/img/lines.svg#wiggly-down" />
+      </svg>
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
-      <article>
+      <!-- <article>
         <header class="spacer">
-          <a href="/projects/{key}">
-            <h2>
+          <h2>
+            <a href="/projects/{key}"> -->
+      <!-- //note find out if this is even needed other than Region Role titles -->
+
+      <article aria-labelledby={project.name}>
+        <header class="spacer">
+          <h2 id={project.name}>
+            <a href="/projects/{key}">
               {project.name}
-            </h2>
-            <svg>
-              <use href="/img/main-icons.svg#info" />
-            </svg>
-          </a>
+              <svg>
+                <use href="/img/main-icons.svg#info" />
+              </svg>
+            </a>
+          </h2>
           <i>{project.subTitle}</i>
         </header>
 
@@ -120,10 +129,10 @@
         gap: var(--gap-3);
 
         &:hover {
-          text-decoration-thickness: 0.2em;
+          text-decoration-thickness: 0.1em;
           text-decoration-line: underline;
           text-decoration-color: var(--clr-highlight);
-          text-underline-offset: 0.2em;
+          text-underline-offset: 0.035em;
         }
       }
 
