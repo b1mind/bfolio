@@ -14,7 +14,8 @@ SomeAntics Audit:
   ✔ vendor icons should be links or different color @done
   ✔ alt text for images needs more depth @done
   ✔ descriptive links for code/demo on slug projects page @done
-  ☐ double check social links for contrast (pretty sure its barley passing/failing 3.5)
+  ✔ double check social links for contrast (pretty sure its barley passing/failing 3.5) @done
+  ☐ pick a passing contrast color for social links (think about making something fancier)
 
 Projects:
   ☐ index make a arrow line design for under h1
