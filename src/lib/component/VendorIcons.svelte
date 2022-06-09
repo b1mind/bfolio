@@ -16,7 +16,7 @@
   @use '../scss/vars' as *;
 
   .icons-wrap {
-    // --fill: var(--clr-highlight);
+    --fill: var(--clr-white);
     margin-block-start: var(--spacer-8);
     display: flex;
     gap: var(--gap-3);
