@@ -13,6 +13,8 @@
 </div>
 
 <style lang="scss">
+  @use '../scss/vars' as *;
+
   .icons-wrap {
     // --fill: var(--clr-highlight);
     margin-block-start: var(--spacer-8);
@@ -21,11 +23,14 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .border {
-      padding: 0.75rem;
-      // border: 2px solid var(--clr-highlight);
-      border: 3px solid var(--clr-secondary-bg);
-      border-radius: 50%;
+    @media (max-width: $mediaSml) {
+      justify-content: center;
     }
+  }
+  .border {
+    padding: 0.75rem;
+    // border: 2px solid var(--clr-highlight);
+    border: 3px solid var(--clr-secondary-bg);
+    border-radius: 50%;
   }
 </style>
