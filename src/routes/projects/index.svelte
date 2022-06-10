@@ -18,12 +18,7 @@
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
-      <!-- <article>
-        <header class="spacer">
-          <h2>
-            <a href="/projects/{key}"> -->
       <!-- //note find out if this is even needed other than Region Role titles -->
-
       <article aria-labelledby={project.name}>
         <header class="spacer">
           <h2 id={project.name}>
