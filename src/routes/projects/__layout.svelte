@@ -22,7 +22,7 @@
     <nav class="subNav" aria-label="projects">
       {#each Object.entries($projectsStore) as [key, project]}
         <a
-          href="/projects/{key}"
+          href="/projects/{key}#main-content"
           class:active={$page.url.pathname === `/projects/${key}`}
           aria-current={$page.url.pathname === `/projects/${key}`}
         >

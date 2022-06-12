@@ -22,7 +22,7 @@
       <article aria-labelledby={project.name}>
         <header class="spacer">
           <h2 id={project.name}>
-            <a href="/projects/{key}">
+            <a href="/projects/{key}#main-content">
               {project.name}
               <svg>
                 <use href="/img/main-icons.svg#info" />
