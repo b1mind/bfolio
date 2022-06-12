@@ -196,13 +196,14 @@ nav > ul {
   position: relative;
   min-height: 100%;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   background-color: var(--clr-secondary-bg);
 }
 
 // this is for collapsing header
 .overlay-bg {
-  min-height: 100%;
   display: grid;
+  min-height: 100%;
   background: linear-gradient(
     180deg,
     var(--clr-primary-bg) 0%,

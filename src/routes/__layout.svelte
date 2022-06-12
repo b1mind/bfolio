@@ -19,15 +19,14 @@
 
 {#if !hidePaths.includes(path)}
   <Header />
-{/if}
 
-<div class="overlay-bg">
-  <slot />
-</div>
+  <div class="overlay-bg">
+    <slot />
+  </div>
 
-<!-- {#if path !== '/'} -->
-{#if !hidePaths.includes(path)}
   <Footer />
+{:else}
+  <slot />
 {/if}
 
 <style lang="scss">
