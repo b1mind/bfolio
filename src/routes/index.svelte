@@ -122,7 +122,7 @@
   header {
     //fix need mobile fix or % (@supports for dvt and new vp units?)
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
     grid-template-areas: '. l .';
     overflow: hidden;
     z-index: 0;
