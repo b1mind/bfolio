@@ -198,22 +198,22 @@ nav > ul {
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: var(--clr-secondary-bg);
+  // background: linear-gradient(
+  //   180deg,
+  //   var(--clr-primary-bg) 0%,
+  //   var(--clr-secondary-bg) 100%
+  // );
+}
+
+// this is for collapsing header
+.overlay-bg {
   background: linear-gradient(
     180deg,
     var(--clr-primary-bg) 0%,
     var(--clr-secondary-bg) 100%
   );
+  z-index: 0;
 }
-
-// this is for collapsing header
-// .overlay-bg {
-//   background: linear-gradient(
-//     180deg,
-//     var(--clr-primary-bg) 0%,
-//     var(--clr-secondary-bg) 100%
-//   );
-//   z-index: 0;
-// }
 
 //utils
 .spacer > * + * {
