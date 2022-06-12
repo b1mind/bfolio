@@ -120,11 +120,17 @@
   }
 
   header {
-    grid-area: 1 / 1 / 4 / -1;
+    grid-row: 1 / -1;
     position: relative;
+    display: grid;
     grid-template-areas: '. l .';
     overflow: hidden;
     z-index: 0;
+    background: linear-gradient(
+      180deg,
+      var(--clr-primary-bg) 0%,
+      var(--clr-secondary-bg) 100%
+    );
 
     & > * {
       grid-area: l;
