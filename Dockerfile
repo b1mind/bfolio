@@ -5,7 +5,6 @@ ARG GIT_TOKEN
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
-RUN npm install @gsap/shockingly
 RUN npm install
 RUN rm -f .npmrc
 EXPOSE 3000
