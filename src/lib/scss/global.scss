@@ -14,11 +14,12 @@
 :root {
   --blue-9: hsla(223, 27%, 10%, 1);
   --blue-8: hsla(223, 26%, 21%, 1);
-  --blue-7: hsla(210, 17%, 35%, 1);
+  --blue-7: hsla(210, 14%, 43%, 1);
+  // --blue-7: hsla(210, 17%, 35%, 1);
   --blue-6: hsla(215, 28%, 47%, 1);
   --blue-5: hsla(203, 33%, 60%, 1);
-  --blue-4: hsla(205, 17%, 47%, 1);
-  // --blue-4: hsla(205, 20%, 62%, 1);
+  // --blue-4: hsla(205, 17%, 47%, 1);
+  --blue-4: hsla(205, 20%, 62%, 1);
   --blue-3: hsla(204, 95%, 78%, 1);
 
   --white-2: hsla(138, 33%, 94%, 1);
@@ -91,7 +92,7 @@
   --clr-secondary-bg: var(--blue-9);
   --clr-highlight: var(--yellow-5);
   --clr-white: var(--white-2);
-  --clr-gray: var(--blue-4);
+  --clr-gray: var(--blue-7);
 }
 
 //put behind prefers or just leave out?
