@@ -60,7 +60,7 @@
 <header class="wrap">
   <nav class="mainNav">
     <div class="logo" aria-label="Brent Morton Logo" on:click={testAnime}>
-      <b>Bren</b>
+      <b aria-hidden="true">Bren</b>
 
       <svg
         width="36"
@@ -81,7 +81,7 @@
         <path d="M28 109H13V124H28V109Z" />
       </svg>
 
-      <b>orton</b>
+      <b aria-hidden="true">orton</b>
     </div>
 
     <a href="/projects">Projects</a>
