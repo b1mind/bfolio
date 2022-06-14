@@ -1,5 +1,5 @@
 # Node build and run environment
-FROM node:16 as builder
+FROM node:16.7 as builder
 RUN mkdir /usr/src/app
 ARG GIT_TOKEN
 WORKDIR /usr/src/app
@@ -13,7 +13,7 @@ CMD ["node", "./build/index.js"]
 
 # # Use for static prod
 # # build environment
-# FROM node:14.16.1 as builder
+# FROM node:16.7 as builder
 # RUN mkdir /usr/src/app
 # WORKDIR /usr/src/app
 # ENV PATH /usr/src/app/node_modules/.bin:$PATH
