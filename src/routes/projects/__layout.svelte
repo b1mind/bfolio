@@ -23,8 +23,7 @@
       {#each Object.entries($projectsStore) as [key, project]}
         <a
           href="/projects/{key}#main-content"
-          class:active={$page.url.pathname === `/projects/${key}`}
-          aria-current={$page.url.pathname === `/projects/${key}`}
+          aria-current={$page.url.pathname === `/projects/${key}` ? 'page' : 'false'}
         >
           {project.name}
         </a>
@@ -70,7 +69,7 @@
     text-transform: lowercase;
   }
 
-  .active {
+  [aria-current='page'] {
     text-decoration-line: underline;
     text-decoration-color: var(--clr-highlight);
     text-decoration-thickness: 2px;
