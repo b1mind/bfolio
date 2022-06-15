@@ -47,8 +47,8 @@
         '>-0.35',
       )
     } else {
-      gsap.set('.hidden', { opacity: 0 })
-      tl.from('.logo', { opacity: 0 })
+      tl.to('.hidden', { opacity: 0 })
+      tl.from('.logo', { opacity: 0 }, '<')
       tl.from('.logo-bg', { opacity: 0 }, '<+0.25')
       tl.from(links, { opacity: 0, stagger: 0.25 }, '<+0.35')
     }
