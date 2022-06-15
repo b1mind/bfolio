@@ -1,3 +1,7 @@
+<script context="module">
+  export let prerender = true
+</script>
+
 <script>
   import Bar from '$lib/component/Bar.svelte'
 

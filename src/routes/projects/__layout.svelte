@@ -2,20 +2,7 @@
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects'
   import Bar from '$lib/component/Bar.svelte'
-
-  //fixme needs to move to root layout or duplicate
-  //refactor and abstract to util later *debt
-  let currentTitle = ''
-  $: if ($page.url.pathname.split('/').length > 2) {
-    currentTitle = $projectsStore[$page.url.pathname.split('/')[2]].subTitle
-  } else {
-    // currentTitle = $page.url.pathname.split('/')[1]
-  }
 </script>
-
-<svelte:head>
-  <title>{currentTitle}</title>
-</svelte:head>
 
 <div class="navBar wrap">
   <Bar>

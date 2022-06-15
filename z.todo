@@ -4,7 +4,8 @@ Todo:
   ✔ collapsing header @done
   ✔ better 100% height layout with grids! @done
   ✔ anchor links for project pages/links @done
-  ☐ fix the way we handle :head and <title> in layouts concat project title/subtitle
+  ✔ fix the way we handle :head and <title> in layouts concat project title/subtitle @done
+  ☐ make use of SSR or SSG
   ☐ better meta - image, disc, social
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
@@ -22,8 +23,8 @@ SomeAntics Audit:
   ✔ pick a passing contrast color for social links (think about making something fancier) @done
 
 Projects:
-  ☐ index make a arrow line design for under h1
-  ☐ rotate header gradient on slug page for mobile
+  ✔ index make a arrow line design for under h1 @done
+  ✔ rotate header gradient on slug page for mobile @done
   ☐ proof read/edit (Mia) better copy
 
 About: 

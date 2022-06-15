@@ -1,3 +1,7 @@
+<script context="module">
+  export let prerender = true
+</script>
+
 <script>
   import { dev } from '$app/env'
   import { onMount } from 'svelte'

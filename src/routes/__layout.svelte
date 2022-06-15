@@ -1,16 +1,24 @@
 <script>
-  import { page } from '$app/stores'
-
-  import Footer from '$lib/component/Footer.svelte'
-  import Header from '$lib/component/Header.svelte'
   import '$lib/scss/normalize.css'
   import '$lib/scss/global.scss'
 
+  import { page } from '$app/stores'
+  import { projectsStore } from '$lib/data/projects'
+
+  import Footer from '$lib/component/Footer.svelte'
+  import Header from '$lib/component/Header.svelte'
+
   const hidePaths = ['/', '/cv']
   const title = 'Portfolio Brent Morton'
+
+  let currentTitle = ''
+  $: if ($page.url.pathname.split('/').length >= 3) {
+    currentTitle = $projectsStore[$page.url.pathname.split('/')[2]].subTitle
+  } else {
+    currentTitle =
+      path === '/' ? title : $page.url.pathname.split('/')[1] + ` - ${title}`
+  }
   $: path = $page.url.pathname
-  $: currentTitle =
-    path === '/' ? title : $page.url.pathname.split('/')[1] + ` - ${title}`
 </script>
 
 <svelte:head>
