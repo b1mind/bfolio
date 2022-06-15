@@ -49,9 +49,9 @@
     {/each}
 
     <footer>
-      <h2 class="title-sml">More work</h2>
-      <button disabled>click for something fun</button>
-      <i>or see more personal projects below</i>
+      <h2 class="title-sml">More Work</h2>
+      <!-- <button disabled>click for something fun</button> -->
+      <i>other fun stuff and projects below</i>
 
       <div class="icons-wrap">
         <a href="https://codepen.io/b1mind/">
