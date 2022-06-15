@@ -12,7 +12,6 @@
   onMount(async () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } })
-    gsap.set('.hidden', { opacity: 0 })
 
     const links = gsap.utils.toArray('.mainNav > a')
 
@@ -22,6 +21,7 @@
       gsap.set(links, { opacity: 0, x: 200 })
       gsap.set('.logo > b', { opacity: 0 })
       gsap.set('.logo', { opacity: 0, y: '20vh', scale: 4, translateX: 15 })
+      gsap.set('.hidden', { opacity: 0 })
 
       tl.to('.logo', { duration: 1, opacity: 1 }, 'start')
       tl.from(
@@ -47,6 +47,7 @@
         '>-0.35',
       )
     } else {
+      gsap.set('.hidden', { opacity: 0 })
       tl.from('.logo', { opacity: 0 })
       tl.from('.logo-bg', { opacity: 0 }, '<+0.25')
       tl.from(links, { opacity: 0, stagger: 0.25 }, '<+0.35')
