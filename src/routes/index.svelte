@@ -120,7 +120,7 @@
     display: grid;
     min-width: 100vw;
     min-height: 100vh;
-    // background-color: var(--clr-secondary-bg);
+    background-color: var(--clr-secondary-bg);
     z-index: 9999;
   }
 
