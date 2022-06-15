@@ -5,7 +5,7 @@
 <div class="icons-wrap">
   {#each techUsed as name}
     <div class="border">
-      <svg aria-label={name} width="32" height="32">
+      <svg width="32" height="32">
         <use href="/img/vendor-icons.svg#{name}" />
       </svg>
     </div>
