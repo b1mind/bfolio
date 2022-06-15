@@ -1,12 +1,16 @@
 Todo:
   ✔ run another screen reader test (audited by Ben) @done
   ✔ font for safari antialising or pick diff size or font @done
+  ✔ collapsing header @done
+  ✔ better 100% height layout with grids! @done
+  ✔ anchor links for project pages/links @done
   ✔ fix the way we handle :head and <title> in layouts concat project title/subtitle @done
   ☐ make use of SSR or SSG
   ☐ better meta - image, disc, social
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
   ☐ contact us links goto msg? twitter/linked in
+  ☐ test a static build before going all in on SSR (until CMS is built)
   
 SomeAntics Audit:
   ✔ aria-current for active links @done
@@ -36,7 +40,7 @@ Wishlist:
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
   ✔ try to get private gsap repo working in docker server side @done
-  ✔ learn how to use Navigator to better test aria needs @done
+  ☐ learn how to use Navigator to better test aria needs
 
 Blog:
   ☐ make new todo and section for blog, maybe even new repo/domain separate
