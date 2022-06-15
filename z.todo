@@ -1,30 +1,13 @@
 Todo:
-  ✔ run another screen reader test (audited by Ben) @done
-  ✔ font for safari antialising or pick diff size or font @done
-  ✔ collapsing header @done
-  ✔ better 100% height layout with grids! @done
-  ✔ anchor links for project pages/links @done
-  ✔ fix the way we handle :head and <title> in layouts concat project title/subtitle @done
-  ☐ make use of SSR or SSG
+  ☐ make use of SSR or SSG (currently just prerendering all pages)
   ☐ better meta - image, disc, social
   ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
   ☐ contact us links goto msg? twitter/linked in
   ☐ test a static build before going all in on SSR (until CMS is built)
   
-SomeAntics Audit:
-  ✔ aria-current for active links @done
-  ✔ navigation duplicates "navigation" no need to describe @done
-  ✔ add labeld by headers for regions articles/sections/main //issues around this read note @done
-  ✔ vendor icons should be links or different color @done
-  ✔ alt text for images needs more depth @done
-  ✔ descriptive links for code/demo on slug projects page @done
-  ✔ double check social links for contrast (pretty sure its barley passing/failing 3.5) @done
-  ✔ pick a passing contrast color for social links (think about making something fancier) @done
 
 Projects:
-  ✔ index make a arrow line design for under h1 @done
-  ✔ rotate header gradient on slug page for mobile @done
   ☐ proof read/edit (Mia) better copy
 
 About: 
@@ -39,7 +22,6 @@ Wishlist:
   ☐ set up github cms with md files or something for CMS
   ☐ home page/lander for root domain 1mind.dev 
   ☐ need to install a img crunch / svg omg package for vite/sveltekit
-  ✔ try to get private gsap repo working in docker server side @done
   ☐ learn how to use Navigator to better test aria needs
 
 Blog:
@@ -48,6 +30,23 @@ Blog:
   ☐ basic url root/slug for post > /blog (only for home)
 
 Archive:
+  ✔ run another screen reader test (audited by Ben) @done @project(Todo)
+  ✔ font for safari antialising or pick diff size or font @done @project(Todo)
+  ✔ collapsing header @done @project(Todo)
+  ✔ better 100% height layout with grids! @done @project(Todo)
+  ✔ anchor links for project pages/links @done @project(Todo)
+  ✔ fix the way we handle :head and <title> in layouts concat project title/subtitle @done @project(Todo)
+  ✔ aria-current for active links @done @project(SomeAntics Audit)
+  ✔ navigation duplicates "navigation" no need to describe @done @project(SomeAntics Audit)
+  ✔ add labeld by headers for regions articles/sections/main //issues around this read note @done @project(SomeAntics Audit)
+  ✔ vendor icons should be links or different color @done @project(SomeAntics Audit)
+  ✔ alt text for images needs more depth @done @project(SomeAntics Audit)
+  ✔ descriptive links for code/demo on slug projects page @done @project(SomeAntics Audit)
+  ✔ double check social links for contrast (pretty sure its barley passing/failing 3.5) @done @project(SomeAntics Audit)
+  ✔ pick a passing contrast color for social links (think about making something fancier) @done @project(SomeAntics Audit)
+  ✔ index make a arrow line design for under h1 @done @project(Projects)
+  ✔ rotate header gradient on slug page for mobile @done @project(Projects)
+  ✔ try to get private gsap repo working in docker server side @done @project(Wishlist)
   ✔ change svg sprites to use custom props with fall backs @done @project(Todo)
   ✔ better hover for project card link buttons @done @project(Todo)
   ✔ look into using conditional slots for Title component @done @project(Todo)
