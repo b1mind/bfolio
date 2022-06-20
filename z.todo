@@ -1,6 +1,6 @@
 Todo:
   ☐ make use of SSR or SSG (currently just prerendering all pages)
-  ☐ test a static build before going all in on SSR (until CMS is built)
+  ✔ test a static build before going all in on SSR (until CMS is built) @done
   ☐ better meta - image, disc, social
   ☐ better favicon (make the spread for all of them) main svg with fallbacks
   ☐ svg favicon - to handle light/dark modes
