@@ -1,23 +1,22 @@
 Todo:
   ☐ make use of SSR or SSG (currently just prerendering all pages)
-  ☐ better meta - image, disc, social
-  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
-  ☐ better favicon (make the spread for all of them) main svg with fallbacks
-  ☐ contact us links goto msg? twitter/linked in
   ☐ test a static build before going all in on SSR (until CMS is built)
-  
+  ☐ better meta - image, disc, social
+  ☐ better favicon (make the spread for all of them) main svg with fallbacks
+  ☐ svg favicon - to handle light/dark modes
+  ☐ contact us links goto msg? twitter/linked in
 
 Projects:
   ☐ proof read/edit (Mia) better copy
 
 About: 
-  ☐ word block to show skills on 
+  ☐ word block to show skills on older languages/tools
   ☐ picture / really need to call in a favor get pro?
   ☐ describe yourself... don't be corny ... how..
 
 Wishlist: 
   ☐ handle prefers color scheme (light/dark/high contrast)
-  ☐ svg favicon - to handle light/dark modes
+  ☐ click for something fun button (takes to random/rotating url to codepen/github fun)
   ☐ get a svg background set up for playtime
   ☐ set up github cms with md files or something for CMS
   ☐ home page/lander for root domain 1mind.dev 
