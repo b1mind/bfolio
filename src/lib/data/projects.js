@@ -91,7 +91,7 @@ const data = {
       {
         title: 'Components',
         content:
-          '<p>Building a design system using CSS utility classes and component styles. Danmic component styles based on data set values. Responsive components to display correct content for based on view port resolution.</p>',
+          '<p>Building a design system using CSS utility classes and component styles. Component styles based on data set values. Responsive to display correct content for based on view port resolution.</p>',
         img: '/img/knitting/knitting-three.webp',
         altText: 'Showing components',
       },
