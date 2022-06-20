@@ -7,7 +7,9 @@
     <div class="border">
       <svg width="32" height="32">
         <use href="/img/vendor-icons.svg#{name}" />
+        <!-- <text x="0" y="30">{name}</text> -->
       </svg>
+      <i>{name}</i>
     </div>
   {/each}
 </div>
@@ -27,10 +29,16 @@
       justify-content: center;
     }
   }
+
   .border {
+    width: 80px;
+    aspect-ratio: 1;
     padding: 0.75rem;
-    // border: 2px solid var(--clr-highlight);
+    display: grid;
+    place-items: center;
+    font-size: var(--fs-4);
     border: 3px solid var(--clr-secondary-bg);
-    border-radius: 50%;
+    border-radius: 100%;
+    // border-radius: 3px;
   }
 </style>
