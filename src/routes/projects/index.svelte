@@ -1,6 +1,7 @@
 <script>
   import VendorIcons from '$lib/component/VendorIcons.svelte'
   import { projectsStore } from '$lib/data/projects'
+  import { triggerMe } from '$lib/utils/gsap'
 
   const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
@@ -19,12 +20,12 @@
 
     {#each Object.entries($projectsStore) as [key, project], dex}
       <!-- //note find out if this is even needed other than Region Role titles -->
-      <article aria-labelledby={project.name}>
+      <article use:triggerMe aria-labelledby={project.name}>
         <header class="spacer">
           <h2 id={project.name}>
             <a href="/projects/{key}#main-content">
               {project.name}
-              <svg>
+              <svg class="info">
                 <use href="/img/main-icons.svg#info" />
               </svg>
             </a>
@@ -32,9 +33,32 @@
           <i>{project.subTitle}</i>
         </header>
 
-        <svg class="line">
-          <use href="/img/lines.svg#swoop-left" />
+        <!-- <svg class="line"> -->
+        <svg
+          class="line"
+          width="343"
+          height="70"
+          viewBox="0 0 343 70"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M341.5 43.5C251 80 32.5 84 1.5 1.5"
+            stroke="#FFCB47"
+            stroke-width="3"
+            fill="none"
+          />
+
+          <!-- <path
+            d="M2.07764 0.505859C12.9966 95.509 90.0748 105.131 339.078 53.5059"
+            stroke="#FFCB47"
+            stroke-width="3"
+            fill="none"
+          /> -->
         </svg>
+
+        <!-- <use href="/img/lines.svg#swoop-left" /> -->
+        <!-- </svg> -->
 
         <div class="img">
           <img

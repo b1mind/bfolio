@@ -1,10 +1,18 @@
 <script>
   import { page } from '$app/stores'
+  import { afterUpdate } from 'svelte'
+  import gsap from 'gsap'
 
-  $: path = $page.url.pathname
+  $: path = $page.url.pathname.split('/')[1]
+  afterUpdate(() => {
+    let tl = gsap.timeline({ defaults: {} })
+    // tl.from('[data-header] > b', { stagger: 0.3, y: 200 })
+    tl.from('.background', { y: 300, ease: 'power2' })
+    tl.from('.title-header', { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
+  })
 </script>
 
-<header class="wrap spacer" data-header={path.split('/')[1]}>
+<header class="wrap spacer" data-header={path}>
   <a class="reader-only" href="#main-content">Skip to content</a>
   <nav class="mainNav" aria-label="main">
     <a href="/projects">Projects</a>
@@ -31,7 +39,8 @@
       </a>
     </div>
   </nav>
-  <b>{path.split('/')[1]}</b>
+  <b class="title-header">{path}</b>
+  <b class="background">{path}</b>
 </header>
 
 <style lang="scss">
@@ -44,8 +53,8 @@
     overflow: hidden;
     z-index: 0;
 
-    &::after {
-      content: attr(data-header) '';
+    b + b {
+      // content: attr(data-header) '';
       position: absolute;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
