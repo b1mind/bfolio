@@ -1,5 +1,6 @@
 /** @type {import('@sveltejs/kit').Config} */
-import adapter from '@sveltejs/adapter-node'
+import adapter from '@sveltejs/adapter-auto'
+// import adapter from '@sveltejs/adapter-node'
 //note: static needs a different dockerfile for build
 // import adapter from '@sveltejs/adapter-static'
 import preprocess from 'svelte-preprocess'

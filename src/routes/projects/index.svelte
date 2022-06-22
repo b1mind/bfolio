@@ -36,9 +36,7 @@
         <!-- <svg class="line"> -->
         <svg
           class="line"
-          width="343"
-          height="70"
-          viewBox="0 0 343 70"
+          viewBox="0 -10 343 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
