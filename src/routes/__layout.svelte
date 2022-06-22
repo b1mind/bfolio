@@ -13,7 +13,8 @@
 
   let currentTitle = ''
   $: if ($page.url.pathname.split('/').length >= 3) {
-    currentTitle = $projectsStore[$page.url.pathname.split('/')[2]].subTitle
+    currentTitle =
+      $projectsStore[$page.url.pathname.split('/')[2]].subTitle + ` - ${title}`
   } else {
     currentTitle =
       path === '/' ? title : $page.url.pathname.split('/')[1] + ` - ${title}`
@@ -36,6 +37,3 @@
 {:else}
   <slot />
 {/if}
-
-<style lang="scss">
-</style>
