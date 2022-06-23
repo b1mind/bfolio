@@ -1,9 +1,9 @@
 import { onDestroy } from 'svelte'
 
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
-import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
+import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin.js'
+import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin.js'
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin)
 
