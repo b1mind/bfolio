@@ -7,7 +7,7 @@
   afterUpdate(() => {
     let tl = gsap.timeline({ defaults: {} })
     // tl.from('[data-header] > b', { stagger: 0.3, y: 200 })
-    tl.from('.background', { scale: 3, ease: 'power2' })
+    tl.from('.background', { y: 300, ease: 'power2' })
     tl.from('.title-header', { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
   })
 </script>

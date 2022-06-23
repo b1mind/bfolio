@@ -33,30 +33,27 @@
           <i>{project.subTitle}</i>
         </header>
 
-        <!-- <svg class="line"> -->
-        <svg
-          class="line"
-          viewBox="0 -10 343 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="line" viewBox="0 0 276 73" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M341.5 43.5C251 80 32.5 84 1.5 1.5"
+            id="swoop-left"
+            d="M275 46.5022C204.463 82.5695 34.1618 86.5221 9.99999 5"
             stroke="#FFCB47"
             stroke-width="3"
             fill="none"
           />
 
-          <!-- <path
-            d="M2.07764 0.505859C12.9966 95.509 90.0748 105.131 339.078 53.5059"
+          <path
+            class="arrow"
+            d="M15.0141 7.31104L6.00897 2.09131 M2 11.8101L6 2.09131"
             stroke="#FFCB47"
             stroke-width="3"
-            fill="none"
-          /> -->
+            stroke-linecap="round"
+          />
         </svg>
 
-        <!-- <use href="/img/lines.svg#swoop-left" /> -->
-        <!-- </svg> -->
+        <!-- <svg class="line">
+        <use href="/img/lines.svg#swoop-left" />
+        </svg> -->
 
         <div class="img">
           <img
@@ -177,6 +174,7 @@
       display: block;
       grid-row: 2 / 3;
       justify-self: center;
+      overflow: visible;
     }
 
     .img {
