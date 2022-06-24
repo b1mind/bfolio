@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects.js'
+  import { triggerMe } from '$lib/utils/gsap.js'
 
   import Title from '$lib/component/Title.svelte'
   import VendorIcons from '$lib/component/VendorIcons.svelte'
@@ -87,9 +88,32 @@
             height="300px"
           />
 
-          <svg class="line">
+          <svg use:triggerMe class="line">
             <use href="/img/lines.svg#{lines[dex]}" />
           </svg>
+
+          <!-- <svg
+            use:triggerMe
+            class="line"
+            viewBox="0 0 276 73"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="swoop-left"
+              d="M275 46.5022C204.463 82.5695 34.1618 86.5221 9.99999 5"
+              stroke="#FFCB47"
+              stroke-width="3"
+              fill="none"
+            />
+
+            <path
+              class="arrow"
+              d="M15.0141 7.31104L6.00897 2.09131 M2 11.8101L6 2.09131"
+              stroke="#FFCB47"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg> -->
 
           <!-- note @html to render the html content of the section -->
           <div class="content spacer">

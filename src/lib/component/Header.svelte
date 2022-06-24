@@ -1,15 +1,8 @@
 <script>
   import { page } from '$app/stores'
-  import { afterUpdate } from 'svelte'
-  import gsap from 'gsap'
+  import { staggerUp } from '$lib/utils/gsap.js'
 
   $: path = $page.url.pathname.split('/')[1]
-  afterUpdate(() => {
-    let tl = gsap.timeline({ defaults: {} })
-    // tl.from('[data-header] > b', { stagger: 0.3, y: 200 })
-    tl.from('.background', { y: 300, ease: 'power2' })
-    tl.from('.title-header', { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
-  })
 </script>
 
 <header class="wrap spacer" data-header={path}>
@@ -39,7 +32,7 @@
       </a>
     </div>
   </nav>
-  <b class="title-header">{path}</b>
+  <b use:staggerUp class="title-header">{path}</b>
   <b class="background">{path}</b>
 </header>
 

@@ -1,5 +1,24 @@
 <script>
+  import { afterUpdate, onMount } from 'svelte'
+  import { gsap } from 'gsap'
+
   export let techUsed = ['svelte']
+  let tl
+
+  //todo test if its better to just use actions
+  onMount(() => {
+    tl = gsap.timeline()
+    tl.from('.icons-wrap > *', {
+      delay: 0.4,
+      opacity: 0,
+      y: 20,
+      stagger: { amount: 0.5, grid: 'auto', from: 'center' },
+    })
+  })
+
+  afterUpdate(() => {
+    tl.restart()
+  })
 </script>
 
 <div class="icons-wrap">
@@ -21,6 +40,7 @@
     --fill: var(--clr-white);
     margin-block-start: var(--spacer-8);
     display: flex;
+    // grid-auto-flow: column;
     gap: var(--gap-3);
     flex-wrap: wrap;
     align-items: center;
