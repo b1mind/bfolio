@@ -16,12 +16,11 @@ export function triggerMe(node) {
   let tl = gsap.timeline({ paused: true })
   tl.from(node.lastChild, { opacity: 0, ease: 'power2.in' })
   tl.from(node.lastChild.lastChild, { y: 0, x: 0, ease: 'power2.in' }, '<')
-  tl.from(line, { duration: 0.4, drawSVG: 0 })
+  tl.from(line, { drawSVG: 0 })
   tl.from(arrow, { duration: 0.01, opacity: 0 }, '<')
   tl.to(
     arrow,
     {
-      duration: 0.4,
       motionPath: {
         path: line,
         align: line,
@@ -31,19 +30,15 @@ export function triggerMe(node) {
     },
     '<',
   )
+
+  tl.from(node.firstChild.lastChild, { y: '-1rem', opacity: 0 }, '<+0.25')
   tl.from(
     node.firstChild.firstChild,
     {
-      y: '-1rem',
+      y: '1rem',
       opacity: 0,
     },
-    '<+0.15',
-  )
-
-  tl.from(
-    node.firstChild.lastChild,
-    { y: '1rem', opacity: 0, ease: 'back.out(3)' },
-    '<+0.2',
+    '<',
   )
 
   ScrollTrigger.create({
