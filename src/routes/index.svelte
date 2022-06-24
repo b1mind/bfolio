@@ -20,7 +20,7 @@
     if (!reduceMotion) {
       gsap.set(links, { opacity: 0, x: 200 })
       gsap.set('.logo > b', { opacity: 0 })
-      gsap.set('.logo', { opacity: 0, y: '25vh', scale: 4, translateX: 15 })
+      gsap.set('.logo', { opacity: 0, y: '23vh', scale: 4, translateX: 15 })
       gsap.set('.hidden', { opacity: 0 })
 
       tl.to('.logo', { duration: 1, opacity: 1 }, 'start')

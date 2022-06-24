@@ -14,7 +14,8 @@ export function triggerMe(node) {
   // gsap.set(arrow, { opacity: 0 })
 
   let tl = gsap.timeline({ paused: true })
-  tl.from(node.lastChild.lastChild, { y: 0, x: 0, ease: 'power2.in' })
+  tl.from(node.lastChild, { opacity: 0, ease: 'power2.in' })
+  tl.from(node.lastChild.lastChild, { y: 0, x: 0, ease: 'power2.in' }, '<')
   tl.from(line, { duration: 0.4, drawSVG: 0 })
   tl.from(arrow, { duration: 0.01, opacity: 0 }, '<')
   tl.to(
@@ -30,15 +31,14 @@ export function triggerMe(node) {
     },
     '<',
   )
-  // tl.from(
-  //   node.firstChild.firstChild,
-  //   {
-  //     y: '-1rem',
-  //     opacity: 0,
-  //     ease: 'back.out(1)',
-  //   },
-  //   '<+0.15',
-  // )
+  tl.from(
+    node.firstChild.firstChild,
+    {
+      y: '-1rem',
+      opacity: 0,
+    },
+    '<+0.15',
+  )
 
   tl.from(
     node.firstChild.lastChild,
@@ -50,7 +50,7 @@ export function triggerMe(node) {
     trigger: node,
     // pin: true,
     // scrub: 1,
-    start: 'bottom bottom',
+    start: 'center bottom',
     animation: tl,
     // markers: true,
   })
@@ -68,6 +68,7 @@ export function staggerUp(node) {
   console.dir(node)
   tl.from(node.nextElementSibling, { y: 300, ease: 'power2' })
   tl.from(node, { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
+
   afterUpdate(() => {
     tl.restart()
   })

@@ -163,7 +163,8 @@
     }
   }
 
-  .line {
+  .line,
+  .arrow {
     display: none;
   }
 
@@ -175,6 +176,10 @@
       grid-row: 2 / 3;
       justify-self: center;
       overflow: visible;
+    }
+
+    .arrow {
+      display: block;
     }
 
     .img {
