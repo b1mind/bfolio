@@ -20,7 +20,7 @@
 
     {#each Object.entries($projectsStore) as [key, project], dex}
       <!-- //note find out if this is even needed other than Region Role titles -->
-      <article use:triggerMe aria-labelledby={project.name}>
+      <article use:triggerMe class:alt={dex === 1} aria-labelledby={project.name}>
         <header class="spacer">
           <h2 id={project.name}>
             <a href="/projects/{key}#main-content">
@@ -171,10 +171,10 @@
   @media (min-width: $mediaSml) {
     .line {
       --fill: var(--clr-highlight);
-      width: 85%;
-      display: block;
       grid-row: 2 / 3;
       justify-self: center;
+      width: 85%;
+      display: block;
       overflow: visible;
     }
 
@@ -209,6 +209,22 @@
       grid-area: l;
       background-color: var(--clr-secondary-bg);
       border-radius: 4px;
+    }
+  }
+
+  .alt {
+    header {
+      justify-self: end;
+    }
+
+    .line {
+      grid-column: 2 / 3;
+      justify-self: start;
+      transform: rotateY(180deg);
+    }
+
+    img {
+      transform: translate(15px, -15px);
     }
   }
 
