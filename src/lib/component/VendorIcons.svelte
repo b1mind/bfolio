@@ -52,7 +52,8 @@
 
   .border {
     width: 80px;
-    aspect-ratio: 1;
+    height: 80px;
+    // aspect-ratio: 1;
     padding: 0.75rem;
     display: grid;
     place-items: center;
