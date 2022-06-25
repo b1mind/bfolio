@@ -57,6 +57,37 @@ export function triggerMe(node) {
   })
 }
 
+export function drawMe(node) {
+  let line = node.firstChild
+  let arrow = node.lastChild
+  gsap.from(arrow, { opacity: 0, repeat: 4, yoyo: true })
+
+  let tl = gsap.timeline({})
+  tl.from(line, { drawSVG: 0 })
+  tl.to(
+    arrow,
+    {
+      motionPath: {
+        path: line,
+        align: line,
+        alignOrigin: [0.5, 0.8],
+        autoRotate: -90,
+      },
+    },
+    '<',
+  )
+
+  ScrollTrigger.create({
+    trigger: node,
+    // pin: true,
+    scrub: 1,
+    start: 'top 70%',
+    end: 'end center',
+    animation: tl,
+    // markers: true,
+  })
+}
+
 export function staggerUp(node) {
   let tl = gsap.timeline({ defaults: {} })
   // tl.from('[data-header] > b', { stagger: 0.3, y: 200 })

@@ -1,7 +1,7 @@
 <script>
   import VendorIcons from '$lib/component/VendorIcons.svelte'
   import { projectsStore } from '$lib/data/projects'
-  import { triggerMe } from '$lib/utils/gsap'
+  import { triggerMe, drawMe } from '$lib/utils/gsap'
 
   const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
@@ -13,9 +13,30 @@
       <h1 class="title-sml">Recent Work</h1>
       <i>a showcase of current skills</i>
       <VendorIcons {techUsed} />
-      <svg height="50%">
-        <use href="/img/lines.svg#wiggly-down" />
+
+      <svg
+        use:drawMe
+        height="150"
+        viewBox="-2 -10 136 98"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M67.2198 7.99984C67.2198 46.9994 116.22 6.99977 114.72 74"
+          stroke="#FFCB47"
+          stroke-width="3"
+          fill="none"
+        />
+        <path
+          d="M114.72 75.3931L123.646 65.6809 M114.72 75.3931L105.794 65.6809"
+          stroke="#FFCB47"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
       </svg>
+
+      <!-- <svg height="50%">
+        <use href="/img/lines.svg#wiggly-down" />
+      </svg> -->
     </header>
 
     {#each Object.entries($projectsStore) as [key, project], dex}
@@ -93,6 +114,10 @@
 
 <style lang="scss">
   @use '../../lib/scss/vars' as *;
+
+  svg {
+    overflow: visible;
+  }
 
   .grid {
     display: grid;
