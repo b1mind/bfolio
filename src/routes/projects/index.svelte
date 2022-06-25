@@ -16,7 +16,7 @@
 
       <svg
         use:drawMe
-        height="150"
+        height="140"
         viewBox="-2 -10 136 98"
         xmlns="http://www.w3.org/2000/svg"
       >

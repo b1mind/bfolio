@@ -81,7 +81,7 @@ export function drawMe(node) {
     trigger: node,
     // pin: true,
     scrub: 1,
-    start: 'top center',
+    start: 'top-=100 center',
     end: 'end 30%',
     animation: tl,
     // markers: true,
