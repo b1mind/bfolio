@@ -11,7 +11,7 @@
     tl.from('.icons-wrap > *', {
       delay: 0.4,
       opacity: 0,
-      y: 20,
+      y: -20,
       stagger: { amount: 0.5, grid: 'auto', from: 'center' },
     })
   })
