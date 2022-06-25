@@ -92,7 +92,12 @@ export function staggerUp(node) {
   let tl = gsap.timeline({ defaults: {} })
   // tl.from('[data-header] > b', { stagger: 0.3, y: 200 })
   console.dir(node)
-  tl.from(node.nextElementSibling, { y: 300, ease: 'power2' })
+  tl.from(node.nextElementSibling, {
+    duration: 0.35,
+    opacity: 0,
+    x: 300,
+    ease: 'power2',
+  })
   tl.from(node, { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
 
   afterUpdate(() => {
