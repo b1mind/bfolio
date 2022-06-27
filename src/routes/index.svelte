@@ -29,7 +29,7 @@
         {
           duration: 1.5,
           scale: 35,
-          ease: 'power1.out',
+          ease: 'power2.out',
         },
         '<',
       )
@@ -66,7 +66,7 @@
   <noscript>
     <style>
       .hidden {
-        display: none;
+        display: none !important;
       }
     </style>
   </noscript>

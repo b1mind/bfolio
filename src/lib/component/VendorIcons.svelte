@@ -1,27 +1,10 @@
 <script>
-  import { afterUpdate, onMount } from 'svelte'
-  import { gsap } from 'gsap'
+  import { staggerIcons } from '$lib/utils/gsap.js'
 
   export let techUsed = ['svelte']
-  let tl
-
-  //todo test if its better to just use actions
-  onMount(() => {
-    tl = gsap.timeline()
-    tl.from('.icons-wrap > *', {
-      delay: 0.4,
-      opacity: 0,
-      y: -20,
-      stagger: { amount: 0.5, grid: 'auto', from: 'center' },
-    })
-  })
-
-  afterUpdate(() => {
-    tl.restart()
-  })
 </script>
 
-<div class="icons-wrap">
+<div use:staggerIcons class="icons-wrap">
   {#each techUsed as name}
     <div class="border">
       <svg width="32" height="32">

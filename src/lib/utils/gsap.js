@@ -31,13 +31,14 @@ export function triggerMe(node) {
     '<',
   )
 
-  tl.from(node.firstChild.lastChild, { y: '-1rem', opacity: 0 }, '<+0.25')
+  tl.from(
+    node.firstChild.lastChild,
+    { duration: 0.35, y: '-1rem', opacity: 0, ease: 'power4' },
+    '<+=0.3',
+  )
   tl.from(
     node.firstChild.firstChild,
-    {
-      y: '1rem',
-      opacity: 0,
-    },
+    { duration: 0.35, y: '1rem', opacity: 0, ease: 'power4' },
     '<',
   )
 
@@ -60,9 +61,9 @@ export function triggerMe(node) {
 export function drawMe(node) {
   let line = node.firstChild
   let arrow = node.lastChild
-  gsap.from(arrow, { opacity: 0, repeat: 4, yoyo: true })
+  gsap.from(arrow, { opacity: 0, repeat: 6, yoyo: true })
 
-  let tl = gsap.timeline({})
+  let tl = gsap.timeline({ defaults: { ease: 'sine.in' } })
   tl.from(line, { drawSVG: 0 })
   tl.to(
     arrow,
@@ -96,9 +97,25 @@ export function staggerUp(node) {
     duration: 0.35,
     opacity: 0,
     x: 300,
-    ease: 'power2',
+    ease: 'power1',
   })
-  tl.from(node, { y: 300, ease: 'back.out(1.2)' }, '<+0.2')
+  tl.from(node, { y: 150, ease: 'back.out(1.3)' }, '<+=0.2')
+
+  afterUpdate(() => {
+    tl.restart()
+  })
+}
+
+export function staggerIcons(node) {
+  let tl = gsap.timeline()
+  console.dir(node)
+  let icons = node.children
+  tl.from(icons, {
+    delay: 0.4,
+    opacity: 0,
+    y: -20,
+    stagger: { amount: 0.5, grid: 'auto', from: 'center' },
+  })
 
   afterUpdate(() => {
     tl.restart()

@@ -1,7 +1,6 @@
 <script>
   import { page } from '$app/stores'
   import { projectsStore } from '$lib/data/projects.js'
-  import { triggerMe } from '$lib/utils/gsap.js'
 
   import Title from '$lib/component/Title.svelte'
   import VendorIcons from '$lib/component/VendorIcons.svelte'
@@ -88,7 +87,7 @@
             height="300px"
           />
 
-          <svg use:triggerMe class="line">
+          <svg class="line">
             <use href="/img/lines.svg#{lines[dex]}" />
           </svg>
 

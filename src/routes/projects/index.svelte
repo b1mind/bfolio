@@ -240,6 +240,7 @@
   .alt {
     header {
       justify-self: end;
+      text-align: right;
     }
 
     .line {
