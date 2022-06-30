@@ -101,46 +101,14 @@
     }
 
     function treeLeafTl() {
-      const tl = gsap.timeline()
-      gsap.set('#tree1Leaf > *', { opacity: 1 })
-      gsap.set('#tree2Leaf > *', { opacity: 1 })
-      gsap.set('#tree3Leaf > *', { opacity: 1 })
+      const tl = gsap.timeline({ defaults: { transformOrigin: 'center' } })
+      const leafs = gsap.utils.toArray('#leafs > *')
 
-      tl.from('#tree1Leaf > *', { scaleY: 0, opacity: 0, stagger: 0.3 })
-      tl.from(
-        '#tree1Leaf > *',
-        {
-          scaleX: 0,
-          transformOrigin: 'center',
-          stagger: 0.3,
-          ease: 'back.out(3)',
-        },
-        '>-0.15',
-      )
-
-      tl.from('#tree3Leaf', { scaleY: 0, opacity: 0, stagger: 0.3 }, '<')
-      tl.from(
-        '#tree3Leaf > *',
-        {
-          scaleX: 0,
-          transformOrigin: 'center',
-          stagger: 0.3,
-          ease: 'back.out(3)',
-        },
-        '>-0.15',
-      )
-
-      tl.from('#tree2Leaf', { scaleY: 0, opacity: 0, stagger: 0.3 }, '<')
-      tl.from(
-        '#tree2Leaf > *',
-        {
-          scaleX: 0,
-          transformOrigin: 'center',
-          stagger: 0.3,
-          ease: 'back.out(3)',
-        },
-        '>-0.15',
-      )
+      leafs.forEach((leaf) => {
+        gsap.set(leaf, { opacity: 1 })
+        tl.from(leaf.children, { scaleY: 0, stagger: 0.3 })
+        tl.from(leaf.children, { scaleX: 0, stagger: 0.3 }, '<+0.2')
+      })
 
       return tl
     }
@@ -542,7 +510,7 @@
           fill="#152F00"
         />
       </g>
-      <g class="leafs">
+      <g id="leafs">
         <g id="tree2Leaf">
           <path
             id="treeLeaves05"
@@ -652,7 +620,7 @@
         </g>
       </g>
 
-      <g class="bushes">
+      <g id="bushes">
         <g id="bush1">
           <path
             id="Rectangle 13"
