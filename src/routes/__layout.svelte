@@ -8,7 +8,7 @@
   import Footer from '$lib/component/Footer.svelte'
   import Header from '$lib/component/Header.svelte'
 
-  const hidePaths = ['/', '/cv']
+  const hidePaths = ['/', '/cv', '/kirby']
   const title = 'Portfolio Brent Morton'
 
   let currentTitle = ''
