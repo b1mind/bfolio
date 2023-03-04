@@ -1,0 +1,310 @@
+//sassy vars
+@use '../scss/vars' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+//todo use of :where(html)? usability
+:root {
+	--blue-9: hsla(223, 27%, 10%, 1);
+	--blue-8: hsla(223, 26%, 21%, 1);
+	--blue-7: hsla(210, 14%, 43%, 1);
+	// --blue-7: hsla(210, 17%, 35%, 1);
+	--blue-6: hsla(215, 28%, 47%, 1);
+	--blue-5: hsla(203, 33%, 60%, 1);
+	// --blue-4: hsla(205, 17%, 47%, 1);
+	--blue-4: hsla(205, 20%, 62%, 1);
+	--blue-3: hsla(204, 95%, 78%, 1);
+
+	--white-2: hsla(138, 33%, 94%, 1);
+
+	--yellow-5: hsla(43, 100%, 64%, 1);
+
+	--fs-1: 0.5rem;
+	--fs-3: 0.75rem;
+	--fs-4: 0.95rem;
+	--fs-5: 1.15rem;
+	--fs-6: 1.75rem;
+	--fs-7: 3.3rem;
+	--fs-8: 4.6rem;
+	--fs-lrg: clamp(3.6rem, 10vw + 1rem, 6.6rem);
+	--fs-xl: clamp(12rem, 28vw + 1rem, 16rem);
+
+	@media (max-width: $mediaSml) {
+		--fs-7: 2.3rem;
+	}
+
+	--fw-1: 100;
+	--fw-2: 200;
+	--fw-3: 300;
+	--fw-4: 400;
+	--fw-5: 500;
+	--fw-6: 600;
+	--fw-7: 700;
+
+	//todo better spacing
+	--spacer-1: 0.25rem;
+	--spacer-2: 0.5rem;
+	--spacer-3: 0.75rem;
+	--spacer-4: 0.85rem;
+	--spacer-5: 1rem;
+	--spacer-6: 1.5rem;
+	--spacer-7: 2rem;
+	--spacer-8: 2.25rem;
+	--spacer-9: 9.5rem;
+
+	@media (max-width: $mediaSml) {
+		--spacer-9: 3.25rem;
+	}
+
+	--gap-1: 0.25rem;
+	--gap-2: 0.35rem;
+	--gap-3: 0.5rem;
+	--gap-4: 0.8rem;
+	--gap-5: 1rem;
+	--gap-6: 1.5rem;
+	--gap-7: 2rem;
+	--gap-8: 2.25rem;
+	--gap-9: 3.25rem;
+
+	//from https://open-props.style
+	--shadow-strength: 50%;
+	--shadow-color: 0 0% 5%;
+
+	--shadow-2: 0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+		0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+	--shadow-5: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+		0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+		0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+		0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+		0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+
+	//site tokens
+	--clr-primary-bg: var(--blue-8);
+	--clr-primary: var(--blue-3);
+	--clr-secondary: var(--blue-5);
+	--clr-secondary-bg: var(--blue-9);
+	--clr-highlight: var(--yellow-5);
+	--clr-white: var(--white-2);
+	--clr-gray: var(--blue-7);
+}
+
+//put behind prefers or just leave out?
+// html {
+//   scroll-behavior: smooth;
+// }
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	color: var(--clr-white);
+	font-size: var(--fs-5);
+	font-family: 'IBM Plex Sans', sans-serif;
+	// -webkit-font-smoothing: antialiased;
+	background-color: var(--clr-secondary-bg);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+svg {
+	fill: currentColor;
+}
+
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	line-height: 1.2;
+	overflow-wrap: break-word;
+}
+
+h1,
+.title-lrg {
+	font-size: var(--fs-8);
+	line-height: 1;
+
+	@media (max-width: $mediaSml) {
+		font-size: var(--fs-7);
+	}
+}
+
+h2,
+.title-med {
+	font-size: var(--fs-7);
+}
+
+h3,
+.title-sml {
+	font-size: var(--fs-6);
+}
+
+i,
+b {
+	line-height: 1.1;
+}
+
+p {
+	max-width: 65ch;
+	margin: 0;
+	line-height: 1.5;
+	font-size: var(--fs-5);
+	font-weight: var(--fw-4);
+	font-family: 'IBM Plex Serif', serif;
+}
+
+nav > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+.main-wrapper {
+	position: relative;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	background-color: var(--clr-secondary-bg);
+}
+
+// this is for collapsing header
+.overlay-bg {
+	display: grid;
+	// min-height: 100%;
+	background: linear-gradient(
+		180deg,
+		var(--clr-primary-bg) 0%,
+		var(--clr-secondary-bg) 100%
+	);
+	z-index: 0;
+}
+
+//utils
+.spacer > * + * {
+	margin-top: var(--spacer, var(--spacer-5));
+}
+
+.wrap {
+	--gap: var(--gap-6);
+
+	display: grid;
+	grid-template-columns:
+		minmax(var(--gap), 1fr)
+		minmax(280px, 920px)
+		minmax(var(--gap), 1fr);
+
+	//for overlaying center cell
+	grid-template-areas: '. l .';
+
+	& > * {
+		// grid-area: l;
+		grid-column: 2 / 3;
+	}
+
+	@media (max-width: $mediaSml) {
+		--gap: var(--gap-4);
+	}
+}
+
+//styles
+a {
+	color: var(--clr-white);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration-thickness: 0.15em;
+		text-decoration-line: underline;
+		text-decoration-color: var(--clr-highlight);
+		text-underline-offset: 0.15em;
+		// research this
+		// text-underline-position: from-font;
+	}
+}
+
+nav a {
+	color: var(--clr-primary);
+	font-weight: var(--fw-6);
+
+	&:hover {
+		color: var(--clr-white);
+		text-decoration: none;
+		// filter: invert(55%);
+	}
+}
+
+p a {
+	color: var(--clr-white);
+	text-decoration-thickness: 0.15em;
+	text-decoration-line: underline;
+	text-decoration-color: var(--clr-primary);
+	text-underline-offset: 0.15em;
+	&:hover {
+		color: var(--clr-primary);
+		text-decoration: none;
+	}
+}
+
+#main-content {
+	scroll-margin-top: var(--spacer-9);
+}
+
+::selection {
+	color: var(--clr-secondary-bg);
+	background: var(--clr-highlight);
+}
+
+img::selection {
+	color: unset;
+	background: unset;
+}
+
+p > img:nth-child(2n + 1),
+p + p > img:nth-child(2n + 2) {
+	float: right;
+	clear: right;
+	// padding: 0.5em 0 0.5em 0.5em;
+	border-radius: 3px;
+}
+
+p > img:nth-child(2n + 2),
+p + p > img:nth-child(2n + 1) {
+	float: left;
+	clear: left;
+	// padding: 0.5em 0.5em 0.5em 0;
+	border-radius: 3px;
+}
