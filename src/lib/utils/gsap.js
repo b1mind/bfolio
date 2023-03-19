@@ -1,5 +1,3 @@
-import { onDestroy, onMount } from 'svelte'
-
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin.js'
@@ -51,11 +49,14 @@ export function triggerMe(node) {
 		// markers: true,
 	})
 
-	onDestroy(() => {
-		// ScrollTrigger.removeEventListener()
-		// note find out if we need to destroy or not
-		console.log('destroy?')
-	})
+	return {
+		destroy() {
+			console.log('destroy?')
+			ScrollTrigger.removeEventListener()
+			tl.kill()
+			// note find out if we need to destroy or not
+		}
+	}
 }
 
 export function drawMe(node) {

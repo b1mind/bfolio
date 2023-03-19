@@ -5,7 +5,7 @@
 </script>
 
 <b use:staggerUp class="title-header">{path}</b>
-<b class="background">{path}</b>
+<b aria-hidden="true" class="background">{path}</b>
 
 <style lang="scss">
 	b {
@@ -31,6 +31,7 @@
 		font-weight: var(--fw-7);
 		text-transform: uppercase;
 		line-height: 1;
+		user-select: none;
 		z-index: -99;
 	}
 </style>
