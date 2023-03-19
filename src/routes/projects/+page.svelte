@@ -1,9 +1,9 @@
 <script>
-	import VendorIcons from '$lib/component/VendorIcons.svelte';
-	import { projectsStore } from '$lib/data/projects';
-	import { triggerMe, drawMe } from '$lib/utils/gsap';
+	import VendorIcons from '$lib/component/VendorIcons.svelte'
+	import { projectsStore } from '$lib/data/projects'
+	import { triggerMe, drawMe } from '$lib/utils/gsap'
 
-	const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap'];
+	const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
 
 <div class="wrap">
@@ -13,7 +13,12 @@
 			<i>a showcase of current skills</i>
 			<VendorIcons {techUsed} />
 
-			<svg use:drawMe height="140" viewBox="-2 -10 136 98" xmlns="http://www.w3.org/2000/svg">
+			<svg
+				use:drawMe
+				height="140"
+				viewBox="-2 -10 136 98"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<path
 					d="M67.2198 7.99984C67.2198 46.9994 116.22 6.99977 114.72 74"
 					stroke="#FFCB47"
