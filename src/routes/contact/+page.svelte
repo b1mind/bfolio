@@ -136,8 +136,8 @@
 	textarea {
 		--spacer: var(--spacer-2);
 		color: var(--clr-white);
-		// background-color: var(--clr-secondary-bg);
-		background-color: var(--clr-primary-bg);
+		background-color: var(--clr-secondary-bg);
+		// background-color: var(--clr-primary-bg);
 		border: 2px solid var(--clr-gray);
 		// border: none;
 		resize: none;
