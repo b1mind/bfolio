@@ -145,29 +145,29 @@
 
 		&:active,
 		&:focus {
-			// outline-color: var(--clr-highlight);
-			// outline-style: inset;
+			outline-color: var(--clr-highlight);
+			outline-style: inset;
 			border: 2px solid var(--clr-highlight);
 		}
 	}
 
 	button {
-		--fill: var(--clr-highlight);
+		--fill: var(--clr-primary);
 		padding-block: 0.25rem;
 		padding-inline: 1.25rem;
 		display: grid;
 		place-content: center;
-		color: var(--clr-highlight);
+		color: var(--clr-primary);
 		font-weight: var(--fw-5);
 		background: var(--clr-secondary-bg);
-		border: 2px solid var(--clr-highlight);
+		border: 2px solid var(--clr-primary);
 		border-radius: 3px;
 		cursor: pointer;
 
 		&:hover {
 			color: var(--clr-secondary-bg);
-			background: var(--clr-highlight);
-			border: 2px solid var(--clr-highlight);
+			background: var(--clr-primary);
+			border: 2px solid var(--clr-primary);
 		}
 	}
 </style>
