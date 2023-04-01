@@ -260,6 +260,7 @@
 
 			img {
 				grid-area: img;
+				max-height: 300px;
 			}
 		}
 
