@@ -1,29 +1,29 @@
 <script context="module">
-	export let prerender = true;
+	export let prerender = true
 </script>
 
 <script>
-	import { dev } from '$app/environment';
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
+	import { dev } from '$app/environment'
+	import { onMount } from 'svelte'
+	import { gsap } from 'gsap'
 
-	let tl;
+	let tl
 
 	onMount(async () => {
-		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } });
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+		tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } })
 
-		const links = gsap.utils.toArray('.mainNav > a');
+		const links = gsap.utils.toArray('.mainNav > a')
 
-		tl.add('start');
+		tl.add('start')
 
 		if (!reduceMotion) {
-			gsap.set(links, { opacity: 0, x: 200 });
-			gsap.set('.logo > b', { opacity: 0 });
-			gsap.set('.logo', { opacity: 0, y: '23vh', scale: 4, translateX: 15 });
-			gsap.set('.hidden', { opacity: 0 });
+			gsap.set(links, { opacity: 0, x: 200 })
+			gsap.set('.logo > b', { opacity: 0 })
+			gsap.set('.logo', { opacity: 0, y: '23vh', scale: 4, translateX: 15 })
+			gsap.set('.hidden', { opacity: 0 })
 
-			tl.to('.logo', { duration: 1, opacity: 1 }, 'start');
+			tl.to('.logo', { duration: 1, opacity: 1 }, 'start')
 			tl.from(
 				'.logo-bg',
 				{
@@ -32,10 +32,10 @@
 					ease: 'power2.out'
 				},
 				'<'
-			);
+			)
 
-			tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5');
-			tl.to('.logo > b', { opacity: 1 }, '>-0.1');
+			tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5')
+			tl.to('.logo > b', { opacity: 1 }, '>-0.1')
 			tl.to(
 				links,
 				{
@@ -45,20 +45,20 @@
 					ease: 'back'
 				},
 				'>-0.35'
-			);
+			)
 		} else {
-			tl.to('.hidden', { opacity: 0 });
-			tl.from('.logo', { opacity: 0 }, '<');
-			tl.from('.logo-bg', { opacity: 0 }, '<+0.25');
-			tl.from(links, { opacity: 0, stagger: 0.25 }, '<+0.35');
+			tl.to('.hidden', { opacity: 0 })
+			tl.from('.logo', { opacity: 0 }, '<')
+			tl.from('.logo-bg', { opacity: 0 }, '<+0.25')
+			tl.from(links, { opacity: 0, stagger: 0.25 }, '<+0.35')
 		}
 
-		tl.set('.hidden', { display: 'none' });
-	});
+		tl.set('.hidden', { display: 'none' })
+	})
 
 	function testAnime() {
-		if (!dev) return;
-		tl.play(0);
+		if (!dev) return
+		tl.play(0)
 	}
 </script>
 
@@ -74,7 +74,12 @@
 
 <header class="wrap">
 	<nav class="mainNav">
-		<div class="logo" aria-label="Brent Morton Logo" on:click={testAnime} on:keypress={testAnime}>
+		<div
+			class="logo"
+			aria-label="Brent Morton Logo"
+			on:click={testAnime}
+			on:keypress={testAnime}
+		>
 			<b aria-hidden="true">Bren</b>
 
 			<svg
@@ -141,7 +146,11 @@
 		grid-template-areas: '. l .';
 		overflow: hidden;
 		z-index: 0;
-		background: linear-gradient(180deg, var(--clr-primary-bg) 0%, var(--clr-secondary-bg) 100%);
+		background: linear-gradient(
+			180deg,
+			var(--clr-primary-bg) 0%,
+			var(--clr-secondary-bg) 100%
+		);
 
 		& > * {
 			grid-area: l;
@@ -178,10 +187,10 @@
 		display: grid;
 		gap: var(--gap-7);
 		place-content: center;
-		text-align: right;
 	}
 
 	a {
+		justify-self: right;
 		font-size: var(--fs-lrg);
 		font-weight: bold;
 		text-decoration: none;
