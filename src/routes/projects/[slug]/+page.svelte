@@ -37,7 +37,7 @@
 
 	<article class="wrap spacer">
 		<header class="box-wrap">
-			<h2 class="title-sml">{currentProject.overview.title}</h2>
+			<h2 class="title-med">{currentProject.overview.title}</h2>
 			<a href={currentProject.link} class="box" aria-label="live demo">
 				<svg width="28" height="28">
 					<use href="/img/main-icons.svg#link" />
@@ -67,16 +67,12 @@
 	</article>
 
 	<article class="wrap spacer">
-		<h2 class="title-sml">Highlight</h2>
-		<ul>
-			{#each currentProject.highlight as highlight, dex}
-				<li><b>{highlight}</b><i>{dex + 1}</i></li>
-			{/each}
-		</ul>
+		<h2 class="title-med">Highlights</h2>
 
 		{#each currentProject.sections as section, dex}
 			<section class="spacer" data-highlight={dex}>
 				<h3>{section.title}</h3>
+				<i>{dex + 1}</i>
 
 				<div class="highlight grid">
 					<img
@@ -115,16 +111,16 @@
           </svg> -->
 
 					<!-- note @html to render the html content of the section -->
-					<div class="content spacer">
+					<p class="content spacer">
 						{@html section.content}
-					</div>
+					</p>
 				</div>
 			</section>
 		{/each}
 	</article>
 
 	<article class="wrap spacer">
-		<h2 class="title-sml">{currentProject.learned.title}</h2>
+		<h2 class="title-med">{currentProject.learned.title}</h2>
 
 		<div class="grid">
 			<!-- <img src={currentProject.learned.img} alt={currentProject.learned.altText} /> -->
@@ -179,21 +175,23 @@
 	.box-wrap {
 		display: inline-flex;
 		gap: 0.5rem;
+		align-items: center;
 	}
 
 	.box {
-		--fill: var(--clr-highlight);
-		padding: 4px;
+		--fill: var(--clr-primary);
+		width: 44px;
+		height: 44px;
 		display: grid;
 		place-content: center;
 		color: var(--clr-secondary-bg);
 		background: var(--clr-secondary-bg);
-		border: 2px solid var(--clr-highlight);
+		border: 2px solid var(--clr-primary);
 		border-radius: 3px;
 
 		&:hover {
 			--fill: currentColor;
-			background: var(--clr-highlight);
+			background: var(--clr-primary);
 		}
 	}
 
@@ -208,63 +206,17 @@
 		--spacer: var(--spacer-9);
 	}
 
-	article {
-		ul {
-			padding: 0;
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			gap: var(--gap-5);
-		}
-
-		li {
-			display: grid;
-			grid-template-areas: 'l';
-			place-items: center;
-
-			& > * {
-				grid-area: l;
-			}
-
-			b {
-				align-self: end;
-				text-transform: lowercase;
-				// color: var(--clr-highlight);
-				transform: translate(0, -5px);
-				z-index: 9;
-			}
-
-			i {
-				max-width: max-content;
-				padding-block: 0.1em;
-				padding-inline: 0.35em;
-				color: var(--clr-primary-bg);
-				font-size: var(--fs-lrg);
-				font-weight: var(--fw-7);
-				background-color: var(--clr-secondary-bg);
-				border-radius: 3px;
-			}
-		}
-	}
-
 	h2 {
 		max-width: max-content;
-		padding-block: 0.25rem;
+		padding-block: 0.05rem;
 		padding-inline: 0.5rem;
-		color: var(--clr-secondary-bg);
-		background: var(--clr-highlight);
-		border-radius: 3px;
+		border-left: 3px solid var(--clr-highlight);
 	}
 
 	h3 {
 		text-decoration-line: underline;
 		text-decoration-color: var(--clr-highlight);
 		text-decoration-thickness: 0.1em;
-		text-underline-offset: 0.05em;
-	}
-
-	i {
-		display: block;
 	}
 
 	.grid {
@@ -276,11 +228,30 @@
 		}
 	}
 
-	.line {
+	.line,
+	section > i {
 		display: none;
 	}
 
 	@media (min-width: $mediaSml) {
+		section {
+			position: relative;
+
+			i {
+				position: absolute;
+				max-width: max-content;
+				padding-block: 0.1em;
+				padding-inline: 0.35em;
+				display: block;
+				color: var(--clr-primary-bg);
+				font-size: var(--fs-lrg);
+				font-weight: var(--fw-7);
+				background-color: var(--clr-secondary-bg);
+				border-radius: 3px;
+				transform: translate(-20px, -7rem);
+				z-index: -1;
+			}
+		}
 		.highlight {
 			grid-template-columns: 4fr 1fr auto;
 			grid-template-areas:
@@ -308,6 +279,14 @@
 		}
 
 		[data-highlight='1'] {
+			h3 {
+				text-align: right;
+			}
+
+			i {
+				right: 0.75rem;
+			}
+
 			.grid {
 				grid-template-columns: auto 1fr 5fr;
 				grid-template-areas:

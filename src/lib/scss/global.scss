@@ -244,38 +244,27 @@ nav > ul {
 //styles
 a {
 	color: var(--clr-white);
-	text-decoration: none;
+	text-decoration-thickness: 0.1em;
+	text-decoration-line: underline;
+	text-decoration-color: var(--clr-primary);
+	text-underline-offset: 0.1em;
 
 	&:hover {
-		text-decoration-thickness: 0.15em;
-		text-decoration-line: underline;
-		text-decoration-color: var(--clr-highlight);
-		text-underline-offset: 0.15em;
-		// research this
-		// text-underline-position: from-font;
+		color: var(--clr-primary);
+		text-decoration: none;
 	}
+	// research this
+	// text-underline-position: from-font;
 }
 
 nav a {
 	color: var(--clr-primary);
 	font-weight: var(--fw-6);
+	text-decoration: none;
 
 	&:hover {
 		color: var(--clr-white);
-		text-decoration: none;
 		// filter: invert(55%);
-	}
-}
-
-p a {
-	color: var(--clr-white);
-	text-decoration-thickness: 0.15em;
-	text-decoration-line: underline;
-	text-decoration-color: var(--clr-primary);
-	text-underline-offset: 0.15em;
-	&:hover {
-		color: var(--clr-primary);
-		text-decoration: none;
 	}
 }
 

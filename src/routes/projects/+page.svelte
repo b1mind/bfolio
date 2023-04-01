@@ -165,13 +165,6 @@
 			a {
 				display: flex;
 				gap: var(--gap-3);
-
-				&:hover {
-					text-decoration-thickness: 0.1em;
-					text-decoration-line: underline;
-					text-decoration-color: var(--clr-highlight);
-					text-underline-offset: 0.035em;
-				}
 			}
 
 			svg {

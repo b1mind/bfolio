@@ -60,6 +60,6 @@
 		text-decoration-line: underline;
 		text-decoration-color: var(--clr-highlight);
 		text-decoration-thickness: 2px;
-		text-underline-offset: 0.6em;
+		text-underline-offset: 10px;
 	}
 </style>
