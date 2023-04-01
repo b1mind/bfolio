@@ -176,7 +176,7 @@
 
 		@media (min-width: $mediaSml) {
 			grid-template-columns: 1fr 1fr;
-			gap: 0;
+			gap: var(--gap-4);
 		}
 	}
 
@@ -232,7 +232,6 @@
 	.alt {
 		header {
 			justify-self: end;
-			text-align: right;
 		}
 
 		.line {
