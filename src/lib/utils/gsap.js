@@ -51,7 +51,7 @@ export function triggerMe(node) {
 
 	return {
 		destroy() {
-			console.log('destroy?')
+			// console.log('destroy?')
 			ScrollTrigger.removeEventListener()
 			tl.kill()
 			// note find out if we need to destroy or not
@@ -93,7 +93,7 @@ export function drawMe(node) {
 export function staggerUp(node) {
 	let tl = gsap.timeline({ defaults: {} })
 	// tl.from('[data-header] > b', { stagger: 0.3, y: 200 })
-	console.dir(node)
+	// console.dir(node)
 	tl.from(node.nextElementSibling, {
 		duration: 0.35,
 		opacity: 0,
