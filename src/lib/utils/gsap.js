@@ -23,21 +23,21 @@ export function triggerMe(node) {
 				path: line,
 				align: line,
 				alignOrigin: [0.32, 0],
-				autoRotate: 105
-			}
+				autoRotate: 105,
+			},
 		},
-		'<'
+		'<',
 	)
 
 	tl.from(
 		node.firstChild.lastChild,
 		{ duration: 0.35, y: '-1rem', opacity: 0, ease: 'power4' },
-		'<+=0.3'
+		'<+=0.3',
 	)
 	tl.from(
 		node.firstChild.firstChild,
 		{ duration: 0.35, y: '1rem', opacity: 0, ease: 'power4' },
-		'<'
+		'<',
 	)
 
 	ScrollTrigger.create({
@@ -45,7 +45,7 @@ export function triggerMe(node) {
 		// pin: true,
 		// scrub: 1,
 		start: 'center bottom',
-		animation: tl
+		animation: tl,
 		// markers: true,
 	})
 
@@ -55,7 +55,7 @@ export function triggerMe(node) {
 			ScrollTrigger.removeEventListener()
 			tl.kill()
 			// note find out if we need to destroy or not
-		}
+		},
 	}
 }
 
@@ -73,10 +73,10 @@ export function drawMe(node) {
 				path: line,
 				align: line,
 				alignOrigin: [0.5, 0.8],
-				autoRotate: -90
-			}
+				autoRotate: -90,
+			},
 		},
-		'<'
+		'<',
 	)
 
 	ScrollTrigger.create({
@@ -85,7 +85,7 @@ export function drawMe(node) {
 		scrub: 1,
 		start: 'top-=100 center',
 		end: 'end 30%',
-		animation: tl
+		animation: tl,
 		// markers: true,
 	})
 }
@@ -98,7 +98,7 @@ export function staggerUp(node) {
 		duration: 0.35,
 		opacity: 0,
 		x: 300,
-		ease: 'power1'
+		ease: 'power1',
 	})
 	tl.from(node, { y: 150, ease: 'back.out(1.3)' }, '<+=0.2')
 
@@ -115,7 +115,7 @@ export function staggerIcons(node) {
 		delay: 0.4,
 		opacity: 0,
 		y: -20,
-		stagger: { amount: 0.5, grid: 'auto', from: 'center' }
+		stagger: { amount: 0.5, grid: 'auto', from: 'center' },
 	})
 
 	afterUpdate(() => {

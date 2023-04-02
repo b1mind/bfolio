@@ -29,9 +29,9 @@
 				{
 					duration: 1.5,
 					scale: 35,
-					ease: 'power2.out'
+					ease: 'power2.out',
 				},
-				'<'
+				'<',
 			)
 
 			tl.to('.logo', { y: 0, scale: 1, translateX: 0, ease: 'sine.in' }, '>-0.5')
@@ -41,10 +41,10 @@
 				{
 					opacity: 1,
 					x: 0,
-					stagger: { amount: 0.1, from: 'end' },
-					ease: 'back'
+					stagger: { amount: 0.24, from: 'end' },
+					ease: 'back.out(2.4)',
 				},
-				'>-0.35'
+				'>-0.35',
 			)
 		} else {
 			tl.to('.hidden', { opacity: 0 })
