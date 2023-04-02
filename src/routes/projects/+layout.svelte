@@ -57,6 +57,7 @@
 	}
 
 	[aria-current='page'] {
+		color: var(--clr-white);
 		text-decoration-line: underline;
 		text-decoration-color: var(--clr-highlight);
 		text-decoration-thickness: 2px;
