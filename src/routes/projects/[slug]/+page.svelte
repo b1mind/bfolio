@@ -22,7 +22,6 @@
 				alt="Visual of the project"
 				width="420px"
 				height="380px"
-				loading="lazy"
 			/>
 
 			<img
@@ -30,7 +29,6 @@
 				alt="Visual of the project"
 				width="420px"
 				height="237px"
-				loading="lazy"
 			/>
 		</div>
 	</Title>
