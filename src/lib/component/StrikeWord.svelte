@@ -2,11 +2,11 @@
 	export let word
 </script>
 
-<span class="parent">
+<div class="parent">
 	{#each word as l}
 		<span class="letter">{l}</span>
 	{/each}
-</span>
+</div>
 
 <style lang="scss">
 	.parent {
@@ -38,18 +38,21 @@
 			position: absolute;
 			min-width: 100%;
 			border-bottom: 0.15em solid var(--clr-white);
-			translate: 0 0.1em;
-			scale: 0 1;
-			transition: scale 320ms ease-in, border 220ms;
+			transform: translateY(0.1em) scaleX(0);
 			transform-origin: left;
+			// needs more support?
+			// translate: 0 0.1em;
+			// scale: 0 1;
+			transition: transform 320ms ease-in, border 220ms;
 			pointer-events: none;
 			z-index: 1;
 		}
 
 		&:hover::after,
 		&:focus::after {
-			scale: 1 1;
+			transform: translateY(0.1em) scaleX(1);
 			transform-origin: right;
+			// scale: 1 1;
 			border-bottom: 0.15em solid var(--clr-highlight);
 		}
 
@@ -64,11 +67,11 @@
 		// 	scale: 1.3;
 		// }
 
-		.letter:nth-child(odd) {
+		.letter:nth-child(even) {
 			z-index: 2;
 		}
 
-		.letter:nth-child(even) {
+		.letter:nth-child(odd) {
 			z-index: -1;
 		}
 	}
