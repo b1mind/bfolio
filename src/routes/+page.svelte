@@ -9,9 +9,12 @@
 
 	let tl
 
-	onMount(async () => {
+	onMount(() => {
 		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-		tl = gsap.timeline({ defaults: { duration: reduceMotion ? '1.25' : '0.5' } })
+		tl = gsap.timeline({
+			// paused: true,
+			defaults: { duration: reduceMotion ? '1.25' : '0.5' },
+		})
 
 		const links = gsap.utils.toArray('.mainNav > a')
 
@@ -104,9 +107,19 @@
 			<b aria-hidden="true">orton</b>
 		</div>
 
-		<a href="/projects">Projects</a>
-		<a href="/contact">Contact</a>
-		<a href="/about">About</a>
+		<a href="/projects"
+			><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span
+				>c</span
+			><span>t</span><span>s</span></a
+		>
+		<a href="/contact"
+			><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span
+				>c</span
+			><span>t</span></a
+		>
+		<a href="/about"
+			><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a
+		>
 	</nav>
 
 	<svg
@@ -190,11 +203,74 @@
 	}
 
 	a {
+		position: relative;
+		isolation: isolate;
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
 		justify-self: right;
 		font-size: var(--fs-lrg);
 		font-weight: bold;
 		text-decoration: none;
-		text-transform: uppercase;
+		text-transform: lowercase;
+		transition: color 250ms;
+
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	min-width: 100%;
+		// 	translate: 0 0.1em;
+		// 	scale: 0 1;
+		// 	transition: scale 320ms ease-in;
+		// 	transform-origin: left;
+		// 	z-index: 1;
+		// }
+
+		&::after {
+			content: '';
+			position: absolute;
+			min-width: 100%;
+			border-bottom: 0.15em solid var(--clr-white);
+			translate: 0 0.1em;
+			scale: 0 1;
+			transition: scale 320ms ease-in, border 220ms;
+			transform-origin: left;
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		// &:hover::before,
+		// &:focus::before {
+		// 	scale: 1 1;
+		// 	transform-origin: right;
+		// 	border-bottom: 0.15em solid var(--clr-highlight);
+		// }
+
+		&:hover::after,
+		&:focus::after {
+			scale: 1 1;
+			transform-origin: right;
+			border-bottom: 0.15em solid var(--clr-highlight);
+		}
+
+		span {
+			position: relative;
+			// padding-inline: 0.1rem;
+			// transition: scale 250ms ease-out;
+			// transform-origin: center;
+		}
+
+		// span:hover {
+		// 	scale: 1.3;
+		// }
+
+		span:nth-child(odd) {
+			z-index: 2;
+		}
+
+		span:nth-child(even) {
+			z-index: -1;
+		}
 	}
 
 	.logo-bg {
