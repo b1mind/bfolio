@@ -107,19 +107,19 @@
 			<b aria-hidden="true">orton</b>
 		</div>
 
-		<a href="/projects"
-			><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span
-				>c</span
-			><span>t</span><span>s</span></a
-		>
-		<a href="/contact"
-			><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span
-				>c</span
-			><span>t</span></a
-		>
-		<a href="/about"
-			><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a
-		>
+		<a href="/projects">
+			<span>P</span><span>r</span><span>o</span><span>j</span><span>e</span>
+			<span>c</span><span>t</span><span>s</span>
+		</a>
+
+		<a href="/contact">
+			<span>C</span><span>o</span><span>n</span><span>t</span><span>a</span>
+			<span>c</span><span>t</span>
+		</a>
+
+		<a href="/about">
+			<span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
+		</a>
 	</nav>
 
 	<svg
