@@ -1,0 +1,11 @@
+Todo:
+  ✔ update packages @done
+  ✔ home link hovers @done
+  ☐ import images with vite blob for proper cache
+  ☐ project page transitions
+  ☐ update projects with better details
+  ☐ name logo hover > change to handle
+  
+Maybe:
+  ☐ change .json from a store to kit endpoints
+  ☐ home > main navigation transitions
