@@ -2,6 +2,45 @@
 	import { page } from '$app/stores'
 	import { projectsStore } from '$lib/data/projects'
 	import Bar from '$lib/component/Bar.svelte'
+
+	import { beforeNavigate, afterNavigate } from '$app/navigation'
+
+	import { gsap } from 'gsap'
+	import { Flip } from 'gsap/dist/Flip.js'
+
+	gsap.registerPlugin(Flip)
+
+	let state
+
+	beforeNavigate(async () => {
+		const articles = gsap.utils.toArray('article')
+		console.dir(articles)
+		for (const article of articles) {
+			console.dir(article)
+			let offset = article.getBoundingClientRect()
+			console.log(offset.y)
+			console.log(window.scrollY)
+			console.log(`${offset.y + window.scrollY}px`)
+			article.style.position = 'absolute'
+			article.style.top = `${offset.y + window.scrollY}px`
+		}
+		state = Flip.getState('.img > img, header > h2')
+		console.dir(state)
+	})
+
+	afterNavigate(async (e) => {
+		Flip.from(state, {
+			targets: '.img-wrap > img, h1',
+			scale: true,
+			ease: 'power2.inOut',
+		})
+	})
+
+	// onNavigate(async (navigate) => {
+	// 	let links = document.querySelectorAll('h2')
+	// 	console.log(navigate)
+	// 	console.log(links)
+	// })
 </script>
 
 <div class="navBar wrap">

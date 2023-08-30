@@ -2,6 +2,13 @@
 	import VendorIcons from '$lib/component/VendorIcons.svelte'
 	import { projectsStore } from '$lib/data/projects'
 	import { triggerMe, drawMe } from '$lib/utils/gsap'
+	import { onNavigate } from '$app/navigation'
+
+	// onNavigate(async (navigate) => {
+	// 	let links = document.querySelectorAll('h2')
+	// 	console.log(navigate)
+	// 	console.log(links)
+	// })
 
 	const techUsed = ['html', 'css', 'svg', 'json', 'svelte', 'figma', 'gsap']
 </script>
@@ -42,7 +49,7 @@
 			<!-- //note find out if this is even needed other than Region Role titles -->
 			<article use:triggerMe class:alt={dex === 1} aria-labelledby={project.name}>
 				<header class="spacer">
-					<h2 id={project.name}>
+					<h2 id={project.name} data-flip-id="title-{project.name}">
 						<a href="/projects/{key}#main-content">
 							{project.name}
 							<svg class="info">
@@ -79,6 +86,7 @@
 					<img
 						src={project.thumbnail}
 						alt="{project.name} preview"
+						data-flip-id="img-{project.name}"
 						width="420px"
 						height="380px"
 						loading="lazy"

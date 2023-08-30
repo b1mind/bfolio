@@ -11,7 +11,9 @@
 
 <div class="spacer" id="main-content" tabindex="-1">
 	<Title>
-		<h1 class="title-med">{currentProject.name}</h1>
+		<h1 class="title-med" data-flip-id="title-{currentProject.name}">
+			{currentProject.name}
+		</h1>
 		<i>{currentProject.subTitle}</i>
 
 		<VendorIcons slot="icons" techUsed={currentProject.techUsed} />
@@ -20,6 +22,7 @@
 			<img
 				src={currentProject.thumbnail}
 				alt="Visual of the project"
+				data-flip-id="img-{currentProject.name}"
 				width="420px"
 				height="380px"
 			/>
@@ -35,7 +38,9 @@
 
 	<article class="wrap spacer">
 		<header class="box-wrap">
-			<h2 class="title-med">{currentProject.overview.title}</h2>
+			<h2 class="title-med">
+				{currentProject.overview.title}
+			</h2>
 			<a href={currentProject.link} class="box" aria-label="live demo">
 				<svg width="28" height="28">
 					<use href="/img/main-icons.svg#link" />

@@ -81,8 +81,9 @@
 		<div
 			class="logo"
 			aria-label="Brent Morton Logo"
-			on:click={testAnime}
-			on:keypress={testAnime}
+			role={dev ? null : 'button'}
+			on:click={dev ? testAnime : null}
+			on:keypress={dev ? testAnime : null}
 		>
 			<b aria-hidden="true">Bren</b>
 
@@ -109,15 +110,15 @@
 		</div>
 
 		<a href="/projects">
-			<StrikeWord word="projects" />
+			<StrikeWord word="Projects" />
 		</a>
 
 		<a href="/contact">
-			<StrikeWord word="contact" />
+			<StrikeWord word="Contact" />
 		</a>
 
 		<a href="/about">
-			<StrikeWord word="about" />
+			<StrikeWord word="About" />
 		</a>
 	</nav>
 
