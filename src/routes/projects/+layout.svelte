@@ -12,27 +12,35 @@
 
 	let state
 
-	beforeNavigate(async () => {
-		const articles = gsap.utils.toArray('article')
-		console.dir(articles)
-		for (const article of articles) {
-			console.dir(article)
-			let offset = article.getBoundingClientRect()
-			console.log(offset.y)
-			console.log(window.scrollY)
-			console.log(`${offset.y + window.scrollY}px`)
-			article.style.position = 'absolute'
-			article.style.top = `${offset.y + window.scrollY}px`
+	beforeNavigate(async (e) => {
+		console.dir(e)
+		if (e.from.route.id === '/projects') {
+			const articles = gsap.utils.toArray('article')
+			console.dir(articles)
+			let totalOffset = 0
+			articles
+				.map((article) => [article, article.getBoundingClientRect()])
+				.map(([article, offset]) => {
+					totalOffset = totalOffset + offset.bottom
+					console.log(offset.y)
+					article.style.position = 'absolute'
+					article.style.top = `${offset.y + 256}px`
+					article.style.tranformOrigin = 'top'
+				})
+			console.log(totalOffset)
 		}
-		state = Flip.getState('.img > img, header > h2')
+
+		state = Flip.getState('.img > img, header > h2, i[data-sub]')
 		console.dir(state)
 	})
 
 	afterNavigate(async (e) => {
 		Flip.from(state, {
-			targets: '.img-wrap > img, h1',
+			targets: '.img-wrap > img, h1[data-title], i[data-sub]',
+			duration: 0.75,
 			scale: true,
-			ease: 'power2.inOut',
+			fade: true,
+			ease: 'power4.out',
 		})
 	})
 

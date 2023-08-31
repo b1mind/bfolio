@@ -11,10 +11,12 @@
 
 <div class="spacer" id="main-content" tabindex="-1">
 	<Title>
-		<h1 class="title-med" data-flip-id="title-{currentProject.name}">
+		<h1 data-title class="title-med" data-flip-id="title-{currentProject.name}">
 			{currentProject.name}
 		</h1>
-		<i>{currentProject.subTitle}</i>
+		<i style="display:block;" data-sub data-flip-id="sub-{currentProject.name}"
+			>{currentProject.subTitle}</i
+		>
 
 		<VendorIcons slot="icons" techUsed={currentProject.techUsed} />
 

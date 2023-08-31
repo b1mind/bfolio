@@ -57,7 +57,9 @@
 							</svg>
 						</a>
 					</h2>
-					<i>{project.subTitle}</i>
+					<i style="display:block;" data-sub data-flip-id="sub-{project.name}"
+						>{project.subTitle}</i
+					>
 				</header>
 
 				<svg class="line" viewBox="0 0 276 73" xmlns="http://www.w3.org/2000/svg">
@@ -168,7 +170,7 @@
 		row-gap: var(--gap-9);
 
 		header {
-			width: max-content;
+			min-width: max-content;
 
 			a {
 				display: flex;
@@ -197,6 +199,7 @@
 		.line {
 			--fill: var(--clr-highlight);
 			grid-row: 2 / 3;
+			grid-column: 1 / 2;
 			justify-self: center;
 			width: 85%;
 			display: block;
