@@ -80,16 +80,16 @@
 
 					<section>
 						<p>
-							Started as a remote technitian providing installations and customer service
+							Started as a remote technician providing installations and customer service
 							for a Dish TV / HughesNet / viaSAT regional service provider. Promoted to
 							manager after one year. By achieving staffing goals and through experienced
-							routing decreased office losses by an avarage of $10,000 per month. Oversaw
+							routing decreased office losses by an average of $10,000 per month. Oversaw
 							weekly up training and OSHA safety meetings.
 						</p>
 
 						<ul>
 							<li>SBCA certification</li>
-							<li>Top technitian/office metrics</li>
+							<li>Top technician/office metrics</li>
 							<li>Winner of sales events</li>
 							<li>iPhone repair certification</li>
 						</ul>
@@ -121,17 +121,17 @@
 				<article>
 					<h3>
 						Web Master / Advisor
-						<b>Rockey Mountain Student Media</b> <i> 2007-09</i>
+						<b>Rocky Mountain Student Media</b> <i> 2007-09</i>
 					</h3>
 
 					<section>
 						<p>
 							Initial contract with Colorado State University, hired as a full time
-							employee when Student Media was reorganized as a seperate 501(c)3. Tasked
+							employee when Student Media was reorganized as a separate 501(c)3. Tasked
 							with maintaining and advising on five student-run websites. Created
 							templates that could be reused for a quarterly online magazine and a high
 							school press association publication, content management backends, frontend
-							design and implementation for radio and TV bradcast stations. Also worked
+							design and implementation for radio and TV broadcast stations. Also worked
 							with other advisors and the board members to apply best practices and
 							adhere to strict web standards.
 						</p>

@@ -1,39 +1,39 @@
 <script>
-  import '$lib/scss/normalize.css'
-  import '$lib/scss/global.scss'
+	import '$lib/scss/normalize.css'
+	import '$lib/scss/global.scss'
 
-  import { page } from '$app/stores'
-  import { projectsStore } from '$lib/data/projects'
+	import { page } from '$app/stores'
+	import { projectsStore } from '$lib/data/projects'
 
-  import Footer from '$lib/component/Footer.svelte'
-  import Header from '$lib/component/Header.svelte'
+	import Footer from '$lib/component/Footer.svelte'
+	import Header from '$lib/component/Header.svelte'
 
-  const hidePaths = ['/', '/cv', '/kirby']
-  const title = 'Portfolio Brent Morton'
+	const hidePaths = ['/', '/cv', '/kirby']
+	const title = 'Portfolio Brent Morton'
 
-  let currentTitle = ''
-  $: if ($page.url.pathname.split('/').length >= 3) {
-    currentTitle =
-      $projectsStore[$page.url.pathname.split('/')[2]].subTitle + ` - ${title}`
-  } else {
-    currentTitle =
-      path === '/' ? title : $page.url.pathname.split('/')[1] + ` - ${title}`
-  }
-  $: path = $page.url.pathname
+	let currentTitle = title
+	// $: if ($page.url.pathname.split('/').length >= 3) {
+	// 	currentTitle =
+	// 		$projectsStore[$page.url.pathname.split('/')[2]].subTitle + ` - ${title}`
+	// } else {
+	// 	currentTitle =
+	// 		path === '/' ? title : $page.url.pathname.split('/')[1] + ` - ${title}`
+	// }
+	$: path = $page.url.pathname
 </script>
 
 <svelte:head>
-  <title>{currentTitle}</title>
+	<title>{currentTitle}</title>
 </svelte:head>
 
 {#if !hidePaths.includes(path)}
-  <Header />
+	<Header />
 
-  <div class="overlay-bg">
-    <slot />
-  </div>
+	<div class="overlay-bg">
+		<slot />
+	</div>
 
-  <Footer />
+	<Footer />
 {:else}
-  <slot />
+	<slot />
 {/if}
