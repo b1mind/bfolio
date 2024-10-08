@@ -25,6 +25,9 @@ CMD ["node", "./build/index.js"]
 # COPY ./default.conf /etc/nginx/conf.d/
 
 # #env
-# FROM nginx:1.13.9-alpine
+# # FROM flashspys/nginx-static
+# # FROM socialengine/nginx-spa:latest
+# FROM nginx:stable-alpine
 # COPY --from=builder /app/build /usr/share/nginx/html
+# EXPOSE 80
 # CMD ["nginx", "-g", "daemon off;"]
