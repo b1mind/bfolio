@@ -13,7 +13,8 @@
 # CMD ["node", "./build/index.js"]
 
 #todo fix multipage app static host
-Use for static prod
+
+# Use for static prod
 FROM node:22-slim as builder
 ARG GIT_TOKEN
 WORKDIR /app
