@@ -16,7 +16,7 @@
 
 # Use for static prod
 FROM node:22-slim as builder
-ARG GIT_TOKEN
+ARG NPM_TOKEN
 WORKDIR /app
 COPY . .
 RUN npm install
