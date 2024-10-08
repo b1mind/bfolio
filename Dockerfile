@@ -13,17 +13,13 @@
 
 # Use for static prod
 # build environment
-FROM node:18.13 as builder
-RUN mkdir /usr/src/app
+FROM socialengine/nginx-spa:latest 
 ARG GIT_TOKEN
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY . /usr/src/app
+# ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm install
 RUN rm -f .npmrc
 RUN npm run build
 COPY ./build /app
 
 # production environment
-FROM socialengine/nginx-spa:latest 
 RUN chmod -R 777 /app
