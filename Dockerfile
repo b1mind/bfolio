@@ -18,6 +18,7 @@
 FROM node:22-slim as builder
 ARG NPM_TOKEN
 WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
 RUN npm install
 RUN npm run build
