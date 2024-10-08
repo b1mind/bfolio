@@ -12,8 +12,7 @@
 # CMD ["node", "./build/index.js"]
 
 # Use for static prod
-# FROM node:22-slim as build
-FROM node:18.13 as builder
+FROM node:22-slim as builder
 ARG GIT_TOKEN
 WORKDIR /app
 COPY . .
@@ -30,5 +29,5 @@ COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 # FROM nginx:1-alpine-slim
-# COPY --from=build /app/build /app
+# COPY --from=builder /app/build /app
 # RUN chmod -R 777 /app
