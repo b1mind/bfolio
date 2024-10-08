@@ -15,8 +15,8 @@
 FROM node:18.13 as builder
 ARG GIT_TOKEN
 WORKDIR /app
-RUN npm install
 COPY . .
+RUN npm install
 RUN npm run build
 
 #env
