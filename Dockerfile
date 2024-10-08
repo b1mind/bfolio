@@ -22,14 +22,11 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
 RUN npm install
 RUN npm run build
-# RUN rm -rf /etc/nginx/conf.d
-# RUN mkdir -p /etc/nginx/conf.d
-# COPY ./default.conf /etc/nginx/conf.d/
 
 #env
-FROM flashspys/nginx-static
+# FROM flashspys/nginx-static
 # FROM socialengine/nginx-spa:latest
-# FROM nginx:stable-alpine
+FROM nginx:stable-alpine
 COPY --from=builder /app/build /static
 # COPY --from=builder /app/build /usr/share/nginx/html
 EXPOSE 80
