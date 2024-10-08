@@ -12,17 +12,14 @@
 # CMD ["node", "./build/index.js"]
 
 # Use for static prod
-# build environment
 FROM node:18.13 as builder
-RUN mkdir /usr/src/app
 ARG GIT_TOKEN
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY . /usr/src/app
+WORKDIR /app
+COPY package.json package-lock.json ./
 RUN npm install
 RUN npm run build
-COPY /usr/src/app /app 
+COPY . .
 
-# production environment
-FROM socialengine/nginx-spa:latest 
-RUN chmod -R 777 /app
+#env
+FROM nginx:1-alpine-slim
+COPY --from=build /app/build /usr/share/nginx/html
