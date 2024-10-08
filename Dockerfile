@@ -15,10 +15,9 @@
 FROM node:18.13 as builder
 ARG GIT_TOKEN
 WORKDIR /app
-COPY package.json package-lock.json ./
 RUN npm install
-RUN npm run build
 COPY . .
+RUN npm run build
 
 #env
 FROM nginx:1-alpine-slim
