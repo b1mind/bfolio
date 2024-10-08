@@ -22,7 +22,7 @@ RUN npm run build
 
 #env
 FROM nginx:1.13.9-alpine
-COPY --from=builder /app/build /var/www
+COPY --from=builder /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 # FROM nginx:1-alpine-slim
