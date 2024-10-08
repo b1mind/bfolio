@@ -16,7 +16,7 @@
 
 # Use for static prod
 FROM node:22-slim as builder
-ARG NPM_TOKEN
+ARG GIT_TOKEN
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
