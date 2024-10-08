@@ -20,9 +20,9 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
 RUN npm install
+RUN rm -f .npmrc
 RUN npm run build
 
 # production environment
 FROM socialengine/nginx-spa:latest 
-COPY ./build /app 
 RUN chmod -R 777 /app
