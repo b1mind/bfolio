@@ -22,6 +22,7 @@ COPY . /usr/src/app
 RUN npm install
 RUN rm -f .npmrc
 RUN npm run build
+COPY ./build /app
 
 # production environment
 FROM socialengine/nginx-spa:latest 
