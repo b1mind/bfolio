@@ -15,6 +15,7 @@
 # build environment
 FROM node:18.13 as builder
 RUN mkdir /usr/src/app
+ARG GIT_TOKEN
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
