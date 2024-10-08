@@ -23,6 +23,6 @@ RUN npm install
 RUN npm run build
 
 # production environment
-FROM socialengine/nginx-spa:latest, 
-COPY ./build /app, 
+FROM socialengine/nginx-spa:latest 
+COPY ./build /app 
 RUN chmod -R 777 /app
