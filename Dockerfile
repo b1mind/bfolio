@@ -21,7 +21,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
 RUN npm install
 RUN npm run build
-COPY ./build /app 
+COPY /usr/src/app/build /app 
 
 # production environment
 FROM socialengine/nginx-spa:latest 
