@@ -1,5 +1,6 @@
 # # Node build and run environment
-# FROM node:18.13 as builder
+# # FROM node:18.13 as builder
+# FROM node:22-slim as builder
 # RUN mkdir /usr/src/app
 # ARG GIT_TOKEN
 # WORKDIR /usr/src/app
@@ -21,10 +22,10 @@ RUN npm run build
 
 #env
 FROM nginx:1.13.9-alpine
-# RUN rm -rf /etc/nginx/conf.d
-# RUN mkdir -p /etc/nginx/conf.d
+RUN rm -rf /etc/nginx/conf.d
+RUN mkdir -p /etc/nginx/conf.d
 ARG GIT_TOKEN
-# COPY ./default.conf /etc/nginx/conf.d/
+COPY ./default.conf /etc/nginx/conf.d/
 COPY --from=builder /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
