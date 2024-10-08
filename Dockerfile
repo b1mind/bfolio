@@ -12,7 +12,7 @@
 # CMD ["node", "./build/index.js"]
 
 # Use for static prod
-FROM node:18.13 as builder
+FROM node:22-slim as build
 ARG GIT_TOKEN
 WORKDIR /app
 COPY . .
