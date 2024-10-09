@@ -2,9 +2,9 @@
 	export let word
 </script>
 
-<div class="parent">
+<div class="parent" aria-label={word}>
 	{#each word as l}
-		<span class="letter">{l}</span>
+		<span aria-hidden="true" class="letter">{l}</span>
 	{/each}
 </div>
 
