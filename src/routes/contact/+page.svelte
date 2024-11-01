@@ -26,9 +26,9 @@
 					<b>b@1mind.dev</b>
 				</a>
 
-				<a href="https://twitter.com/b1mind/">
+				<a href="https://bsky.app/profile/b.1mind.dev">
 					<svg width="32" height="32">
-						<use href="/img/social-icons.svg#twitter" />
+						<use href="/img/social-icons.svg#bluesky" />
 					</svg>
 					<b>@b1mind</b>
 				</a>

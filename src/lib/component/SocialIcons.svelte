@@ -1,6 +1,6 @@
 <script>
-	export let name = 'bluesky'
-	export let url = 'bsky.app'
+	export let name = ''
+	export let url = ''
 
 	let icon = `/img/social-icons.svg#${name}`
 </script>

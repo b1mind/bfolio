@@ -4,7 +4,7 @@
 	const icons = [
 		{
 			name: 'bluesky',
-			url: 'https://bsky.app/profile/b.1mind.dev',
+			url: 'bsky.app/profile/b.1mind.dev',
 		},
 		{
 			name: 'twitch',
