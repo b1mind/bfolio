@@ -36,10 +36,6 @@
 	--fs-lrg: clamp(3.6rem, 10vw + 1rem, 6.6rem);
 	--fs-xl: clamp(12rem, 28vw + 1rem, 16rem);
 
-	@media (max-width: $mediaSml) {
-		--fs-7: 2.3rem;
-	}
-
 	--fw-1: 100;
 	--fw-2: 200;
 	--fw-3: 300;
@@ -58,10 +54,6 @@
 	--spacer-7: 2rem;
 	--spacer-8: 2.25rem;
 	--spacer-9: 9.5rem;
-
-	@media (max-width: $mediaSml) {
-		--spacer-9: 3.25rem;
-	}
 
 	--gap-1: 0.25rem;
 	--gap-2: 0.35rem;
@@ -93,6 +85,14 @@
 	--clr-highlight: var(--yellow-5);
 	--clr-white: var(--white-2);
 	--clr-gray: var(--blue-7);
+
+	@media (max-width: $mediaSml) {
+		--spacer-9: 3.25rem;
+	}
+
+	@media (max-width: $mediaSml) {
+		--fs-7: 2.3rem;
+	}
 }
 
 //put behind prefers or just leave out?

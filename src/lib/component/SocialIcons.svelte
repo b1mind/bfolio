@@ -1,6 +1,6 @@
 <script>
-	export let name = 'twitter'
-	export let url = 'twitter.com'
+	export let name = 'bluesky'
+	export let url = 'bsky.app'
 
 	let icon = `/img/social-icons.svg#${name}`
 </script>
