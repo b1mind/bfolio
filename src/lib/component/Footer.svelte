@@ -35,6 +35,17 @@
 			{/each}
 		</ul>
 	</nav>
+
+	<div class="webring">
+		<b>CS.Sjoy.lol webring: </b>
+		<a href="https://webri.ng/webring/cssjoy/previous?via=https://b.1mind.dev"
+			>Previous</a
+		>
+		<b>-</b>
+		<a href="https://webri.ng/webring/cssjoy/random?via=https://b.1mind.dev">Random</a>
+		<b>-</b>
+		<a href="https://webri.ng/webring/cssjoy/next?via=https://b.1mind.dev">Next</a>
+	</div>
 </footer>
 
 <style lang="scss">
@@ -50,5 +61,19 @@
 		place-content: center;
 		gap: 2rem;
 		list-style: none;
+	}
+
+	.webring {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin-inline: 0.25em;
+		& > :first-child {
+			@media (max-width: 600px) {
+				width: 100%;
+				text-align: center;
+			}
+		}
 	}
 </style>
