@@ -69,6 +69,7 @@
 		flex-wrap: wrap;
 		gap: 0.5em;
 		margin-inline: 0.25em;
+		padding-block-end: 0.75em;
 		& > :first-child {
 			@media (max-width: 600px) {
 				width: 100%;
