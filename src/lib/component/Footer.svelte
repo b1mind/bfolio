@@ -26,6 +26,10 @@
 </script>
 
 <footer class="container">
+	<p>
+		This website is <strong>OUTDATED</strong>. Will have a new website coming sometime in
+		spring '26
+	</p>
 	<nav class="social" aria-label="social links">
 		<ul>
 			{#each icons as icon}
@@ -52,6 +56,10 @@
 	@use '../scss/vars' as *;
 	footer {
 		margin-top: var(--spacer-9);
+		& > p {
+			max-width: 100%;
+			text-align: center;
+		}
 	}
 
 	ul {
